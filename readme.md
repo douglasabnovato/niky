@@ -3,7 +3,7 @@
 </h4>
 
 <p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
-  <img alt="niky" title="#niky" src="./.github/template.png">
+  <img alt="niky" title="#niky" src="./.github/design.jpg">
 </p>    
 
 ### 💻 Sobre o desafio
