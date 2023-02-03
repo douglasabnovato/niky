@@ -28,9 +28,23 @@ arquivos SQL gerados.
 
 ![Design](./.github/item-6-design.jpg)
 
-- [ ] a. considerando o padrão Bootstrap de divisão em 12 colunas, respeitando os espaçamentos descritos na imagem. 
-- [ ] b. Demais espaçamentos, alturas e larguras dos objetos podem ser aplicados conforme o seu bom senso. 
-- [ ] c. Objetivo: Analisar a sua capacidade de converter layouts entregues pela equipe de produtos em telas de sistema.
+- [ ] a. considerando o padrão Bootstrap de divisão em 12 colunas, respeitando os espaçamentos descritos na imagem
+- [ ] b. demais espaçamentos, alturas e larguras dos objetos podem ser aplicados conforme o seu bom senso 
+- [ ] c. Objetivo: Analisar a sua capacidade de converter layouts entregues pela equipe de produtos em telas de sistema
+
+9. Faça uma análise crítica do protótipo do item 6 do frontend 
+
+- [ ] a. indique pontos de melhoria do layout apresentado. 
+- [ ] b. Exemplo: Cores, espalhamentos, tamanho de fonte, alinhamento de objetos e texto, larguras, etc.
+- [ ] c. Objetivo: Analisar seu senso crítico e capacidade de colaborar com o fluxo produtivo como um todo.
+
+10.  Usando o layout criado, no “gestor de categorias”, implemente javascripts que permitam:
+
+- [ ] a. Ao clicar em um dos ícones “lixeira” presentes nas linhas de categoria, a mensagem de
+confirmação: “Deseja excluir essa categoria?” seja exibida. 
+- [ ] b. Se o usuário confirmar a exclusão, a linha onde o botão está posicionado seja removida;
+- [ ] c. Uma mensagem de erro seja disparada se a frequência informada no combo da linha que está sendo excluída for igual a “mensal”;
+- [ ] d. Objetivo: Testar sua capacidade em implementar ações no lado do cliente.
 
 ### 🚀 Tarefas Backend
 
@@ -117,6 +131,41 @@ não tenha telefone
 - [ ] f. Objetivo: Compreender seu nível de conhecimento sobre a construção de queries SQL a partir
 da compreensão de um modelo de dados simples. 
 
+7. Conforme as informações da tabela abaixo:
+
+![Tabela](./.github/item-5-tabela.jpg)
+
+- [ ] a. Criar uma API mock [GET]/categorias que entregue em um JSON as informações
+- [ ] b. publicar no Heroku ou em outra hospedagem gratuita que julgar mais simples para você 
+- [ ] c. Objetivo: Entender se você conhece o conceito de mock e tem habilidade de realizar uma
+publicação em ambiente real.
+
+8. Utilizando a API [GET]/categorias do item 7 do backend
+
+- [ ] a. apresentar a tela que você criou no item 6 do frontend consumindo os dados e montando dinamicamente as 2 tabelas existentes na tela.
+- [ ] b. Obs: Caso você não tenha respondido a questão anterior, você pode utilizar o seguinte serviço:
+https://ufmsd4brfl.execute-api.us-east-1.amazonaws.com/avaliacao-niky/categorias
+- [ ] c. Objetivo: Analisar a sua capacidade de converter layouts entregues pela equipe de produtos em
+telas de sistema.
+
+11. Usando a AWS gratuitamente 
+
+- [ ] a. criar uma fila SQS atachada com uma trigger Lambda que leia a
+mensagem entregue e grave no log de execução o conteúdo do JSON 
+
+![json](./.github/item-11-json.jpg)
+
+Para evidenciar seu desenvolvimento print:
+
+- [ ] b. A tela que demonstra a vinculação da fila com o lambda;
+- [ ] c. O código do serviço lambda;
+- [ ] d. A tela do log de execução com o conteúdo, conforme exemplo abaixo.
+
+![log](./.github/item-11-log.jpg)
+
+- [ ] e. Objetivo: Compreender se você possui os conhecimentos básicos para operar uma fila de
+processamento assíncrono.
+
 ### 💡 Referências
 
 - [ ] tarefa
@@ -124,6 +173,10 @@ da compreensão de um modelo de dados simples.
 ### 📅 Entregas
 
 - [ ] tarefa
+
+### 🚀 Conclusão
+
+Esse projeto avalia a habilidade de realizar tarefas de frontend e backend juntamente com soft skills, como, a compreensão e interpretação das tarefas em texto, buscar respostas e perguntar a outros membros da equipe conforme os processos de desenvolvimento em equipe.
 
 Feito com ❤️ por Douglas A B Novato. 👋🏽 [Entre em contato!](https://www.linkedin.com/in/douglasabnovato/)
  
