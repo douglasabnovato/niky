@@ -28,7 +28,7 @@ arquivos SQL gerados.
 
 ### 🚀 Tarefas Backend
 
-- [ ] 1. Proponha um modelo de dados e o represente em um DER (diagrama de entidade
+1. Proponha um modelo de dados e o represente em um DER (diagrama de entidade
 relacionamento) que contemple a situação descrita abaixo:
 
 **ACADEMIA DE GINÁSTICA**
@@ -64,7 +64,7 @@ presenças e ausências do aluno.
 - [ ] g. Entregue como resultado uma imagem (com boa definição) de seu diagrama.
 - [ ] h. Objetivo: Compreender o seu quanto de conhecimento em relação à modelagem de dados relacionais e sua capacidade de interpretar um caso de uso e traduzi-lo em um modelo de dados aplicável.
 
-- [ ] 2. Considerando o caso de uso do item 1 do backend: 
+2. Considerando o caso de uso do item 1 do backend: 
 
 **Garantias**
 
