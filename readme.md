@@ -90,7 +90,7 @@ presenças e ausências do aluno.
 
 5. As tabelas abaixo estão representadas uma estrutura de dados de um cadastro de pessoa:
 
-[!Tabela](./.github/item-5-tabela.jpg)
+![Tabela](./.github/item-5-tabela.jpg)
 
 Com base nas tabelas acima, escreva queries que atendam às necessidades descritas nos tópicos a seguir.
 
