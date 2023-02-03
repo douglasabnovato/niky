@@ -73,6 +73,44 @@ presenças e ausências do aluno.
 - [ ] c. justificar o motivo de sua criação 
 - [ ] d. Objetivo: Compreender o quanto de conhecimento você possui em relação à programação orientada a objetos e sua capacidade de aplicá-la em um caso de uso apresentado.
 
+3. Ainda baseado no caso de uso do item 1 do backend: 
+
+**Garantias**
+
+- [ ] a. monte os contratos dos métodos necessários para implementar o cadastro dos alunos e turmas (CRUD), contemplando as particularidades apresentadas no texto.
+- [ ] b. Objetivo: Compreender a sua capacidade prática em transformar um caso de uso em APIs REST.
+
+4. Baseado nos contratos criados no item 3 do backend:  
+
+**Garantias**
+
+- [ ] a. implemente as APIs persistindo os dados em um banco de dados relacional
+- [ ] b. suba o código no GitHub 
+- [ ] c. Objetivo: Compreender a sua capacidade prática em desenvolvimento back-end.
+
+5. As tabelas abaixo estão representadas uma estrutura de dados de um cadastro de pessoa:
+
+[!Tabela](./.github/item-5-tabela.jpg)
+
+Com base nas tabelas acima, escreva queries que atendam às necessidades descritas nos tópicos a seguir.
+
+**Garantias**
+
+- [ ] a. Para etiquetar uma remessa de correspondência, crie uma query que apresente o nome da
+pessoa e seu endereço. Importante: Apenas pessoas com endereço devem ser exibidas na
+lista 
+- [ ] b. Para que possamos alertar a equipe responsável, crie uma query que identifique eventuais
+pessoas que não possuam endereço 
+- [ ] c. Levando em conta que todos os campos do cadastro dos dados pessoa são obrigatórios, crie
+uma query que apresente as pessoas que possuem erro em seu cadastro, para que a equipe
+possa complementá-lo
+- [ ] d. Monte uma lista telefônica com “Nome”, “Sexo”, “Telefone” e “Contato”, onde telefone deve
+exibir celular ou fixo. Importante: Todas as pessoas devem ser exibidas na lista, mesmo quem
+não tenha telefone
+- [ ] e. Crie uma query que apresente as pessoas com mais de 1 filho 
+- [ ] f. Objetivo: Compreender seu nível de conhecimento sobre a construção de queries SQL a partir
+da compreensão de um modelo de dados simples. 
+
 ### 💡 Referências
 
 - [ ] tarefa
