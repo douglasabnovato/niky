@@ -121,4 +121,4 @@ da compreensão de um modelo de dados simples.
 
 Feito com ❤️ por Douglas A B Novato. 👋🏽 [Entre em contato!](https://www.linkedin.com/in/douglasabnovato/)
  
-Fonte do projeto na [Rocketseat](https://www.rocketseat.com.br/). 👋 Participe da [comunidade aberta](https://discord.gg/bacwY2gDCF)!
+Fonte do projeto na [niky](https://www.niky.com.vc/) 👋  
