@@ -14,23 +14,18 @@ O teste deve ser realizado com React e Node, mas o objetivo é analisar o seu en
 
 ### ✅ Requisitos
 
-- [ ] Um repositório no GitHub onde subirá todo código das funcionalidades desenvolvidas e os
+- [x] Um repositório no GitHub onde subirá todo código das funcionalidades desenvolvidas e os
 arquivos SQL gerados.
-
-- [ ] Uma conta em uma plataforma de aplicação gratuita de sua preferência, por exemplo, o
-[Heroku](https://www.heroku.com/), onde você publicará as APIs que criar.
-
-- [ ] Uma conta gratuita na AWS para construir uma fila SQS.
+- [ ] Uma conta em uma plataforma de aplicação gratuita de sua preferência, onde você publicará as APIs que criar.
+- [ ] Uma conta gratuita para construir uma fila SQS.
 
 ### 🎨 Tarefas Frontend
 
-- [ ] 6. Criar o layout abaixo:
-
+- [ ] 6. Criar o layout a seguir 
 ![Design](./.github/item-6-design.jpg)
-
-- [ ] a. considerando o padrão Bootstrap de divisão em 12 colunas, respeitando os espaçamentos descritos na imagem
-- [ ] b. demais espaçamentos, alturas e larguras dos objetos podem ser aplicados conforme o seu bom senso 
-- [ ] c. Objetivo: Analisar a sua capacidade de converter layouts entregues pela equipe de produtos em telas de sistema
+  - [ ] a. considerando o padrão Bootstrap de divisão em 12 colunas, respeitando os espaçamentos descritos na imagem
+  - [ ] b. demais espaçamentos, alturas e larguras dos objetos podem ser aplicados conforme o seu bom senso 
+  - [ ] c. Objetivo: Analisar a sua capacidade de converter layouts entregues pela equipe de produtos em telas de sistema
 
 9. Faça uma análise crítica do protótipo do item 6 do frontend 
 
