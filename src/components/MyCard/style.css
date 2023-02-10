@@ -1,0 +1,23 @@
+:root {
+  --blue-dark: rgb(23, 38, 67);
+  --blue-medium: rgb(42, 69, 122);
+  --blue-text: rgb(119, 146, 201);
+
+  --gray-bg: rgb(238, 238, 238);
+  --white-bg: rgb(252, 252, 254);
+
+  --green-dark: rgb(0, 93, 127);
+  --green-medium: rgb(0, 151, 156);
+  --green-light: rgb(89, 207, 147);
+
+  --yellow-bg: rgb(231, 253, 127);
+}
+
+.nav {
+  background-color: var(--blue-dark);
+  height: 25vh;
+}
+
+.col {
+    border: 1px solid red
+}
