@@ -177,6 +177,16 @@ processamento assíncrono.
 
 - [ ] tarefa
 
+
+
+### 📅 Entregas
+
+- [x] Tela terminada conforme o design disponibilizado
+
+<p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
+  <img alt="tmdb" title="#tmdb" src="./.github/tela-layout.jpg" width="400px">
+</p>  
+
 ### 🚀 Conclusão
 
 Esse projeto avalia a habilidade de realizar tarefas de frontend e backend juntamente com soft skills, como, a compreensão e interpretação das tarefas em texto, buscar respostas e perguntar a outros membros da equipe conforme os processos de desenvolvimento em equipe.
