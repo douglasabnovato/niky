@@ -31,10 +31,29 @@
 }
 
 .nav div.input-group {
-  width: 300px;
+  width: 35%;
   height: 32px;
   margin-left: 40px;
   margin-top: 13px;
+}
+
+.nav div.input-group input.form-control {
+  width: 50%;
+  border-radius: 7px;
+  padding-inline-start: 10px;
+  padding-inline-end: 48px;
+  padding-block: 12px;
+  background-color: var(--blue-medium);
+  color: var(--blue-text);
+  z-index: 1;
+}
+
+.nav div.input-group  button.btn-outline-secondary{
+  margin-left: -37px;
+  width: 36px;
+  z-index: 10;
+  color: var(--white-text);
+  border: none;
 }
 
 .main {
@@ -43,8 +62,7 @@
   width: 100vw;
   height: 75vh;
   gap: 30px;
-  margin-inline: 40px;
-  margin-block: 40px;
+  padding: 40px;
 }
 
 .category {
@@ -70,35 +88,102 @@
 }
 
 .top-title .form-select,
-.top-title .selected{
+.top-title .selected {
   color: var(--blue-dark);
   font-weight: 700;
 }
 
 .category .table thead tr,
-.category .table tbody tr{
-  border: none; 
+.category .table tbody tr {
+  border: none;
 }
 
 .table thead {
   background-color: var(--gray-bg);
 }
 
-.table thead tr th.first{
+.table thead tr th.first {
   border-radius: 12px 0 0 12px;
 }
 
-.table thead tr th.fourth{
+.table thead tr th.fourth {
   border-radius: 0 12px 12px 0;
 }
 
 .resume {
-  padding: 20px;
+  padding-left: 20px;
+  padding-right: 30px;
+  padding-top: 30px; 
   background-color: var(--white-bg);
   border-radius: 12px;
+  width: 100%;
+  max-width: 31vw;
+}
+
+.resume h6 {
+  margin-block: 20px;
+}
+
+.resume .table select {
+  width: 50%;
+  border-radius: 12px;
+  padding-inline: 5px;
+  padding-block: 4px;
+  background-color: var(--gray-bg);
+  font-weight: 500;
+  font-size: 14px;
 }
 
 .buttons {
   display: flex;
+  justify-content: space-between;
   gap: 20px;
+  width: 100%;
 }
+
+.cor-1 {
+  background-color: var(--blue-dark);
+  color: var(--white-text);
+  font-weight: 500;
+}
+
+.cor-2 {
+  background-color: var(--blue-medium);
+  color: var(--white-text);
+  font-weight: 500;
+}
+
+.cor-3 {
+  background-color: var(--green-dark);
+  color: var(--white-text);
+  font-weight: 500;
+}
+
+.cor-4 {
+  background-color: var(--green-medium);
+  color: var(--white-text);
+  font-weight: 500;
+}
+
+.cor-5 {
+  background-color: var(--green-light);
+  color: var(--blue-medium);
+  font-weight: 500;
+}
+
+.cor-6 {
+  background-color: var(--yellow-bg);
+  color: var(--blue-medium);
+  font-weight: 500;
+}
+
+.buttons button {
+  width: 50%;
+  padding-block: 15px;
+  border-radius: 12px;
+}
+
+.buttons button.primary {
+  background-color: var(--blue-dark);
+}
+

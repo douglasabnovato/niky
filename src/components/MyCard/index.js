@@ -1,5 +1,9 @@
 import "./style.css";
 
+import Check from "./../../Icons/Check"
+import Search from "./../../Icons/Search"
+import Trash from "./../../Icons/Trash"
+
 function MyCard() {
   return (
     <div class="row">
@@ -15,11 +19,9 @@ function MyCard() {
                 aria-label="Pesquisar"
                 aria-describedby="basic-addon2"
               />
-              <div class="input-group-append">
-                <button class="btn btn-outline-secondary" type="button">
-                  <i class="bi bi-trash-fill"></i>
-                </button>
-              </div>
+              <button class="btn btn-outline-secondary" type="button">
+                <Search/>
+              </button>
             </div>
           </div>
         </div>
@@ -83,27 +85,27 @@ function MyCard() {
 
             <div class="column col-sm-5 resume">
               <h3>Resumo</h3>
-              <h4>Gestores de área</h4>
+              <h6>Gestores de área</h6>
               <table class="table">
                 <tbody>
-                  <tr>
+                  <tr className="cor-1">
                     <td>Alimentação</td>
                     <td>
                       <select
                         class="form-select"
                         aria-label="Default select example"
                       >
-                        <option value="1">Diário</option>
+                        <option selected value="1">Diário</option>
                         <option value="2">Quinzenal</option>
                         <option value="3">Mensal</option>
                         <option value="4">Anual</option>
                       </select>
                     </td>
                     <td>
-                      <i class="bi bi-trash-fill"></i>
+                      <Trash/>
                     </td>
                   </tr>
-                  <tr>
+                  <tr className="cor-2">
                     <td>Cultura</td>
                     <td>
                       <select
@@ -112,15 +114,15 @@ function MyCard() {
                       >
                         <option value="1">Diário</option>
                         <option value="2">Quinzenal</option>
-                        <option value="3">Mensal</option>
+                        <option selected value="3">Mensal</option>
                         <option value="4">Anual</option>
                       </select>
                     </td>
                     <td>
-                      <i class="bi bi-trash-fill"></i>
+                      <Trash/>
                     </td>
                   </tr>
-                  <tr>
+                  <tr className="cor-3">
                     <td>Flexível</td>
                     <td>
                       <select
@@ -128,16 +130,16 @@ function MyCard() {
                         aria-label="Default select example"
                       >
                         <option value="1">Diário</option>
-                        <option value="2">Quinzenal</option>
+                        <option selected value="2">Quinzenal</option>
                         <option value="3">Mensal</option>
                         <option value="4">Anual</option>
                       </select>
                     </td>
                     <td>
-                      <i class="bi bi-trash-fill"></i>
+                      <Trash/>
                     </td>
                   </tr>
-                  <tr>
+                  <tr className="cor-4">
                     <td>Home Office</td>
                     <td>
                       <select
@@ -146,15 +148,15 @@ function MyCard() {
                       >
                         <option value="1">Diário</option>
                         <option value="2">Quinzenal</option>
-                        <option value="3">Mensal</option>
+                        <option selected value="3">Mensal</option>
                         <option value="4">Anual</option>
                       </select>
                     </td>
                     <td>
-                      <i class="bi bi-trash-fill"></i>
+                      <Trash/>
                     </td>
                   </tr>
-                  <tr>
+                  <tr className="cor-5">
                     <td>Mobilidade</td>
                     <td>
                       <select
@@ -163,15 +165,15 @@ function MyCard() {
                       >
                         <option value="1">Diário</option>
                         <option value="2">Quinzenal</option>
-                        <option value="3">Mensal</option>
+                        <option selected value="3">Mensal</option>
                         <option value="4">Anual</option>
                       </select>
                     </td>
                     <td>
-                      <i class="bi bi-trash-fill"></i>
+                      <Trash/>
                     </td>
                   </tr>
-                  <tr>
+                  <tr className="cor-6">
                     <td>Saúde</td>
                     <td>
                       <select
@@ -180,21 +182,21 @@ function MyCard() {
                       >
                         <option value="1">Diário</option>
                         <option value="2">Quinzenal</option>
-                        <option value="3">Mensal</option>
+                        <option selected value="3">Mensal</option>
                         <option value="4">Anual</option>
                       </select>
                     </td>
                     <td>
-                      <i class="bi bi-trash-fill"></i>
+                      <Trash/>
                     </td>
                   </tr>
                 </tbody>
               </table>
               <div className="buttons">
-                <button type="button" class="btn btn-primary">
-                  <i class="bi bi-check-lg"></i> Ativar categoria
+                <button type="button" class="btn btn-primary primary">
+                  <Check/> Ativar categoria
                 </button>
-                <button type="button" class="btn btn-primary">
+                <button type="button" class="btn btn-secondary secondary">
                   Salvar alterações
                 </button>
               </div>
