@@ -11,13 +11,38 @@
   --green-light: rgb(89, 207, 147);
 
   --yellow-bg: rgb(231, 253, 127);
+
+  --white-text: white;
+}
+
+.row {
+  color: var(-white-text);
+  font-size: 16px;
+}
+
+.col-sm-2 {
+  background-color: orange;
+  border: 1px solid orange;
+}
+
+.col-sm-10 {
+  border: 1px solid brown;
 }
 
 .nav {
   background-color: var(--blue-dark);
+  width: 100vw;
   height: 25vh;
 }
 
-.col {
-    border: 1px solid red
+.main {
+  display: flex;
+  direction: column;
+  background-color: var(--gray-bg);
+  width: 100vw;
+  height: 75vh;
+}
+
+.table {
+  border: 1px solid yellow;
 }

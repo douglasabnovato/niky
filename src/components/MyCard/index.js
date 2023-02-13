@@ -1,36 +1,100 @@
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-
-import Nav from 'react-bootstrap/Nav';  
-
-import "./style.css"
+import "./style.css";
 
 function MyCard() {
   return (
-    <Container>
-      <Row>
-        <Col xs={2}>xs=2 - vazia</Col>
-        <Col xs={10}>
-          <Row>
-            <Col>
-              <Nav className="justify-content-center nav" activeKey="/home">
-                <Nav.Item  className="float-left">
-                    <form class="form-inline my-2 my-lg-0">
-                      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
-                      <button class="btn btn-outline-success my-2 my-sm-2" type="submit">Search</button>
-                    </form>
-                </Nav.Item>
-              </Nav>
-            </Col>
-          </Row>
-          <Row>
-            <Col className="col" xs={7}>xs=7 - categorias</Col>
-            <Col className="col" xs={5}>xs=5 - resumo</Col>
-          </Row>
-        </Col>
-      </Row>
-    </Container>
+    <div class="row">
+      <div class="col-sm-2">col-2</div>
+      <div class="col-sm-10">
+        <div class="row">
+          <div class="nav">nav</div>
+        </div>
+        <div class="row">
+          <div class="main">
+            <div class="column col-sm-7">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Categoria</th>
+                    <th scope="col">Frequência</th>
+                    <th scope="col">Valor</th>
+                    <th scope="col">Valor total</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Alimentação</td>
+                    <td>Mensal</td>
+                    <td>R$752,25</td>
+                    <td>R$248.242,50</td>
+                  </tr>
+                  <tr>
+                    <td>Combustível</td>
+                    <td>Mensal</td>
+                    <td>R$100,00</td>
+                    <td>R$6.600,00</td>
+                  </tr>
+                  <tr>
+                    <td>Cultura</td>
+                    <td>Mensal</td>
+                    <td>R$100,00</td>
+                    <td>R$33.000,00</td>
+                  </tr>
+                  <tr>
+                    <td>Educação</td>
+                    <td>Anual</td>
+                    <td>R$1000,25</td>
+                    <td>R$330.000,00</td>
+                  </tr>
+                  <tr>
+                    <td>Flexível</td>
+                    <td>Mensal</td>
+                    <td>R$120,00</td>
+                    <td>R$000.000,00</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="column col-sm-5">
+            <table class="table">
+                <tbody>
+                  <tr>
+                    <td>Alimentação</td>
+                    <td>Diário</td>
+                    <td>DEL</td>
+                  </tr>
+                  <tr>
+                    <td>Cultura</td>
+                    <td>Mensal</td>
+                    <td>DEL</td>
+                  </tr>
+                  <tr>
+                    <td>Flexível</td>
+                    <td>Quinzenal</td>
+                    <td>DEL</td>
+                  </tr>
+                  <tr>
+                    <td>Home Office</td>
+                    <td>Mensal</td>
+                    <td>DEL</td>
+                  </tr>
+                  <tr>
+                    <td>Mobilidade</td>
+                    <td>Mensal</td>
+                    <td>DEL</td>
+                  </tr>
+                  <tr>
+                    <td>Saúde</td>
+                    <td>Mensal</td>
+                    <td>DEL</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }
 
