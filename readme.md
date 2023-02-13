@@ -32,11 +32,22 @@ arquivos SQL gerados.
 
 9. Faça uma análise crítica do protótipo do item 6 do frontend 
 
-- [ ] a. indique pontos de melhoria do layout apresentado. 
-- [ ] b. Exemplo: Cores, espalhamentos, tamanho de fonte, alinhamento de objetos e texto, larguras, etc.
-- [ ] c. OBJETIVO: Analisar seu senso crítico e capacidade de colaborar com o fluxo produtivo como um todo.
+- [x] a. indique pontos de melhoria do layout apresentado. 
+  - [ ] 1. ajustar a aplicação para ocupar a tela inteira aonde estiver sendo exibida
+  - [ ] 2. na navbar, a barra de pesquisa ficaria mais interessante alinhado a direita
+  - [ ] 3. nas tabelas, seria mais confortável com o mesmo design, sugiro algo como a categoria
+  - [ ] 4. na tabela de categoria, inserir as linhas horizontais para os registros
+  - [ ] 5. na tabela de categoria, completaria o crud da tabela. Inserir uma coluna com as ações de deleção e update, adicionaria um botão para adicionar registro.
+  - [ ] 6. na tabela de resumo, remover as cores das linhas, remover o negrito do texto dos registros
+  - [ ] 7. na tabela de resumo, os botões devem seguir o mesmo design, ambos com icon ou ambos sem icon.
+  - [ ] 8. na tabela de resumo, as funcionalidades dos botões deveriam ser revisadas já que são duas afirmativas
+  - [ ] 9. a principal cor é a da navbar. partindo que é uma boa cor, os botões devem ter cores marcantes primary e secondary. Seguindo o material design lite, apliquei esse azul como primary e então gerei a segunda cor de contraste.
+  - [ ] 10. aplicando o comportamento de responsividade, caso a tela for maior que max-width, então centralizar ambas tabelas. A navbar seguiria com width 100% mas a barra de busca seguiria alinhada com as tabelas.
+  - [ ] 11. aplicando o comportamento de responsividade, caso a tela ficasse menor que o min-width, então, a tabela resumo iria para debaixo da tabela categoria com uma margin e ambas ficariam com width 100% dessa tela (tablet, smartphone)
+- [x] b. Exemplo: Cores, espalhamentos, tamanho de fonte, alinhamento de objetos e texto, larguras, etc.
+- [x] c. OBJETIVO: Analisar seu senso crítico e capacidade de colaborar com o fluxo produtivo como um todo.
 
-10.  Usando o layout criado, no “gestor de categorias”, implemente javascripts que permitam:
+10.   Usando o layout criado, no “gestor de categorias”, implemente javascripts que permitam:
 
 - [ ] a. Ao clicar em um dos ícones “lixeira” presentes nas linhas de categoria, a mensagem de
 confirmação: “Deseja excluir essa categoria?” seja exibida. 
@@ -168,6 +179,7 @@ processamento assíncrono.
 
 - [reactjs](https://reactjs.org/)
 - [bootstrap](https://icons.getbootstrap.com/)
+- [material design](https://getmdl.io/customize/index.html) 
 
 ### 📅 Entregas
 
