@@ -21,8 +21,10 @@ arquivos SQL gerados.
 
 ### 🎨 Tarefas Frontend
 
-- 6. Criar o layout a seguir
+6. Criar o layout a seguir
+
 ![Design](./.github/item-6-design.jpg)
+
   - [ ] a. considerando o padrão Bootstrap de divisão em 12 colunas, respeitando os espaçamentos descritos na imagem
   - [ ] b. demais espaçamentos, alturas e larguras dos objetos podem ser aplicados conforme o seu bom senso 
   - [ ] c. OBJETIVO: Analisar a sua capacidade de converter layouts entregues pela equipe de produtos em telas de sistema
