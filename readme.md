@@ -166,7 +166,12 @@ processamento assíncrono.
 
 ### 💡 Referências
 
-- [ ] instalar as dependências react, bootstrap
+- [x] instalar as dependências react, bootstrap
+- [ ] inserir icons
+- [ ] dimensionar os elementos 
+- [ ] posicionar os elementos 
+- [ ] estilizar os elementos os elementos 
+
 
 ### 📅 Entregas
 

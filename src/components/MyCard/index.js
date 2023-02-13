@@ -3,14 +3,38 @@ import "./style.css";
 function MyCard() {
   return (
     <div class="row">
-      <div class="col-sm-2">col-2</div>
+      <div class="col-sm-2"></div>
       <div class="col-sm-10">
         <div class="row">
-          <div class="nav">nav</div>
+          <div class="nav">
+            <div class="input-group mb-3">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Recipient's username"
+                aria-label="Recipient's username"
+                aria-describedby="basic-addon2"
+              />
+              <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="button">
+                  Button
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="row">
           <div class="main">
             <div class="column col-sm-7">
+              <h3>Categorias</h3>
+              <select class="form-select" aria-label="Default select example">
+                <option selected>Selecione um grupo</option>
+                <option value="1">Alimentação</option>
+                <option value="2">Combustível</option>
+                <option value="3">Cultura</option>
+                <option value="2">Educação</option>
+                <option value="3">Flexível</option>
+              </select>
               <table class="table">
                 <thead>
                   <tr>
@@ -56,40 +80,120 @@ function MyCard() {
             </div>
 
             <div class="column col-sm-5">
-            <table class="table">
+              <h3>Resumo</h3>
+              <h4>Gestores de área</h4>
+              <table class="table">
                 <tbody>
                   <tr>
                     <td>Alimentação</td>
-                    <td>Diário</td>
-                    <td>DEL</td>
+                    <td>
+                      <select
+                        class="form-select"
+                        aria-label="Default select example"
+                      >
+                        <option value="1">Diário</option>
+                        <option value="2">Quinzenal</option>
+                        <option value="3">Mensal</option>
+                        <option value="4">Anual</option>
+                      </select>
+                    </td>
+                    <td>
+                      <i class="bi bi-trash-fill"></i>
+                    </td>
                   </tr>
                   <tr>
                     <td>Cultura</td>
-                    <td>Mensal</td>
-                    <td>DEL</td>
+                    <td>
+                      <select
+                        class="form-select"
+                        aria-label="Default select example"
+                      >
+                        <option value="1">Diário</option>
+                        <option value="2">Quinzenal</option>
+                        <option value="3">Mensal</option>
+                        <option value="4">Anual</option>
+                      </select>
+                    </td>
+                    <td>
+                      <i class="bi bi-trash-fill"></i>
+                    </td>
                   </tr>
                   <tr>
                     <td>Flexível</td>
-                    <td>Quinzenal</td>
-                    <td>DEL</td>
+                    <td>
+                      <select
+                        class="form-select"
+                        aria-label="Default select example"
+                      >
+                        <option value="1">Diário</option>
+                        <option value="2">Quinzenal</option>
+                        <option value="3">Mensal</option>
+                        <option value="4">Anual</option>
+                      </select>
+                    </td>
+                    <td>
+                      <i class="bi bi-trash-fill"></i>
+                    </td>
                   </tr>
                   <tr>
                     <td>Home Office</td>
-                    <td>Mensal</td>
-                    <td>DEL</td>
+                    <td>
+                      <select
+                        class="form-select"
+                        aria-label="Default select example"
+                      >
+                        <option value="1">Diário</option>
+                        <option value="2">Quinzenal</option>
+                        <option value="3">Mensal</option>
+                        <option value="4">Anual</option>
+                      </select>
+                    </td>
+                    <td>
+                      <i class="bi bi-trash-fill"></i>
+                    </td>
                   </tr>
                   <tr>
                     <td>Mobilidade</td>
-                    <td>Mensal</td>
-                    <td>DEL</td>
+                    <td>
+                      <select
+                        class="form-select"
+                        aria-label="Default select example"
+                      >
+                        <option value="1">Diário</option>
+                        <option value="2">Quinzenal</option>
+                        <option value="3">Mensal</option>
+                        <option value="4">Anual</option>
+                      </select>
+                    </td>
+                    <td>
+                      <i class="bi bi-trash-fill"></i>
+                    </td>
                   </tr>
                   <tr>
                     <td>Saúde</td>
-                    <td>Mensal</td>
-                    <td>DEL</td>
+                    <td>
+                      <select
+                        class="form-select"
+                        aria-label="Default select example"
+                      >
+                        <option value="1">Diário</option>
+                        <option value="2">Quinzenal</option>
+                        <option value="3">Mensal</option>
+                        <option value="4">Anual</option>
+                      </select>
+                    </td>
+                    <td>
+                      <i class="bi bi-trash-fill"></i>
+                    </td>
                   </tr>
                 </tbody>
               </table>
+              <button type="button" class="btn btn-primary">
+                <i class="bi bi-check-lg"></i> Ativar categoria
+              </button>
+              <button type="button" class="btn btn-primary">
+                Salvar alterações
+              </button>
             </div>
           </div>
         </div>
