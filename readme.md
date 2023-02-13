@@ -14,37 +14,46 @@ O teste deve ser realizado com React e Node, mas o objetivo é analisar o seu en
 
 ### ✅ Requisitos
 
-- [ ] Um repositório no GitHub onde subirá todo código das funcionalidades desenvolvidas e os
+- [x] Um repositório no GitHub onde subirá todo código das funcionalidades desenvolvidas e os
 arquivos SQL gerados.
-
-- [ ] Uma conta em uma plataforma de aplicação gratuita de sua preferência, por exemplo, o
-[Heroku](https://www.heroku.com/), onde você publicará as APIs que criar.
-
-- [ ] Uma conta gratuita na AWS para construir uma fila SQS.
+- [ ] Uma conta em uma plataforma de aplicação gratuita de sua preferência, onde você publicará as APIs que criar.
+- [ ] Uma conta gratuita para construir uma fila SQS.
 
 ### 🎨 Tarefas Frontend
 
-- [ ] 6. Criar o layout abaixo:
+6. Criar o layout a seguir
 
 ![Design](./.github/item-6-design.jpg)
 
-- [ ] a. considerando o padrão Bootstrap de divisão em 12 colunas, respeitando os espaçamentos descritos na imagem
-- [ ] b. demais espaçamentos, alturas e larguras dos objetos podem ser aplicados conforme o seu bom senso 
-- [ ] c. Objetivo: Analisar a sua capacidade de converter layouts entregues pela equipe de produtos em telas de sistema
+  - [x] a. considerando o padrão Bootstrap de divisão em 12 colunas, respeitando os espaçamentos descritos na imagem
+  - [x] b. demais espaçamentos, alturas e larguras dos objetos podem ser aplicados conforme o seu bom senso 
+  - [x] c. OBJETIVO: Analisar a sua capacidade de converter layouts entregues pela equipe de produtos em telas de sistema
+  - [x] d. Utilizar react para construir o design.
 
 9. Faça uma análise crítica do protótipo do item 6 do frontend 
 
-- [ ] a. indique pontos de melhoria do layout apresentado. 
-- [ ] b. Exemplo: Cores, espalhamentos, tamanho de fonte, alinhamento de objetos e texto, larguras, etc.
-- [ ] c. Objetivo: Analisar seu senso crítico e capacidade de colaborar com o fluxo produtivo como um todo.
+- [x] a. indique pontos de melhoria do layout apresentado. 
+  - [ ] 1. ajustar a aplicação para ocupar a tela inteira aonde estiver sendo exibida
+  - [ ] 2. na navbar, a barra de pesquisa ficaria mais interessante alinhado a direita
+  - [ ] 3. nas tabelas, seria mais confortável com o mesmo design, sugiro algo como a categoria
+  - [ ] 4. na tabela de categoria, inserir as linhas horizontais para os registros
+  - [ ] 5. na tabela de categoria, completaria o crud da tabela. Inserir uma coluna com as ações de deleção e update, adicionaria um botão para adicionar registro.
+  - [ ] 6. na tabela de resumo, remover as cores das linhas, remover o negrito do texto dos registros
+  - [ ] 7. na tabela de resumo, os botões devem seguir o mesmo design, ambos com icon ou ambos sem icon.
+  - [ ] 8. na tabela de resumo, as funcionalidades dos botões deveriam ser revisadas já que são duas afirmativas
+  - [ ] 9. a principal cor é a da navbar. partindo que é uma boa cor, os botões devem ter cores marcantes primary e secondary. Seguindo o material design lite, apliquei esse azul como primary e então gerei a segunda cor de contraste.
+  - [ ] 10. aplicando o comportamento de responsividade, caso a tela for maior que max-width, então centralizar ambas tabelas. A navbar seguiria com width 100% mas a barra de busca seguiria alinhada com as tabelas.
+  - [ ] 11. aplicando o comportamento de responsividade, caso a tela ficasse menor que o min-width, então, a tabela resumo iria para debaixo da tabela categoria com uma margin e ambas ficariam com width 100% dessa tela (tablet, smartphone)
+- [x] b. Exemplo: Cores, espalhamentos, tamanho de fonte, alinhamento de objetos e texto, larguras, etc.
+- [x] c. OBJETIVO: Analisar seu senso crítico e capacidade de colaborar com o fluxo produtivo como um todo.
 
-10.  Usando o layout criado, no “gestor de categorias”, implemente javascripts que permitam:
+10.   Usando o layout criado, no “gestor de categorias”, implemente javascripts que permitam:
 
 - [ ] a. Ao clicar em um dos ícones “lixeira” presentes nas linhas de categoria, a mensagem de
 confirmação: “Deseja excluir essa categoria?” seja exibida. 
 - [ ] b. Se o usuário confirmar a exclusão, a linha onde o botão está posicionado seja removida;
 - [ ] c. Uma mensagem de erro seja disparada se a frequência informada no combo da linha que está sendo excluída for igual a “mensal”;
-- [ ] d. Objetivo: Testar sua capacidade em implementar ações no lado do cliente.
+- [ ] d. OBJETIVO: Testar sua capacidade em implementar ações no lado do cliente.
 
 ### 🚀 Tarefas Backend
 
@@ -82,7 +91,7 @@ presenças e ausências do aluno.
 - [ ] e. seja possível identificar as chaves em cada entidade
 - [ ] f. utilize a ferramenta de sua escolha para a construção do DER (Miro, Draw.io, Lucid, ou qualquer outro que desejar)
 - [ ] g. Entregue como resultado uma imagem (com boa definição) de seu diagrama.
-- [ ] h. Objetivo: Compreender o seu quanto de conhecimento em relação à modelagem de dados relacionais e sua capacidade de interpretar um caso de uso e traduzi-lo em um modelo de dados aplicável.
+- [ ] h. OBJETIVO: Compreender o seu quanto de conhecimento em relação à modelagem de dados relacionais e sua capacidade de interpretar um caso de uso e traduzi-lo em um modelo de dados aplicável.
 
 2. Considerando o caso de uso do item 1 do backend: 
 
@@ -91,14 +100,14 @@ presenças e ausências do aluno.
 - [ ] a. demonstrar as classes
 - [ ] b. propor os métodos necessários para as classes identificadas
 - [ ] c. justificar o motivo de sua criação 
-- [ ] d. Objetivo: Compreender o quanto de conhecimento você possui em relação à programação orientada a objetos e sua capacidade de aplicá-la em um caso de uso apresentado.
+- [ ] d. OBJETIVO: Compreender o quanto de conhecimento você possui em relação à programação orientada a objetos e sua capacidade de aplicá-la em um caso de uso apresentado.
 
 3. Ainda baseado no caso de uso do item 1 do backend: 
 
 **Garantias**
 
 - [ ] a. monte os contratos dos métodos necessários para implementar o cadastro dos alunos e turmas (CRUD), contemplando as particularidades apresentadas no texto.
-- [ ] b. Objetivo: Compreender a sua capacidade prática em transformar um caso de uso em APIs REST.
+- [ ] b. OBJETIVO: Compreender a sua capacidade prática em transformar um caso de uso em APIs REST.
 
 4. Baseado nos contratos criados no item 3 do backend:  
 
@@ -106,7 +115,7 @@ presenças e ausências do aluno.
 
 - [ ] a. implemente as APIs persistindo os dados em um banco de dados relacional
 - [ ] b. suba o código no GitHub 
-- [ ] c. Objetivo: Compreender a sua capacidade prática em desenvolvimento back-end.
+- [ ] c. OBJETIVO: Compreender a sua capacidade prática em desenvolvimento back-end.
 
 5. As tabelas abaixo estão representadas uma estrutura de dados de um cadastro de pessoa:
 
@@ -128,7 +137,7 @@ possa complementá-lo
 exibir celular ou fixo. Importante: Todas as pessoas devem ser exibidas na lista, mesmo quem
 não tenha telefone
 - [ ] e. Crie uma query que apresente as pessoas com mais de 1 filho 
-- [ ] f. Objetivo: Compreender seu nível de conhecimento sobre a construção de queries SQL a partir
+- [ ] f. OBJETIVO: Compreender seu nível de conhecimento sobre a construção de queries SQL a partir
 da compreensão de um modelo de dados simples. 
 
 7. Conforme as informações da tabela abaixo:
@@ -137,7 +146,7 @@ da compreensão de um modelo de dados simples.
 
 - [ ] a. Criar uma API mock [GET]/categorias que entregue em um JSON as informações
 - [ ] b. publicar no Heroku ou em outra hospedagem gratuita que julgar mais simples para você 
-- [ ] c. Objetivo: Entender se você conhece o conceito de mock e tem habilidade de realizar uma
+- [ ] c. OBJETIVO: Entender se você conhece o conceito de mock e tem habilidade de realizar uma
 publicação em ambiente real.
 
 8. Utilizando a API [GET]/categorias do item 7 do backend
@@ -145,7 +154,7 @@ publicação em ambiente real.
 - [ ] a. apresentar a tela que você criou no item 6 do frontend consumindo os dados e montando dinamicamente as 2 tabelas existentes na tela.
 - [ ] b. Obs: Caso você não tenha respondido a questão anterior, você pode utilizar o seguinte serviço:
 https://ufmsd4brfl.execute-api.us-east-1.amazonaws.com/avaliacao-niky/categorias
-- [ ] c. Objetivo: Analisar a sua capacidade de converter layouts entregues pela equipe de produtos em
+- [ ] c. OBJETIVO: Analisar a sua capacidade de converter layouts entregues pela equipe de produtos em
 telas de sistema.
 
 11. Usando a AWS gratuitamente 
@@ -163,16 +172,34 @@ Para evidenciar seu desenvolvimento print:
 
 ![log](./.github/item-11-log.jpg)
 
-- [ ] e. Objetivo: Compreender se você possui os conhecimentos básicos para operar uma fila de
+- [ ] e. OBJETIVO: Compreender se você possui os conhecimentos básicos para operar uma fila de
 processamento assíncrono.
 
 ### 💡 Referências
 
-- [ ] tarefa
+- [reactjs](https://reactjs.org/)
+- [bootstrap](https://icons.getbootstrap.com/)
+- [material design](https://getmdl.io/customize/index.html) 
 
 ### 📅 Entregas
 
-- [ ] tarefa
+- [x] instalar as dependências react, bootstrap
+- [x] inserir icons
+- [x] dimensionar os elementos 
+- [x] posicionar os elementos 
+- [x] estilizar os elementos os elementos 
+- [x] remover linhas da tabela category e ajustar design
+- [ ] posicionar icons
+- [ ] border-radius da tabela resume e ajustar design
+- [ ] fazer o item 1
+
+### 📅 Entregas
+
+- [x] Tela terminada conforme o design disponibilizado
+
+<p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
+  <img alt="tmdb" title="#tmdb" src="./.github/tela-layout.jpg" width="400px">
+</p>  
 
 ### 🚀 Conclusão
 

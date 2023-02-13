@@ -1,0 +1,188 @@
+:root {
+  --blue-dark: rgb(23, 38, 67);
+  --blue-medium: rgb(42, 69, 122);
+  --blue-text: rgb(119, 146, 201);
+
+  --gray-bg: rgb(238, 238, 238);
+  --white-bg: rgb(252, 252, 254);
+  --gray-bg-space: rgba(219, 215, 215, 0.781);
+
+  --green-dark: rgb(0, 93, 127);
+  --green-medium: rgb(0, 151, 156);
+  --green-light: rgb(89, 207, 147);
+
+  --yellow-bg: rgb(231, 253, 127);
+
+  --white-text: white;
+}
+
+.space {
+  background-color: var(--gray-bg-space);
+}
+
+.row {
+  background-color: var(--gray-bg);
+}
+
+.nav {
+  background-color: var(--blue-dark);
+  width: 100vw;
+  height: 25vh;
+}
+
+.nav div.input-group {
+  width: 35%;
+  height: 32px;
+  margin-left: 40px;
+  margin-top: 13px;
+}
+
+.nav div.input-group input.form-control {
+  width: 50%;
+  border-radius: 7px;
+  padding-inline-start: 10px;
+  padding-inline-end: 48px;
+  padding-block: 12px;
+  background-color: var(--blue-medium);
+  color: var(--blue-text);
+  z-index: 1;
+}
+
+.nav div.input-group button.btn-outline-secondary {
+  margin-left: -37px;
+  width: 36px;
+  z-index: 10;
+  color: var(--white-text);
+  border: none;
+}
+
+.main {
+  display: flex;
+  direction: column;
+  width: 100vw;
+  height: 75vh;
+  gap: 30px;
+  padding: 40px;
+}
+
+.category {
+  padding-inline: 30px;
+  padding-block-start: 10px;
+  background-color: var(--white-bg);
+  border-radius: 12px;
+  height: 40vh;
+}
+
+.top-title {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-block-end: 30px;
+}
+
+.top-title select {
+  width: 50%;
+  border-radius: 12px;
+  padding-inline: 10px;
+  background-color: var(--gray-bg);
+}
+
+.top-title .form-select,
+.top-title .selected {
+  color: var(--blue-dark);
+  font-weight: 700;
+}
+
+.category .table thead tr th,
+.category .table tbody tr td {
+  border: none;
+}
+
+.table thead {
+  background-color: var(--gray-bg);
+}
+
+.table thead tr th.first {
+  border-radius: 12px 0 0 12px;
+}
+
+.table thead tr th.fourth {
+  border-radius: 0 12px 12px 0;
+}
+
+.resume {
+  padding-left: 20px;
+  padding-right: 30px;
+  padding-top: 30px;
+  background-color: var(--white-bg);
+  border-radius: 12px;
+  width: 100%;
+  max-width: 31vw;
+}
+
+.resume h6 {
+  margin-block: 20px;
+}
+
+.resume .table select {
+  width: 50%;
+  border-radius: 12px;
+  padding-inline: 5px;
+  padding-block: 4px;
+  background-color: var(--gray-bg);
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+}
+
+.cor-1 {
+  background-color: var(--blue-dark);
+  color: var(--white-text);
+  font-weight: 500;
+}
+
+.cor-2 {
+  background-color: var(--blue-medium);
+  color: var(--white-text);
+  font-weight: 500;
+}
+
+.cor-3 {
+  background-color: var(--green-dark);
+  color: var(--white-text);
+  font-weight: 500;
+}
+
+.cor-4 {
+  background-color: var(--green-medium);
+  color: var(--white-text);
+  font-weight: 500;
+}
+
+.cor-5 {
+  background-color: var(--green-light);
+  color: var(--blue-medium);
+  font-weight: 500;
+}
+
+.cor-6 {
+  background-color: var(--yellow-bg);
+  color: var(--blue-medium);
+  font-weight: 500;
+}
+
+.buttons button {
+  width: 50%;
+  padding-block: 15px;
+  border-radius: 12px;
+}
+
+.buttons button.primary {
+  background-color: var(--blue-dark);
+}
