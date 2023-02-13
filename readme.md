@@ -166,7 +166,7 @@ processamento assíncrono.
 
 ### 💡 Referências
 
-- [ ] tarefa
+- [ ] instalar as dependências react, bootstrap
 
 ### 📅 Entregas
 
