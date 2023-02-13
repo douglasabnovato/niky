@@ -21,18 +21,18 @@ arquivos SQL gerados.
 
 ### 🎨 Tarefas Frontend
 
-- 6. Criar o layout a seguir 
+- 6. Criar o layout a seguir
 ![Design](./.github/item-6-design.jpg)
   - [ ] a. considerando o padrão Bootstrap de divisão em 12 colunas, respeitando os espaçamentos descritos na imagem
   - [ ] b. demais espaçamentos, alturas e larguras dos objetos podem ser aplicados conforme o seu bom senso 
-  - [ ] c. Objetivo: Analisar a sua capacidade de converter layouts entregues pela equipe de produtos em telas de sistema
+  - [ ] c. OBJETIVO: Analisar a sua capacidade de converter layouts entregues pela equipe de produtos em telas de sistema
   - [ ] d. Utilizar react para construir o design.
 
 9. Faça uma análise crítica do protótipo do item 6 do frontend 
 
 - [ ] a. indique pontos de melhoria do layout apresentado. 
 - [ ] b. Exemplo: Cores, espalhamentos, tamanho de fonte, alinhamento de objetos e texto, larguras, etc.
-- [ ] c. Objetivo: Analisar seu senso crítico e capacidade de colaborar com o fluxo produtivo como um todo.
+- [ ] c. OBJETIVO: Analisar seu senso crítico e capacidade de colaborar com o fluxo produtivo como um todo.
 
 10.  Usando o layout criado, no “gestor de categorias”, implemente javascripts que permitam:
 
@@ -40,7 +40,7 @@ arquivos SQL gerados.
 confirmação: “Deseja excluir essa categoria?” seja exibida. 
 - [ ] b. Se o usuário confirmar a exclusão, a linha onde o botão está posicionado seja removida;
 - [ ] c. Uma mensagem de erro seja disparada se a frequência informada no combo da linha que está sendo excluída for igual a “mensal”;
-- [ ] d. Objetivo: Testar sua capacidade em implementar ações no lado do cliente.
+- [ ] d. OBJETIVO: Testar sua capacidade em implementar ações no lado do cliente.
 
 ### 🚀 Tarefas Backend
 
@@ -78,7 +78,7 @@ presenças e ausências do aluno.
 - [ ] e. seja possível identificar as chaves em cada entidade
 - [ ] f. utilize a ferramenta de sua escolha para a construção do DER (Miro, Draw.io, Lucid, ou qualquer outro que desejar)
 - [ ] g. Entregue como resultado uma imagem (com boa definição) de seu diagrama.
-- [ ] h. Objetivo: Compreender o seu quanto de conhecimento em relação à modelagem de dados relacionais e sua capacidade de interpretar um caso de uso e traduzi-lo em um modelo de dados aplicável.
+- [ ] h. OBJETIVO: Compreender o seu quanto de conhecimento em relação à modelagem de dados relacionais e sua capacidade de interpretar um caso de uso e traduzi-lo em um modelo de dados aplicável.
 
 2. Considerando o caso de uso do item 1 do backend: 
 
@@ -87,14 +87,14 @@ presenças e ausências do aluno.
 - [ ] a. demonstrar as classes
 - [ ] b. propor os métodos necessários para as classes identificadas
 - [ ] c. justificar o motivo de sua criação 
-- [ ] d. Objetivo: Compreender o quanto de conhecimento você possui em relação à programação orientada a objetos e sua capacidade de aplicá-la em um caso de uso apresentado.
+- [ ] d. OBJETIVO: Compreender o quanto de conhecimento você possui em relação à programação orientada a objetos e sua capacidade de aplicá-la em um caso de uso apresentado.
 
 3. Ainda baseado no caso de uso do item 1 do backend: 
 
 **Garantias**
 
 - [ ] a. monte os contratos dos métodos necessários para implementar o cadastro dos alunos e turmas (CRUD), contemplando as particularidades apresentadas no texto.
-- [ ] b. Objetivo: Compreender a sua capacidade prática em transformar um caso de uso em APIs REST.
+- [ ] b. OBJETIVO: Compreender a sua capacidade prática em transformar um caso de uso em APIs REST.
 
 4. Baseado nos contratos criados no item 3 do backend:  
 
@@ -102,7 +102,7 @@ presenças e ausências do aluno.
 
 - [ ] a. implemente as APIs persistindo os dados em um banco de dados relacional
 - [ ] b. suba o código no GitHub 
-- [ ] c. Objetivo: Compreender a sua capacidade prática em desenvolvimento back-end.
+- [ ] c. OBJETIVO: Compreender a sua capacidade prática em desenvolvimento back-end.
 
 5. As tabelas abaixo estão representadas uma estrutura de dados de um cadastro de pessoa:
 
@@ -124,7 +124,7 @@ possa complementá-lo
 exibir celular ou fixo. Importante: Todas as pessoas devem ser exibidas na lista, mesmo quem
 não tenha telefone
 - [ ] e. Crie uma query que apresente as pessoas com mais de 1 filho 
-- [ ] f. Objetivo: Compreender seu nível de conhecimento sobre a construção de queries SQL a partir
+- [ ] f. OBJETIVO: Compreender seu nível de conhecimento sobre a construção de queries SQL a partir
 da compreensão de um modelo de dados simples. 
 
 7. Conforme as informações da tabela abaixo:
@@ -133,7 +133,7 @@ da compreensão de um modelo de dados simples.
 
 - [ ] a. Criar uma API mock [GET]/categorias que entregue em um JSON as informações
 - [ ] b. publicar no Heroku ou em outra hospedagem gratuita que julgar mais simples para você 
-- [ ] c. Objetivo: Entender se você conhece o conceito de mock e tem habilidade de realizar uma
+- [ ] c. OBJETIVO: Entender se você conhece o conceito de mock e tem habilidade de realizar uma
 publicação em ambiente real.
 
 8. Utilizando a API [GET]/categorias do item 7 do backend
@@ -141,7 +141,7 @@ publicação em ambiente real.
 - [ ] a. apresentar a tela que você criou no item 6 do frontend consumindo os dados e montando dinamicamente as 2 tabelas existentes na tela.
 - [ ] b. Obs: Caso você não tenha respondido a questão anterior, você pode utilizar o seguinte serviço:
 https://ufmsd4brfl.execute-api.us-east-1.amazonaws.com/avaliacao-niky/categorias
-- [ ] c. Objetivo: Analisar a sua capacidade de converter layouts entregues pela equipe de produtos em
+- [ ] c. OBJETIVO: Analisar a sua capacidade de converter layouts entregues pela equipe de produtos em
 telas de sistema.
 
 11. Usando a AWS gratuitamente 
@@ -159,7 +159,7 @@ Para evidenciar seu desenvolvimento print:
 
 ![log](./.github/item-11-log.jpg)
 
-- [ ] e. Objetivo: Compreender se você possui os conhecimentos básicos para operar uma fila de
+- [ ] e. OBJETIVO: Compreender se você possui os conhecimentos básicos para operar uma fila de
 processamento assíncrono.
 
 ### 💡 Referências
