@@ -5,6 +5,7 @@
 
   --gray-bg: rgb(238, 238, 238);
   --white-bg: rgb(252, 252, 254);
+  --gray-bg-space: rgba(219, 215, 215, 0.781);
 
   --green-dark: rgb(0, 93, 127);
   --green-medium: rgb(0, 151, 156);
@@ -15,11 +16,19 @@
   --white-text: white;
 }
 
+.space {
+  background-color: var(--gray-bg-space);
+}
+
+.row {
+  background-color: var(--gray-bg);
+}
+
 .nav {
   background-color: var(--blue-dark);
   width: 100vw;
   height: 25vh;
-} 
+}
 
 .nav div.input-group {
   width: 300px;
@@ -28,22 +37,68 @@
   margin-top: 13px;
 }
 
-i.bi-search {
-  color: var(--blue-dark);
-  height: 24px;
-  width: 24px;
-  margin-left: -35px;
-}
-
 .main {
   display: flex;
   direction: column;
-  background-color: var(--gray-bg);
   width: 100vw;
   height: 75vh;
+  gap: 30px;
+  margin-inline: 40px;
+  margin-block: 40px;
 }
 
-.table {
+.category {
+  padding-inline: 30px;
+  padding-block-start: 10px;
   background-color: var(--white-bg);
-  border: 1px solid yellow;
+  border-radius: 12px;
+  height: 40vh;
+}
+
+.top-title {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-block-end: 30px;
+}
+
+.top-title select {
+  width: 50%;
+  border-radius: 12px;
+  padding-inline: 10px;
+  background-color: var(--gray-bg);
+}
+
+.top-title .form-select,
+.top-title .selected{
+  color: var(--blue-dark);
+  font-weight: 700;
+}
+
+.category .table thead tr,
+.category .table tbody tr{
+  border: none; 
+}
+
+.table thead {
+  background-color: var(--gray-bg);
+}
+
+.table thead tr th.first{
+  border-radius: 12px 0 0 12px;
+}
+
+.table thead tr th.fourth{
+  border-radius: 0 12px 12px 0;
+}
+
+.resume {
+  padding: 20px;
+  background-color: var(--white-bg);
+  border-radius: 12px;
+}
+
+.buttons {
+  display: flex;
+  gap: 20px;
 }

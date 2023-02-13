@@ -3,7 +3,7 @@ import "./style.css";
 function MyCard() {
   return (
     <div class="row">
-      <div class="col-sm-2"></div>
+      <div class="col-sm-2 space"></div>
       <div class="col-sm-10">
         <div class="row">
           <div class="nav">
@@ -11,13 +11,13 @@ function MyCard() {
               <input
                 type="text"
                 class="form-control"
-                placeholder="Recipient's username"
-                aria-label="Recipient's username"
+                placeholder="Pesquisar"
+                aria-label="Pesquisar"
                 aria-describedby="basic-addon2"
               />
               <div class="input-group-append">
                 <button class="btn btn-outline-secondary" type="button">
-                  Button
+                  <i class="bi bi-trash-fill"></i>
                 </button>
               </div>
             </div>
@@ -25,23 +25,25 @@ function MyCard() {
         </div>
         <div class="row">
           <div class="main">
-            <div class="column col-sm-7">
-              <h3>Categorias</h3>
-              <select class="form-select" aria-label="Default select example">
-                <option selected>Selecione um grupo</option>
-                <option value="1">Alimentação</option>
-                <option value="2">Combustível</option>
-                <option value="3">Cultura</option>
-                <option value="2">Educação</option>
-                <option value="3">Flexível</option>
-              </select>
+            <div class="column col-sm-7 category">
+              <div class="top-title">
+                <h3>Categorias</h3>
+                <select class="form-select" aria-label="Default select example">
+                  <option selected className="selected">Selecione um grupo</option>
+                  <option value="1">Alimentação</option>
+                  <option value="2">Combustível</option>
+                  <option value="3">Cultura</option>
+                  <option value="2">Educação</option>
+                  <option value="3">Flexível</option>
+                </select>
+              </div>
               <table class="table">
                 <thead>
                   <tr>
-                    <th scope="col">Categoria</th>
+                    <th scope="col" className="first">Categoria</th>
                     <th scope="col">Frequência</th>
                     <th scope="col">Valor</th>
-                    <th scope="col">Valor total</th>
+                    <th scope="col" className="fourth">Valor total</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -79,7 +81,7 @@ function MyCard() {
               </table>
             </div>
 
-            <div class="column col-sm-5">
+            <div class="column col-sm-5 resume">
               <h3>Resumo</h3>
               <h4>Gestores de área</h4>
               <table class="table">
@@ -188,12 +190,14 @@ function MyCard() {
                   </tr>
                 </tbody>
               </table>
-              <button type="button" class="btn btn-primary">
-                <i class="bi bi-check-lg"></i> Ativar categoria
-              </button>
-              <button type="button" class="btn btn-primary">
-                Salvar alterações
-              </button>
+              <div className="buttons">
+                <button type="button" class="btn btn-primary">
+                  <i class="bi bi-check-lg"></i> Ativar categoria
+                </button>
+                <button type="button" class="btn btn-primary">
+                  Salvar alterações
+                </button>
+              </div>
             </div>
           </div>
         </div>
