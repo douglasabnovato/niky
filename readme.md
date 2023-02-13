@@ -25,10 +25,10 @@ arquivos SQL gerados.
 
 ![Design](./.github/item-6-design.jpg)
 
-  - [ ] a. considerando o padrão Bootstrap de divisão em 12 colunas, respeitando os espaçamentos descritos na imagem
-  - [ ] b. demais espaçamentos, alturas e larguras dos objetos podem ser aplicados conforme o seu bom senso 
-  - [ ] c. OBJETIVO: Analisar a sua capacidade de converter layouts entregues pela equipe de produtos em telas de sistema
-  - [ ] d. Utilizar react para construir o design.
+  - [x] a. considerando o padrão Bootstrap de divisão em 12 colunas, respeitando os espaçamentos descritos na imagem
+  - [x] b. demais espaçamentos, alturas e larguras dos objetos podem ser aplicados conforme o seu bom senso 
+  - [x] c. OBJETIVO: Analisar a sua capacidade de converter layouts entregues pela equipe de produtos em telas de sistema
+  - [x] d. Utilizar react para construir o design.
 
 9. Faça uma análise crítica do protótipo do item 6 do frontend 
 
@@ -166,18 +166,19 @@ processamento assíncrono.
 
 ### 💡 Referências
 
-- [x] instalar as dependências react, bootstrap
-- [ ] inserir icons
-- [ ] dimensionar os elementos 
-- [ ] posicionar os elementos 
-- [ ] estilizar os elementos os elementos 
-
+- [reactjs](https://reactjs.org/)
+- [bootstrap](https://icons.getbootstrap.com/)
 
 ### 📅 Entregas
 
-- [ ] tarefa
-
-
+- [x] instalar as dependências react, bootstrap
+- [x] inserir icons
+- [ ] posicionar icons
+- [x] dimensionar os elementos 
+- [x] posicionar os elementos 
+- [x] estilizar os elementos os elementos 
+- [x] remover linhas da tabela category e ajustar design
+- [ ] border-radius da tabela resume e ajustar design
 
 ### 📅 Entregas
 

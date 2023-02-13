@@ -1,8 +1,8 @@
 import "./style.css";
 
-import Check from "./../../Icons/Check"
-import Search from "./../../Icons/Search"
-import Trash from "./../../Icons/Trash"
+import Check from "./../../Icons/Check";
+import Search from "./../../Icons/Search";
+import Trash from "./../../Icons/Trash";
 
 function MyCard() {
   return (
@@ -20,7 +20,7 @@ function MyCard() {
                 aria-describedby="basic-addon2"
               />
               <button class="btn btn-outline-secondary" type="button">
-                <Search/>
+                <Search />
               </button>
             </div>
           </div>
@@ -31,7 +31,9 @@ function MyCard() {
               <div class="top-title">
                 <h3>Categorias</h3>
                 <select class="form-select" aria-label="Default select example">
-                  <option selected className="selected">Selecione um grupo</option>
+                  <option selected className="selected">
+                    Selecione um grupo
+                  </option>
                   <option value="1">Alimentação</option>
                   <option value="2">Combustível</option>
                   <option value="3">Cultura</option>
@@ -42,10 +44,14 @@ function MyCard() {
               <table class="table">
                 <thead>
                   <tr>
-                    <th scope="col" className="first">Categoria</th>
+                    <th scope="col" className="first">
+                      Categoria
+                    </th>
                     <th scope="col">Frequência</th>
                     <th scope="col">Valor</th>
-                    <th scope="col" className="fourth">Valor total</th>
+                    <th scope="col" className="fourth">
+                      Valor total
+                    </th>
                   </tr>
                 </thead>
                 <tbody>
@@ -95,14 +101,16 @@ function MyCard() {
                         class="form-select"
                         aria-label="Default select example"
                       >
-                        <option selected value="1">Diário</option>
+                        <option selected value="1">
+                          Diário
+                        </option>
                         <option value="2">Quinzenal</option>
                         <option value="3">Mensal</option>
                         <option value="4">Anual</option>
                       </select>
                     </td>
                     <td>
-                      <Trash/>
+                      <Trash />
                     </td>
                   </tr>
                   <tr className="cor-2">
@@ -114,12 +122,14 @@ function MyCard() {
                       >
                         <option value="1">Diário</option>
                         <option value="2">Quinzenal</option>
-                        <option selected value="3">Mensal</option>
+                        <option selected value="3">
+                          Mensal
+                        </option>
                         <option value="4">Anual</option>
                       </select>
                     </td>
                     <td>
-                      <Trash/>
+                      <Trash />
                     </td>
                   </tr>
                   <tr className="cor-3">
@@ -130,13 +140,15 @@ function MyCard() {
                         aria-label="Default select example"
                       >
                         <option value="1">Diário</option>
-                        <option selected value="2">Quinzenal</option>
+                        <option selected value="2">
+                          Quinzenal
+                        </option>
                         <option value="3">Mensal</option>
                         <option value="4">Anual</option>
                       </select>
                     </td>
                     <td>
-                      <Trash/>
+                      <Trash />
                     </td>
                   </tr>
                   <tr className="cor-4">
@@ -148,12 +160,14 @@ function MyCard() {
                       >
                         <option value="1">Diário</option>
                         <option value="2">Quinzenal</option>
-                        <option selected value="3">Mensal</option>
+                        <option selected value="3">
+                          Mensal
+                        </option>
                         <option value="4">Anual</option>
                       </select>
                     </td>
                     <td>
-                      <Trash/>
+                      <Trash />
                     </td>
                   </tr>
                   <tr className="cor-5">
@@ -165,12 +179,14 @@ function MyCard() {
                       >
                         <option value="1">Diário</option>
                         <option value="2">Quinzenal</option>
-                        <option selected value="3">Mensal</option>
+                        <option selected value="3">
+                          Mensal
+                        </option>
                         <option value="4">Anual</option>
                       </select>
                     </td>
                     <td>
-                      <Trash/>
+                      <Trash />
                     </td>
                   </tr>
                   <tr className="cor-6">
@@ -182,19 +198,21 @@ function MyCard() {
                       >
                         <option value="1">Diário</option>
                         <option value="2">Quinzenal</option>
-                        <option selected value="3">Mensal</option>
+                        <option selected value="3">
+                          Mensal
+                        </option>
                         <option value="4">Anual</option>
                       </select>
                     </td>
                     <td>
-                      <Trash/>
+                      <Trash />
                     </td>
                   </tr>
                 </tbody>
               </table>
               <div className="buttons">
                 <button type="button" class="btn btn-primary primary">
-                  <Check/> Ativar categoria
+                  <Check /> Ativar categoria
                 </button>
                 <button type="button" class="btn btn-secondary secondary">
                   Salvar alterações

@@ -48,7 +48,7 @@
   z-index: 1;
 }
 
-.nav div.input-group  button.btn-outline-secondary{
+.nav div.input-group button.btn-outline-secondary {
   margin-left: -37px;
   width: 36px;
   z-index: 10;
@@ -93,8 +93,8 @@
   font-weight: 700;
 }
 
-.category .table thead tr,
-.category .table tbody tr {
+.category .table thead tr th,
+.category .table tbody tr td {
   border: none;
 }
 
@@ -113,7 +113,7 @@
 .resume {
   padding-left: 20px;
   padding-right: 30px;
-  padding-top: 30px; 
+  padding-top: 30px;
   background-color: var(--white-bg);
   border-radius: 12px;
   width: 100%;
@@ -186,4 +186,3 @@
 .buttons button.primary {
   background-color: var(--blue-dark);
 }
-
