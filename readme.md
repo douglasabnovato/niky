@@ -185,12 +185,13 @@ processamento assíncrono.
 
 - [x] instalar as dependências react, bootstrap
 - [x] inserir icons
-- [ ] posicionar icons
 - [x] dimensionar os elementos 
 - [x] posicionar os elementos 
 - [x] estilizar os elementos os elementos 
 - [x] remover linhas da tabela category e ajustar design
+- [ ] posicionar icons
 - [ ] border-radius da tabela resume e ajustar design
+- [ ] fazer o item 1
 
 ### 📅 Entregas
 
