@@ -9,7 +9,6 @@
 ### 💻 Sobre o desafio
 
 Esse projeto compreende tanto disciplinas de front-end quanto de back-end.
-
 O teste deve ser realizado com React e Node, mas o objetivo é analisar o seu entendimento dos conceitos e das boas práticas de desenvolvimento.
 
 ### ✅ Requisitos
@@ -44,6 +43,7 @@ arquivos SQL gerados.
   - [ ] 9. a principal cor é a da navbar. partindo que é uma boa cor, os botões devem ter cores marcantes primary e secondary. Seguindo o material design lite, apliquei esse azul como primary e então gerei a segunda cor de contraste.
   - [ ] 10. aplicando o comportamento de responsividade, caso a tela for maior que max-width, então centralizar ambas tabelas. A navbar seguiria com width 100% mas a barra de busca seguiria alinhada com as tabelas.
   - [ ] 11. aplicando o comportamento de responsividade, caso a tela ficasse menor que o min-width, então, a tabela resumo iria para debaixo da tabela categoria com uma margin e ambas ficariam com width 100% dessa tela (tablet, smartphone)
+  - [ ] 12. uma alternativa interessante é colocar uma funcionalidade em cada rota, ou seja, criar uma aba para categorias e uma outra aba para resumo. Na aba categoria, um crud de categoria. Na aba resumo, um crud também.
 - [x] b. Exemplo: Cores, espalhamentos, tamanho de fonte, alinhamento de objetos e texto, larguras, etc.
 - [x] c. OBJETIVO: Analisar seu senso crítico e capacidade de colaborar com o fluxo produtivo como um todo.
 
@@ -179,11 +179,13 @@ processamento assíncrono.
 
 - [reactjs](https://reactjs.org/)
 - [bootstrap](https://icons.getbootstrap.com/)
-- [material design](https://getmdl.io/customize/index.html) 
+- [react-bootstrap](https://react-bootstrap.github.io/components/table/)
+- [material design](https://getmdl.io/customize/index.html)
 
 ### 📅 Entregas
 
 - [x] instalar as dependências react, bootstrap
+- [x] inserir favicon
 - [x] inserir icons
 - [x] dimensionar os elementos 
 - [x] posicionar os elementos 
@@ -192,6 +194,7 @@ processamento assíncrono.
 - [ ] posicionar icons
 - [ ] border-radius da tabela resume e ajustar design
 - [ ] fazer o item 1
+- [ ] refatorar e componentizar
 
 ### 📅 Entregas
 
