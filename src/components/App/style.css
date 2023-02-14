@@ -136,7 +136,9 @@
   font-size: 14px;
 }
 
-
+.resume td.deletar{
+  cursor: pointer;
+}
 
 .buttons {
   display: flex;

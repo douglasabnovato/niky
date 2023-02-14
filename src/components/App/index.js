@@ -90,6 +90,10 @@ class App extends Component {
     };
   }
 
+  alert() {
+    this.alert("deletar");
+  }
+
   render() {
     return (
       <div className="row">
@@ -173,7 +177,7 @@ class App extends Component {
                             <option value="1">{area.frequencia}</option>
                           </select>
                         </td>
-                        <td>
+                        <td className="deletar">
                           <Trash />
                         </td>
                       </tr>
