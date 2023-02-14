@@ -11,44 +11,6 @@ class App extends Component {
     super(props);
 
     this.state = {
-      categories: [
-        {
-          id: 1,
-          categoria: "Alimentação",
-          frequencia: "Mensal",
-          valor: "752,25",
-          total: "248.242,50",
-        },
-        {
-          id: 2,
-          categoria: "Combustível",
-          frequencia: "Mensal",
-          valor: "100,00",
-          total: "6.600,00",
-        },
-        {
-          id: 3,
-          categoria: "Cultura",
-          frequencia: "Mensal",
-          valor: "100,00",
-          total: "33.000,00",
-        },
-        {
-          id: 4,
-          categoria: "Educação",
-          frequencia: "Mensal",
-          valor: "1.000,25",
-          total: "330.000,00",
-        },
-        {
-          id: 5,
-          categoria: "Flexível",
-          frequencia: "Mensal",
-          valor: "120,00",
-          total: "000.000,00",
-        },
-      ],
-
       areas: [
         {
           id: 1,
@@ -87,37 +49,75 @@ class App extends Component {
           cor: "cor-6",
         },
       ],
+
+      categories: [
+        {
+          id: 1,
+          categoria: "Alimentação",
+          frequencia: "Mensal",
+          valor: "752,25",
+          total: "248.242,50",
+        },
+        {
+          id: 2,
+          categoria: "Combustível",
+          frequencia: "Mensal",
+          valor: "100,00",
+          total: "6.600,00",
+        },
+        {
+          id: 3,
+          categoria: "Cultura",
+          frequencia: "Mensal",
+          valor: "100,00",
+          total: "33.000,00",
+        },
+        {
+          id: 4,
+          categoria: "Educação",
+          frequencia: "Mensal",
+          valor: "1.000,25",
+          total: "330.000,00",
+        },
+        {
+          id: 5,
+          categoria: "Flexível",
+          frequencia: "Mensal",
+          valor: "120,00",
+          total: "000.000,00",
+        },
+      ],
     };
   }
 
   render() {
     return (
-      <div class="row">
-        <div class="col-sm-2 space"></div>
-        <div class="col-sm-10">
-          <div class="row">
-            <div class="nav">
-              <div class="input-group mb-3">
+      <div className="row">
+        <div className="col-sm-2 space"></div>
+        <div className="col-sm-10">
+          <div className="row">
+            <div className="nav">
+              <div className="input-group mb-3">
                 <input
                   type="text"
-                  class="form-control"
+                  className="form-control"
                   placeholder="Pesquisar"
                   aria-label="Pesquisar"
                   aria-describedby="basic-addon2"
                 />
-                <button class="btn btn-outline-secondary" type="button">
+                <button className="btn btn-outline-secondary" type="button">
                   <Search />
                 </button>
               </div>
             </div>
           </div>
-          <div class="row">
-            <div class="main">
-              <div class="column col-sm-7 category">
-                <div class="top-title">
+          <div className="row">
+            <div className="main">
+              <div className="column col-sm-7 category">
+                <div className="top-title">
                   <h3>Categorias</h3>
                   <select
-                    class="form-select"
+                    className="form-select"
                     aria-label="Default select example"
                   >
                     <option selected className="selected">
@@ -130,7 +130,7 @@ class App extends Component {
                     <option value="3">Flexível</option>
                   </select>
                 </div>
-                <table class="table">
+                <table className="table">
                   <thead>
                     <tr>
                       <th scope="col" className="first">
@@ -145,7 +145,7 @@ class App extends Component {
                   </thead>
                   <tbody>
                     {this.state.categories.map((category) => (
-                      <tr>
+                      <tr key={category.id}>
                         <td>{category.categoria}</td>
                         <td>{category.frequencia}</td>
                         <td>{category.valor}</td>
@@ -156,33 +156,35 @@ class App extends Component {
                 </table>
               </div>
 
-              <div class="column col-sm-5 resume">
+              <div className="column col-sm-5 resume">
                 <h3>Resumo</h3>
                 <h6>Gestores de área</h6>
-                <table class="table">
+                <table className="table">
                   <tbody>
                     {this.state.areas.map((area) => (
-                      <tr className={`${area.cor}`}>
+                      <tr key={area.id} className={`${area.cor}`}>
                         <td>{area.area}</td>
                         <td>
-                        <select
-                          class="form-select"
-                          aria-label="Default select example"
-                          disabled 
-                        >
-                          <option value="1">{area.frequencia}</option>
-                        </select>
-                      </td>
-                        <td><Trash /></td>
+                          <select
+                            className="form-select"
+                            aria-label="Default select example"
+                            disabled
+                          >
+                            <option value="1">{area.frequencia}</option>
+                          </select>
+                        </td>
+                        <td>
+                          <Trash />
+                        </td>
                       </tr>
                     ))}
                   </tbody>
                 </table>
                 <div className="buttons">
-                  <button type="button" class="btn btn-primary primary">
+                  <button type="button" className="btn btn-primary primary">
                     <Check /> Ativar categoria
                   </button>
-                  <button type="button" class="btn btn-secondary secondary">
+                  <button type="button" className="btn btn-secondary secondary">
                     Salvar alterações
                   </button>
                 </div>

@@ -195,6 +195,7 @@ processamento assíncrono.
 - [ ] border-radius da tabela resume e ajustar design
 - [ ] fazer o item 1
 - [ ] refatorar e componentizar
+- [ ] estruturar o crud com json
 
 ### 📅 Entregas
 
