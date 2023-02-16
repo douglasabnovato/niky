@@ -14,4 +14,5 @@ const Trash = () => {
     </svg>
   );
 };
+
 export default Trash;

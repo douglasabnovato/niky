@@ -136,8 +136,10 @@
   font-size: 14px;
 }
 
-.resume td.deletar{
+.resume td button.deletar {
   cursor: pointer;
+  background-color: transparent;
+  border: none;
 }
 
 .buttons {

@@ -49,11 +49,10 @@ arquivos SQL gerados.
 
 10.   Usando o layout criado, no “gestor de categorias”, implemente javascripts que permitam:
 
-- [ ] a. Ao clicar em um dos ícones “lixeira” presentes nas linhas de categoria, a mensagem de
-confirmação: “Deseja excluir essa categoria?” seja exibida. 
-- [ ] b. Se o usuário confirmar a exclusão, a linha onde o botão está posicionado seja removida;
-- [ ] c. Uma mensagem de erro seja disparada se a frequência informada no combo da linha que está sendo excluída for igual a “mensal”;
-- [ ] d. OBJETIVO: Testar sua capacidade em implementar ações no lado do cliente.
+- [x] a. Ao clicar em um dos ícones “lixeira” presentes nas linhas de categoria, a mensagem de confirmação: “Deseja excluir essa categoria?” seja exibida. 
+- [x] b. Se o usuário confirmar a exclusão, a linha onde o botão está posicionado seja removida;
+- [x] c. Uma mensagem de erro seja disparada se a frequência informada no combo da linha que está sendo excluída for igual a “mensal”;
+- [x] d. OBJETIVO: Testar sua capacidade em implementar ações no lado do cliente.
 
 ### 🚀 Tarefas Backend
 
@@ -181,6 +180,7 @@ processamento assíncrono.
 - [bootstrap](https://icons.getbootstrap.com/)
 - [react-bootstrap](https://react-bootstrap.github.io/components/table/)
 - [material design](https://getmdl.io/customize/index.html)
+- [CRUD Operations](https://www.youtube.com/watch?v=QVokz2OrEy8)
 
 ### 📅 Entregas
 
@@ -191,11 +191,11 @@ processamento assíncrono.
 - [x] posicionar os elementos 
 - [x] estilizar os elementos os elementos 
 - [x] remover linhas da tabela category e ajustar design
+- [x] estruturar o crud em objeto
 - [ ] posicionar icons
 - [ ] border-radius da tabela resume e ajustar design
 - [ ] fazer o item 1
 - [ ] refatorar e componentizar
-- [ ] estruturar o crud com json
 
 ### 📅 Entregas
 
