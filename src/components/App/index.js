@@ -89,10 +89,7 @@ class App extends Component {
       ],
     };
   }
-
-  alert() {
-    this.alert("deletar");
-  }
+  
 
   render() {
     return (
@@ -172,7 +169,6 @@ class App extends Component {
                           <select
                             className="form-select"
                             aria-label="Default select example"
-                            disabled
                           >
                             <option value="1">{area.frequencia}</option>
                           </select>
