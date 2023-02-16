@@ -58,8 +58,7 @@ arquivos SQL gerados.
 
 **Definições**: A modelagem de dados consiste em criar um diagrama simplificado de um sistema de software e dos seus elementos de dados. Isso é feito usando texto e símbolos para representar os dados e como eles fluem. Os modelos de dados são fluxograma que ilustram as entidades de dados, seus atributos e os relacionamentos entre as entidades. 
 
-1. Proponha um modelo de dados e o represente em um DER (diagrama de entidade
-relacionamento) que contemple a situação descrita abaixo:
+1. Proponha um modelo de dados e o represente em um DER (diagrama de entidade relacionamento) que contemple a situação descrita abaixo:
 
 **ACADEMIA DE GINÁSTICA**
 
@@ -177,7 +176,7 @@ processamento assíncrono.
 - [modelagem-bd](https://www.devmedia.com.br/mer-e-der-modelagem-de-bancos-de-dados/14332)
 - [mer-e-der](https://www.alura.com.br/artigos/mer-e-der-funcoes)
 
-### 📅 Entregas
+### 📅 Entregas Frontend
 
 - [x] instalar as dependências react, bootstrap
 - [x] inserir favicon
@@ -190,6 +189,9 @@ processamento assíncrono.
 - [ ] posicionar icons
 - [ ] border-radius da tabela resume e ajustar design
 - [ ] refatorar e componentizar
+### 📅 Entregas Backend
+
+- [ ] Entendendo o modelagem de dados do item 1 e rascunhando o MER e o DER
 
 ### 📅 Entregas
 
