@@ -56,29 +56,21 @@ arquivos SQL gerados.
 
 ### 🚀 Tarefas Backend
 
+**Definições**: A modelagem de dados consiste em criar um diagrama simplificado de um sistema de software e dos seus elementos de dados. Isso é feito usando texto e símbolos para representar os dados e como eles fluem. Os modelos de dados são fluxograma que ilustram as entidades de dados, seus atributos e os relacionamentos entre as entidades. 
+
 1. Proponha um modelo de dados e o represente em um DER (diagrama de entidade
 relacionamento) que contemple a situação descrita abaixo:
 
 **ACADEMIA DE GINÁSTICA**
 
-Uma academia de ginástica deseja manter um controle do seu
-funcionamento. Os alunos são organizados em turmas associadas a um
-tipo específico de atividade. As informações sobre uma turma são
-quantidade máxima de alunos, horário da aula, duração da aula, data
-inicial, data final e tipo de atividade.
+Uma academia de ginástica deseja manter um controle do seu funcionamento. Os alunos são organizados em turmas associadas a um tipo específico de atividade. As informações sobre uma turma são quantidade máxima de alunos, horário da aula, duração da aula, data inicial, data final e tipo de atividade.
 
-Cada turma é orientada por um único instrutor para o qual são
-cadastrados RG, nome, data de nascimento, titulação e todos os
-telefones possíveis para sua localização. Um instrutor pode orientar
-várias turmas que podem ser de diferentes atividades. Para cada turma
-existe um aluno monitor que auxilia o instrutor da turma, sendo que um
-aluno pode ser monitor no máximo em uma turma.
+Cada turma é orientada por um único instrutor para o qual são cadastrados RG, nome, data de nascimento, titulação e todos os telefones possíveis para sua localização. Um instrutor pode orientar várias turmas que podem ser de diferentes atividades. Para cada turma
+existe um aluno monitor que auxilia o instrutor da turma, sendo que um aluno pode ser monitor no máximo em uma turma.
 
-Os dados cadastrados dos alunos são: código de matrícula, data de
-matrícula, nome, endereço, telefone, data de nascimento, altura e peso.
+Os dados cadastrados dos alunos são: código de matrícula, data de matrícula, nome, endereço, telefone, data de nascimento, altura e peso.
 
-Um aluno pode estar matriculado em várias turmas se deseja realizar
-atividades diferentes e para cada matrícula é mantido um registro das
+Um aluno pode estar matriculado em várias turmas se deseja realizar atividades diferentes e para cada matrícula é mantido um registro das
 presenças e ausências do aluno.
 
 **Garantias**
@@ -181,6 +173,9 @@ processamento assíncrono.
 - [react-bootstrap](https://react-bootstrap.github.io/components/table/)
 - [material design](https://getmdl.io/customize/index.html)
 - [CRUD Operations](https://www.youtube.com/watch?v=QVokz2OrEy8)
+- [modelos-de-dados](https://www.infonova.com.br/gestao-de-ti/o-que-sao-modelos-de-dados/)
+- [modelagem-bd](https://www.devmedia.com.br/mer-e-der-modelagem-de-bancos-de-dados/14332)
+- [mer-e-der](https://www.alura.com.br/artigos/mer-e-der-funcoes)
 
 ### 📅 Entregas
 

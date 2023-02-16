@@ -91,12 +91,12 @@ function App() {
     let response = window.confirm("Deseja excluir essa categoria?");
 
     if (response) {
-        if (areas[idArea].frequencia !== "Mensal") {
-          const newlist = areas.filter((area) => area.id !== idArea);
-          setAreas(newlist);
-        }else {
-          console.log("Error");
-        }
+      if (areas[idArea].frequencia !== "Mensal") {
+        const newlist = areas.filter((area) => area.id !== idArea);
+        setAreas(newlist);
+      } else {
+        console.log("Error");
+      }
     }
   }
 
