@@ -229,11 +229,13 @@ processamento assíncrono.
 
 - MER no drawio
 <p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
+  <img alt="MER" title="#MER" src="./.github/draw.io/drawio-mer.jpg" width="400px">
   <img alt="MER" title="#MER" src="./.github/draw.io/item-10-MER-niky.jpg" width="400px">
 </p>  
 
 - DER no drawio
 <p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
+  <img alt="DER" title="#DER" src="./.github/draw.io/drawio-der.jpg" width="400px">
   <img alt="DER" title="#DER" src="./.github/draw.io/item-10-DER-niky.jpg" width="400px">
 </p>  
 
@@ -242,6 +244,7 @@ processamento assíncrono.
 - [modelos-de-dados](https://www.infonova.com.br/gestao-de-ti/o-que-sao-modelos-de-dados/)
 - [modelagem-bd](https://www.devmedia.com.br/mer-e-der-modelagem-de-bancos-de-dados/14332)
 - [mer-e-der](https://www.alura.com.br/artigos/mer-e-der-funcoes)
+- [diagrama-de-classes-uml](https://www.devmedia.com.br/diagrama-de-classes-uml/12251)
 
 ### 🚀 Conclusão
 
