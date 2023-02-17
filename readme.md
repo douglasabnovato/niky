@@ -9,7 +9,6 @@
 ### 💻 Sobre o desafio
 
 Esse projeto compreende tanto disciplinas de front-end quanto de back-end.
-
 O teste deve ser realizado com React e Node, mas o objetivo é analisar o seu entendimento dos conceitos e das boas práticas de desenvolvimento.
 
 ### ✅ Requisitos
@@ -44,54 +43,70 @@ arquivos SQL gerados.
   - [ ] 9. a principal cor é a da navbar. partindo que é uma boa cor, os botões devem ter cores marcantes primary e secondary. Seguindo o material design lite, apliquei esse azul como primary e então gerei a segunda cor de contraste.
   - [ ] 10. aplicando o comportamento de responsividade, caso a tela for maior que max-width, então centralizar ambas tabelas. A navbar seguiria com width 100% mas a barra de busca seguiria alinhada com as tabelas.
   - [ ] 11. aplicando o comportamento de responsividade, caso a tela ficasse menor que o min-width, então, a tabela resumo iria para debaixo da tabela categoria com uma margin e ambas ficariam com width 100% dessa tela (tablet, smartphone)
+  - [ ] 12. uma alternativa interessante é colocar uma funcionalidade em cada rota, ou seja, criar uma aba para categorias e uma outra aba para resumo. Na aba categoria, um crud de categoria. Na aba resumo, um crud também.
 - [x] b. Exemplo: Cores, espalhamentos, tamanho de fonte, alinhamento de objetos e texto, larguras, etc.
 - [x] c. OBJETIVO: Analisar seu senso crítico e capacidade de colaborar com o fluxo produtivo como um todo.
 
 10.   Usando o layout criado, no “gestor de categorias”, implemente javascripts que permitam:
 
-- [ ] a. Ao clicar em um dos ícones “lixeira” presentes nas linhas de categoria, a mensagem de
-confirmação: “Deseja excluir essa categoria?” seja exibida. 
-- [ ] b. Se o usuário confirmar a exclusão, a linha onde o botão está posicionado seja removida;
-- [ ] c. Uma mensagem de erro seja disparada se a frequência informada no combo da linha que está sendo excluída for igual a “mensal”;
-- [ ] d. OBJETIVO: Testar sua capacidade em implementar ações no lado do cliente.
+- [x] a. Ao clicar em um dos ícones “lixeira” presentes nas linhas de categoria, a mensagem de confirmação: “Deseja excluir essa categoria?” seja exibida. 
+- [x] b. Se o usuário confirmar a exclusão, a linha onde o botão está posicionado seja removida;
+- [x] c. Uma mensagem de erro seja disparada se a frequência informada no combo da linha que está sendo excluída for igual a “mensal”;
+- [x] d. OBJETIVO: Testar sua capacidade em implementar ações no lado do cliente.
 
 ### 🚀 Tarefas Backend
 
-1. Proponha um modelo de dados e o represente em um DER (diagrama de entidade
-relacionamento) que contemple a situação descrita abaixo:
+**Definições**: A modelagem de dados consiste em criar um diagrama simplificado de um sistema de software e dos seus elementos de dados. Isso é feito usando texto e símbolos para representar os dados e como eles fluem. Os modelos de dados são fluxograma que ilustram as entidades de dados, seus atributos e os relacionamentos entre as entidades. 
+
+1. Proponha um modelo de dados e o represente em um DER (diagrama de entidade relacionamento) que contemple a situação descrita abaixo:
 
 **ACADEMIA DE GINÁSTICA**
 
-Uma academia de ginástica deseja manter um controle do seu
-funcionamento. Os alunos são organizados em turmas associadas a um
-tipo específico de atividade. As informações sobre uma turma são
-quantidade máxima de alunos, horário da aula, duração da aula, data
-inicial, data final e tipo de atividade.
+Uma academia de ginástica deseja manter um controle do seu funcionamento. Os alunos são organizados em turmas associadas a um tipo específico de atividade. As informações sobre uma turma são quantidade máxima de alunos, horário da aula, duração da aula, data inicial, data final e tipo de atividade.
 
-Cada turma é orientada por um único instrutor para o qual são
-cadastrados RG, nome, data de nascimento, titulação e todos os
-telefones possíveis para sua localização. Um instrutor pode orientar
-várias turmas que podem ser de diferentes atividades. Para cada turma
-existe um aluno monitor que auxilia o instrutor da turma, sendo que um
-aluno pode ser monitor no máximo em uma turma.
+Cada turma é orientada por um único instrutor para o qual são cadastrados RG, nome, data de nascimento, titulação e todos os telefones possíveis para sua localização. Um instrutor pode orientar várias turmas que podem ser de diferentes atividades. Para cada turma
+existe um aluno monitor que auxilia o instrutor da turma, sendo que um aluno pode ser monitor no máximo em uma turma.
 
-Os dados cadastrados dos alunos são: código de matrícula, data de
-matrícula, nome, endereço, telefone, data de nascimento, altura e peso.
+Os dados cadastrados dos alunos são: código de matrícula, data de matrícula, nome, endereço, telefone, data de nascimento, altura e peso.
 
-Um aluno pode estar matriculado em várias turmas se deseja realizar
-atividades diferentes e para cada matrícula é mantido um registro das
+Um aluno pode estar matriculado em várias turmas se deseja realizar atividades diferentes e para cada matrícula é mantido um registro das
 presenças e ausências do aluno.
 
 **Garantias**
 
-- [ ] a. todas as entidades possuam nome
-- [ ] b. todos os atributos listados estejam representados
-- [ ] c. que sejam definidos os tipos de dados para cada atributo (utilize INT para números inteiros, VARCHAR para strings, BOOL para booleanos, FLOAT para números decimais, DATE para datas, e TIME para horas)
-- [ ] d. que seja possível identificar os relacionamentos entre as entidades
-- [ ] e. seja possível identificar as chaves em cada entidade
-- [ ] f. utilize a ferramenta de sua escolha para a construção do DER (Miro, Draw.io, Lucid, ou qualquer outro que desejar)
-- [ ] g. Entregue como resultado uma imagem (com boa definição) de seu diagrama.
-- [ ] h. OBJETIVO: Compreender o seu quanto de conhecimento em relação à modelagem de dados relacionais e sua capacidade de interpretar um caso de uso e traduzi-lo em um modelo de dados aplicável.
+- [x] a. todas as ENTIDADES possuam nome
+- [x] b. todos os ATRIBUTOS listados estejam representados
+- [x] c. que sejam definidos os tipos de dados para cada atributo (utilize INT para números inteiros, VARCHAR para strings, BOOL para booleanos, FLOAT para números decimais, DATE para datas, e TIME para horas)
+- [x] d. que seja possível identificar os RELACIONAMENTOS entre as entidades
+- [x] e. seja possível identificar as CHAVES em cada entidade
+- [x] f. utilize a ferramenta de sua escolha para a construção do DER (Miro, Draw.io, Lucid, ou qualquer outro que desejar)
+- [x] g. Entregue como resultado uma imagem (com boa definição) de seu diagrama.
+- [x] h. OBJETIVO: Compreender o seu quanto de conhecimento em relação à MODELAGEM DE DADOS RELACIONAIS e sua capacidade de interpretar um CASO DE USO e traduzi-lo em um MODELO DE DADOS aplicável.  
+
+### Inspirações MER
+
+<p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
+  <img alt="mer" title="#mer" src="./.github/draw.io/ER_Model-inspiracao.png" width="400px">
+</p>  
+
+### Inspirações DER
+
+<p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
+  <img alt="der" title="#der" src="./.github/draw.io/ER_Diagram-inspiracao.png" width="400px">
+</p>
+
+### Compreensão
+
+- O cenário é para controlar o funcionamento de uma academia de ginástica
+- e ter os alunos organizados em turmas associadas a um tipo específico de atividade
+- informações de uma turma: quantidade máxima de alunos, horário de aula, duração de aula, data inicial, data final, tipo de atividade e instrutor (único)
+- informações do instrutor: rg, nome, data de nascimento, titulação, todos os telefones
+- um instrutor pode orientar várias turmas que podem ser de diferentes atividades
+- para cada turma tem um aluno monitor da turma
+- um aluno monitor só pode ser monitor de uma turma
+- os dados cadastrados dos alunos: código de matrícula, data de matrícula, nome, endereço, telefone, data de nascimento, altura, peso
+- um aluno pode estar matriculado em várias turmas se desejar realizar atividades diferentes
+- e para cada matrícula é mantido o registro das presenças e ausenças do aluno
 
 2. Considerando o caso de uso do item 1 do backend: 
 
@@ -179,26 +194,50 @@ processamento assíncrono.
 
 - [reactjs](https://reactjs.org/)
 - [bootstrap](https://icons.getbootstrap.com/)
-- [material design](https://getmdl.io/customize/index.html) 
+- [react-bootstrap](https://react-bootstrap.github.io/components/table/)
+- [material design](https://getmdl.io/customize/index.html)
+- [CRUD Operations](https://www.youtube.com/watch?v=QVokz2OrEy8)
+- [modelos-de-dados](https://www.infonova.com.br/gestao-de-ti/o-que-sao-modelos-de-dados/)
+- [modelagem-bd](https://www.devmedia.com.br/mer-e-der-modelagem-de-bancos-de-dados/14332)
+- [mer-e-der](https://www.alura.com.br/artigos/mer-e-der-funcoes)
 
-### 📅 Entregas
+### 📅 Entregas Frontend
 
 - [x] instalar as dependências react, bootstrap
+- [x] inserir favicon
 - [x] inserir icons
 - [x] dimensionar os elementos 
 - [x] posicionar os elementos 
 - [x] estilizar os elementos os elementos 
 - [x] remover linhas da tabela category e ajustar design
+- [x] estruturar o crud em objeto
+- [x] revisado a lógica do item  10.c
 - [ ] posicionar icons
 - [ ] border-radius da tabela resume e ajustar design
-- [ ] fazer o item 1
+- [ ] refatorar e componentizar
 
-### 📅 Entregas
-
-- [x] Tela terminada conforme o design disponibilizado
+### 📅 Tela Entregues
 
 <p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
-  <img alt="tmdb" title="#tmdb" src="./.github/tela-layout.jpg" width="400px">
+  <img alt="niky" title="#niky" src="./.github/tela-layout.jpg" width="400px">
+</p>  
+
+### 📅 Entregas Backend
+
+- [x] Entender o modelagem de dados do item 1
+- [x] Rascunhar o MER do item 1
+- [x] Rascunhar o DER do item 1
+
+### 📅 Dados Entregues
+
+- MER no drawio
+<p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
+  <img alt="MER" title="#MER" src="./.github/draw.io/item-10-MER-niky.jpg" width="400px">
+</p>  
+
+- DER no drawio
+<p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
+  <img alt="DER" title="#DER" src="./.github/draw.io/item-10-DER-niky.jpg" width="400px">
 </p>  
 
 ### 🚀 Conclusão

@@ -124,14 +124,22 @@
   margin-block: 20px;
 }
 
-.resume .table select {
-  width: 50%;
+.resume .table select,
+.resume .table select:disabled {
+  width: 65%;
   border-radius: 12px;
   padding-inline: 5px;
   padding-block: 4px;
-  background-color: var(--gray-bg);
+  background-color: var(--white-bg);
+  color: var(--blue-dark);
   font-weight: 500;
   font-size: 14px;
+}
+
+.resume td button.deletar {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
 }
 
 .buttons {
