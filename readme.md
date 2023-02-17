@@ -74,16 +74,28 @@ presenças e ausências do aluno.
 
 **Garantias**
 
-- [ ] a. todas as entidades possuam nome
-- [ ] b. todos os atributos listados estejam representados
-- [ ] c. que sejam definidos os tipos de dados para cada atributo (utilize INT para números inteiros, VARCHAR para strings, BOOL para booleanos, FLOAT para números decimais, DATE para datas, e TIME para horas)
-- [ ] d. que seja possível identificar os relacionamentos entre as entidades
-- [ ] e. seja possível identificar as chaves em cada entidade
-- [ ] f. utilize a ferramenta de sua escolha para a construção do DER (Miro, Draw.io, Lucid, ou qualquer outro que desejar)
+- [x] a. todas as ENTIDADES possuam nome
+- [x] b. todos os ATRIBUTOS listados estejam representados
+- [x] c. que sejam definidos os tipos de dados para cada atributo (utilize INT para números inteiros, VARCHAR para strings, BOOL para booleanos, FLOAT para números decimais, DATE para datas, e TIME para horas)
+- [x] d. que seja possível identificar os RELACIONAMENTOS entre as entidades
+- [x] e. seja possível identificar as CHAVES em cada entidade
+- [x] f. utilize a ferramenta de sua escolha para a construção do DER (Miro, Draw.io, Lucid, ou qualquer outro que desejar)
 - [ ] g. Entregue como resultado uma imagem (com boa definição) de seu diagrama.
-- [ ] h. OBJETIVO: Compreender o seu quanto de conhecimento em relação à modelagem de dados relacionais e sua capacidade de interpretar um caso de uso e traduzi-lo em um modelo de dados aplicável.
+- [ ] h. OBJETIVO: Compreender o seu quanto de conhecimento em relação à MODELAGEM DE DADOS RELACIONAIS e sua capacidade de interpretar um CASO DE USO e traduzi-lo em um MODELO DE DADOS aplicável.  
 
-2. Considerando o caso de uso do item 1 do backend: 
+### Inspirações MER
+
+<p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
+  <img alt="mer" title="#mer" src="./.github/ER_Model-inspiracao.jpg" width="400px">
+</p>  
+
+### Inspirações DER
+
+<p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
+  <img alt="der" title="#der" src="./.github/ER_Diagram-inspiracao.jpg" width="400px">
+</p>
+
+1. Considerando o caso de uso do item 1 do backend: 
 
 **Garantias**
 
@@ -191,16 +203,28 @@ processamento assíncrono.
 - [ ] border-radius da tabela resume e ajustar design
 - [ ] refatorar e componentizar
 
-### 📅 Entregas Backend
-
-- [ ] Entendendo o modelagem de dados do item 1 e rascunhando o MER e o DER
-
-### 📅 Entregas
-
-- [x] Tela terminada conforme o design disponibilizado
+### 📅 Tela Entregues
 
 <p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
-  <img alt="tmdb" title="#tmdb" src="./.github/tela-layout.jpg" width="400px">
+  <img alt="niky" title="#niky" src="./.github/tela-layout.jpg" width="400px">
+</p>  
+
+### 📅 Entregas Backend
+
+- [x] Entender o modelagem de dados do item 1
+- [x] Rascunhar o MER do item 1
+- [x] Rascunhar o DER do item 1
+
+### 📅 Dados Entregues
+
+- MER no drawio
+<p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
+  <img alt="MER" title="#MER" src="./.github/item-10-MER-niky.jpg" width="400px">
+</p>  
+
+- DER no drawio
+<p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
+  <img alt="DER" title="#DER" src="./.github/item-10-DER-niky.jpg" width="400px">
 </p>  
 
 ### 🚀 Conclusão
