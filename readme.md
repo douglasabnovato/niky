@@ -80,8 +80,8 @@ presenças e ausências do aluno.
 - [x] d. que seja possível identificar os RELACIONAMENTOS entre as entidades
 - [x] e. seja possível identificar as CHAVES em cada entidade
 - [x] f. utilize a ferramenta de sua escolha para a construção do DER (Miro, Draw.io, Lucid, ou qualquer outro que desejar)
-- [ ] g. Entregue como resultado uma imagem (com boa definição) de seu diagrama.
-- [ ] h. OBJETIVO: Compreender o seu quanto de conhecimento em relação à MODELAGEM DE DADOS RELACIONAIS e sua capacidade de interpretar um CASO DE USO e traduzi-lo em um MODELO DE DADOS aplicável.  
+- [x] g. Entregue como resultado uma imagem (com boa definição) de seu diagrama.
+- [x] h. OBJETIVO: Compreender o seu quanto de conhecimento em relação à MODELAGEM DE DADOS RELACIONAIS e sua capacidade de interpretar um CASO DE USO e traduzi-lo em um MODELO DE DADOS aplicável.  
 
 ### Inspirações MER
 
@@ -95,7 +95,20 @@ presenças e ausências do aluno.
   <img alt="der" title="#der" src="./.github/draw.io/ER_Diagram-inspiracao.png" width="400px">
 </p>
 
-1. Considerando o caso de uso do item 1 do backend: 
+### Compreensão
+
+- O cenário é para controlar o funcionamento de uma academia de ginástica
+- e ter os alunos organizados em turmas associadas a um tipo específico de atividade
+- informações de uma turma: quantidade máxima de alunos, horário de aula, duração de aula, data inicial, data final, tipo de atividade e instrutor (único)
+- informações do instrutor: rg, nome, data de nascimento, titulação, todos os telefones
+- um instrutor pode orientar várias turmas que podem ser de diferentes atividades
+- para cada turma tem um aluno monitor da turma
+- um aluno monitor só pode ser monitor de uma turma
+- os dados cadastrados dos alunos: código de matrícula, data de matrícula, nome, endereço, telefone, data de nascimento, altura, peso
+- um aluno pode estar matriculado em várias turmas se desejar realizar atividades diferentes
+- e para cada matrícula é mantido o registro das presenças e ausenças do aluno
+
+2. Considerando o caso de uso do item 1 do backend: 
 
 **Garantias**
 
