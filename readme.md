@@ -18,7 +18,7 @@ arquivos SQL gerados.
 - [ ] Uma conta em uma plataforma de aplicação gratuita de sua preferência, onde você publicará as APIs que criar.
 - [ ] Uma conta gratuita para construir uma fila SQS.
 
-### 🎨 Tarefas Frontend
+## 🎨 Tarefas Frontend
 
 6. Criar o layout a seguir
 
@@ -27,7 +27,6 @@ arquivos SQL gerados.
   - [x] a. considerando o padrão Bootstrap de divisão em 12 colunas, respeitando os espaçamentos descritos na imagem
   - [x] b. demais espaçamentos, alturas e larguras dos objetos podem ser aplicados conforme o seu bom senso 
   - [x] c. OBJETIVO: Analisar a sua capacidade de converter layouts entregues pela equipe de produtos em telas de sistema
-  - [x] d. Utilizar react para construir o design.
 
 9. Faça uma análise crítica do protótipo do item 6 do frontend 
 
@@ -54,9 +53,36 @@ arquivos SQL gerados.
 - [x] c. Uma mensagem de erro seja disparada se a frequência informada no combo da linha que está sendo excluída for igual a “mensal”;
 - [x] d. OBJETIVO: Testar sua capacidade em implementar ações no lado do cliente.
 
-### 🚀 Tarefas Backend
+### 📅 Tela Entregues
 
-**Definições**: A modelagem de dados consiste em criar um diagrama simplificado de um sistema de software e dos seus elementos de dados. Isso é feito usando texto e símbolos para representar os dados e como eles fluem. Os modelos de dados são fluxograma que ilustram as entidades de dados, seus atributos e os relacionamentos entre as entidades. 
+<p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
+  <img alt="niky" title="#niky" src="./.github/tela-layout.jpg" width="400px">
+</p>  
+
+### 📅 Entregas Frontend
+
+- [x] instalar as dependências react, bootstrap
+- [x] inserir favicon
+- [x] inserir icons
+- [x] dimensionar os elementos 
+- [x] posicionar os elementos 
+- [x] estilizar os elementos os elementos 
+- [x] remover linhas da tabela category e ajustar design
+- [x] estruturar o crud em objeto
+- [x] revisado a lógica do item  10.c
+- [ ] posicionar icons
+- [ ] border-radius da tabela resume e ajustar design
+- [ ] refatorar e componentizar
+
+### 💡 Referências Frontend
+
+- [reactjs](https://reactjs.org/)
+- [bootstrap](https://icons.getbootstrap.com/)
+- [react-bootstrap](https://react-bootstrap.github.io/components/table/)
+- [material design](https://getmdl.io/customize/index.html)
+- [CRUD Operations](https://www.youtube.com/watch?v=QVokz2OrEy8)
+
+## 🚀 Tarefas Backend
 
 1. Proponha um modelo de dados e o represente em um DER (diagrama de entidade relacionamento) que contemple a situação descrita abaixo:
 
@@ -107,6 +133,22 @@ presenças e ausências do aluno.
 - os dados cadastrados dos alunos: código de matrícula, data de matrícula, nome, endereço, telefone, data de nascimento, altura, peso
 - um aluno pode estar matriculado em várias turmas se desejar realizar atividades diferentes
 - e para cada matrícula é mantido o registro das presenças e ausenças do aluno
+
+**Definições**: A modelagem de dados consiste em criar um diagrama simplificado de um sistema de software e dos seus elementos de dados. Isso é feito usando texto e símbolos para representar os dados e como eles fluem. Os modelos de dados são fluxograma que ilustram as entidades de dados, seus atributos e os relacionamentos entre as entidades. 
+
+### 📅 Dados Entregues
+
+- MER no drawio
+<p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
+  <img alt="MER" title="#MER" src="./.github/draw.io/drawio-mer.jpg" width="400px">
+  <img alt="MER" title="#MER" src="./.github/draw.io/item-10-MER-niky.jpg" width="400px">
+</p>  
+
+- DER no drawio
+<p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
+  <img alt="DER" title="#DER" src="./.github/draw.io/drawio-der.jpg" width="400px">
+  <img alt="DER" title="#DER" src="./.github/draw.io/item-10-DER-niky.jpg" width="400px">
+</p>  
 
 2. Considerando o caso de uso do item 1 do backend: 
 
@@ -200,54 +242,13 @@ Para evidenciar seu desenvolvimento print:
 - [ ] e. OBJETIVO: Compreender se você possui os conhecimentos básicos para operar uma fila de
 processamento assíncrono.
 
-### 📅 Entregas Frontend
-
-- [x] instalar as dependências react, bootstrap
-- [x] inserir favicon
-- [x] inserir icons
-- [x] dimensionar os elementos 
-- [x] posicionar os elementos 
-- [x] estilizar os elementos os elementos 
-- [x] remover linhas da tabela category e ajustar design
-- [x] estruturar o crud em objeto
-- [x] revisado a lógica do item  10.c
-- [ ] posicionar icons
-- [ ] border-radius da tabela resume e ajustar design
-- [ ] refatorar e componentizar
-
-### 📅 Tela Entregues
-
-<p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
-  <img alt="niky" title="#niky" src="./.github/tela-layout.jpg" width="400px">
-</p>  
-
-### 💡 Referências Frontend
-
-- [reactjs](https://reactjs.org/)
-- [bootstrap](https://icons.getbootstrap.com/)
-- [react-bootstrap](https://react-bootstrap.github.io/components/table/)
-- [material design](https://getmdl.io/customize/index.html)
-- [CRUD Operations](https://www.youtube.com/watch?v=QVokz2OrEy8)
-
 ### 📅 Entregas Backend
 
 - [x] Entender o modelagem de dados do item 1
 - [x] Rascunhar o MER do item 1
 - [x] Rascunhar o DER do item 1
-
-### 📅 Dados Entregues
-
-- MER no drawio
-<p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
-  <img alt="MER" title="#MER" src="./.github/draw.io/drawio-mer.jpg" width="400px">
-  <img alt="MER" title="#MER" src="./.github/draw.io/item-10-MER-niky.jpg" width="400px">
-</p>  
-
-- DER no drawio
-<p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
-  <img alt="DER" title="#DER" src="./.github/draw.io/drawio-der.jpg" width="400px">
-  <img alt="DER" title="#DER" src="./.github/draw.io/item-10-DER-niky.jpg" width="400px">
-</p>  
+- [ ] fazendo os métodos do item 2
+- [ ] fazendo os métodos do item 3
 
 ### 💡 Referências Backend
 
@@ -257,6 +258,7 @@ processamento assíncrono.
 - [diagrama-de-classes-uml](https://www.devmedia.com.br/diagrama-de-classes-uml/12251)
 - [diagrama-de-classes](https://www.devmedia.com.br/orientacoes-basicas-na-elaboracao-de-um-diagrama-de-classes/37224)
 - [diagramas-de-caso-de-uso-uml](https://www.devmedia.com.br/o-que-e-uml-e-diagramas-de-caso-de-uso-introducao-pratica-a-uml/23408)
+- [programacao-orientada-a-objetos](https://www.alura.com.br/artigos/poo-programacao-orientada-a-objetos)
 
 ### 🚀 Conclusão
 
