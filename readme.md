@@ -86,13 +86,13 @@ presenças e ausências do aluno.
 ### Inspirações MER
 
 <p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
-  <img alt="mer" title="#mer" src="./.github/ER_Model-inspiracao.jpg" width="400px">
+  <img alt="mer" title="#mer" src="./.github/draw.io/ER_Model-inspiracao.png" width="400px">
 </p>  
 
 ### Inspirações DER
 
 <p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
-  <img alt="der" title="#der" src="./.github/ER_Diagram-inspiracao.jpg" width="400px">
+  <img alt="der" title="#der" src="./.github/draw.io/ER_Diagram-inspiracao.png" width="400px">
 </p>
 
 1. Considerando o caso de uso do item 1 do backend: 
@@ -219,12 +219,12 @@ processamento assíncrono.
 
 - MER no drawio
 <p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
-  <img alt="MER" title="#MER" src="./.github/item-10-MER-niky.jpg" width="400px">
+  <img alt="MER" title="#MER" src="./.github/draw.io/item-10-MER-niky.jpg" width="400px">
 </p>  
 
 - DER no drawio
 <p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
-  <img alt="DER" title="#DER" src="./.github/item-10-DER-niky.jpg" width="400px">
+  <img alt="DER" title="#DER" src="./.github/draw.io/item-10-DER-niky.jpg" width="400px">
 </p>  
 
 ### 🚀 Conclusão
