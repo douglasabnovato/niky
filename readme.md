@@ -190,17 +190,6 @@ Para evidenciar seu desenvolvimento print:
 - [ ] e. OBJETIVO: Compreender se você possui os conhecimentos básicos para operar uma fila de
 processamento assíncrono.
 
-### 💡 Referências
-
-- [reactjs](https://reactjs.org/)
-- [bootstrap](https://icons.getbootstrap.com/)
-- [react-bootstrap](https://react-bootstrap.github.io/components/table/)
-- [material design](https://getmdl.io/customize/index.html)
-- [CRUD Operations](https://www.youtube.com/watch?v=QVokz2OrEy8)
-- [modelos-de-dados](https://www.infonova.com.br/gestao-de-ti/o-que-sao-modelos-de-dados/)
-- [modelagem-bd](https://www.devmedia.com.br/mer-e-der-modelagem-de-bancos-de-dados/14332)
-- [mer-e-der](https://www.alura.com.br/artigos/mer-e-der-funcoes)
-
 ### 📅 Entregas Frontend
 
 - [x] instalar as dependências react, bootstrap
@@ -222,6 +211,14 @@ processamento assíncrono.
   <img alt="niky" title="#niky" src="./.github/tela-layout.jpg" width="400px">
 </p>  
 
+### 💡 Referências Frontend
+
+- [reactjs](https://reactjs.org/)
+- [bootstrap](https://icons.getbootstrap.com/)
+- [react-bootstrap](https://react-bootstrap.github.io/components/table/)
+- [material design](https://getmdl.io/customize/index.html)
+- [CRUD Operations](https://www.youtube.com/watch?v=QVokz2OrEy8)
+
 ### 📅 Entregas Backend
 
 - [x] Entender o modelagem de dados do item 1
@@ -239,6 +236,12 @@ processamento assíncrono.
 <p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
   <img alt="DER" title="#DER" src="./.github/draw.io/item-10-DER-niky.jpg" width="400px">
 </p>  
+
+### 💡 Referências Backend
+
+- [modelos-de-dados](https://www.infonova.com.br/gestao-de-ti/o-que-sao-modelos-de-dados/)
+- [modelagem-bd](https://www.devmedia.com.br/mer-e-der-modelagem-de-bancos-de-dados/14332)
+- [mer-e-der](https://www.alura.com.br/artigos/mer-e-der-funcoes)
 
 ### 🚀 Conclusão
 
