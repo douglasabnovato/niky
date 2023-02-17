@@ -112,10 +112,20 @@ presenças e ausências do aluno.
 
 **Garantias**
 
-- [ ] a. demonstrar as classes
-- [ ] b. propor os métodos necessários para as classes identificadas
-- [ ] c. justificar o motivo de sua criação 
-- [ ] d. OBJETIVO: Compreender o quanto de conhecimento você possui em relação à programação orientada a objetos e sua capacidade de aplicá-la em um caso de uso apresentado.
+- [x] a. demonstrar as classes
+- [x] b. propor os métodos necessários para as classes identificadas
+- [x] c. justificar o motivo de sua criação 
+- [x] d. OBJETIVO: Compreender o quanto de conhecimento você possui em relação à programação orientada a objetos e sua capacidade de aplicá-la em um caso de uso apresentado.
+
+### Compreensão
+
+O objetivo do programa é matricular um Aluno em uma atividade de uma Turma, com um Instrutor e com um aluno monitor, que realiza uma Aula.
+
+- Para a classe Turma, os métodos tradicionais do CRUD: createTurma, readTurma, updateTurma, deleteTurma.
+- Para a classe Instrutor, os métodos tradicionais do CRUD: createInstrutor, readInstrutor, updateInstrutor, deleteInstrutor.
+- Para a classe Aluno, os métodos tradicionais do CRUD: createAluno, readAluno, updateAluno, deleteAluno.
+- Para a classe Aula, os métodos tradicionais do CRUD: createAula, readAula, updateAula, deleteAula.
+- O método Registrar para o Aluno registrar-se na Aula.
 
 3. Ainda baseado no caso de uso do item 1 do backend: 
 
@@ -245,6 +255,8 @@ processamento assíncrono.
 - [modelagem-bd](https://www.devmedia.com.br/mer-e-der-modelagem-de-bancos-de-dados/14332)
 - [mer-e-der](https://www.alura.com.br/artigos/mer-e-der-funcoes)
 - [diagrama-de-classes-uml](https://www.devmedia.com.br/diagrama-de-classes-uml/12251)
+- [diagrama-de-classes](https://www.devmedia.com.br/orientacoes-basicas-na-elaboracao-de-um-diagrama-de-classes/37224)
+- [diagramas-de-caso-de-uso-uml](https://www.devmedia.com.br/o-que-e-uml-e-diagramas-de-caso-de-uso-introducao-pratica-a-uml/23408)
 
 ### 🚀 Conclusão
 
