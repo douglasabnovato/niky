@@ -186,9 +186,11 @@ processamento assíncrono.
 - [x] estilizar os elementos os elementos 
 - [x] remover linhas da tabela category e ajustar design
 - [x] estruturar o crud em objeto
+- [x] revisado a lógica do item  10.c
 - [ ] posicionar icons
 - [ ] border-radius da tabela resume e ajustar design
 - [ ] refatorar e componentizar
+
 ### 📅 Entregas Backend
 
 - [ ] Entendendo o modelagem de dados do item 1 e rascunhando o MER e o DER

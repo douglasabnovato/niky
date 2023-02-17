@@ -7,7 +7,7 @@ import Search from "../../Icons/Search";
 import Trash from "../../Icons/Trash";
 
 function App() {
-  const area = [
+  const objAreas = [
     {
       id: 0,
       area: "Alimentação",
@@ -46,7 +46,7 @@ function App() {
     },
   ];
 
-  const category = [
+  const objCategories = [
     {
       id: 0,
       categoria: "Alimentação",
@@ -84,17 +84,19 @@ function App() {
     },
   ];
 
-  const [areas, setAreas] = useState(area);
-  const [categories, setCategories] = useState(category);
+  const [areas, setAreas] = useState(objAreas);
+  const [categories, setCategories] = useState(objCategories);
 
-  function handleDelete(idArea) {
+  function handleDelete(objArea) {
     let response = window.confirm("Deseja excluir essa categoria?");
 
-    if (response) {
-      if (areas[idArea].frequencia !== "Mensal") {
-        const newlist = areas.filter((area) => area.id !== idArea);
+    if (response) {      
+      if (objArea.frequencia !== "Mensal") {
+        const newlist = areas.filter((area) => area.id !== objArea.id);
         setAreas(newlist);
+        console.log("Deletado");
       } else {
+        alert("Não foi possível excluir essa categoria.");
         console.log("Error");
       }
     }
@@ -187,7 +189,7 @@ function App() {
                         <button
                           className="deletar"
                           type="button"
-                          onClick={() => handleDelete(area.id)}
+                          onClick={() => handleDelete(area)}
                         >
                           <Trash />
                         </button>
