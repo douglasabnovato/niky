@@ -1,0 +1,9 @@
+[
+  { "id": 1, "categoria": "Alimentação", "recorrencia": "Diária", "valor": 45.5, "valorTotal": 63700.0, "beneficiarios": 70 },
+  { "id": 2, "categoria": "Combustível", "recorrencia": "Mensal", "valor": 100.0, "valorTotal": 3500.0, "beneficiarios": 35 },
+  { "id": 3, "categoria": "Cultura", "recorrencia": "Mensal", "valor": 100.0, "valorTotal": 4200.0, "beneficiarios": 42 },
+  { "id": 4, "categoria": "Educação", "recorrencia": "Anual", "valor": 1200.0, "valorTotal": 42000.0, "beneficiarios": 35 },
+  { "id": 5, "categoria": "Flexível", "recorrencia": "Mensal", "valor": 120.0, "valorTotal": 7200.0, "beneficiarios": 60 },
+  { "id": 6, "categoria": "Transporte", "recorrencia": "Diária", "valor": 12.0, "valorTotal": 8400.0, "beneficiarios": 35 },
+  { "id": 7, "categoria": "Saúde", "recorrencia": "Mensal", "valor": 420.0, "valorTotal": 41160.0, "beneficiarios": 70 }
+]
