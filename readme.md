@@ -1,4 +1,4 @@
-> **Projeto de estudo.** Estado conferido em 30/10/2026: 1 endereço(s) citado(s) abaixo não responde(m). Detalhes em [docs/AVALIACAO.md](docs/AVALIACAO.md) e próximos passos em [docs/PLANO-ESTRATEGICO.md](docs/PLANO-ESTRATEGICO.md).
+> **Projeto de estudo.** Estado conferido em 31/10/2026: os endereços que seguem fora do ar foram retirados deste README. Detalhes em [docs/AVALIACAO.md](docs/AVALIACAO.md) e próximos passos em [docs/PLANO-ESTRATEGICO.md](docs/PLANO-ESTRATEGICO.md).
 
 <h4 align="center"> 
 	Niky 🚀
@@ -33,7 +33,7 @@ O front busca `GET {REACT_APP_API_URL}/categorias`; sem a variável, usa `http:/
 
 ### ☁️ Publicação gratuita
 
-**Demonstração:** https://niky.onrender.com (front) · https://niky-api.onrender.com/categorias (API)
+**Demonstração:** https://niky.onrender.com (front). A API publicada não responde, então os dados só aparecem rodando localmente (seção "Como executar").
 
 - Os dois serviços sobem juntos pelo `render.yaml` (Blueprint do Render): a **API** como serviço web gratuito com *root directory* `api`, e o **front** como site estático com `REACT_APP_API_URL` apontando para a API.
 - A API dorme após 15 min sem acesso (a primeira chamada leva ~1 min) e o SQLite é recriado a cada reinício.
