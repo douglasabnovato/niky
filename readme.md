@@ -8,6 +8,15 @@
   <img alt="niky" title="#niky" src="./.github/design.jpg">
 </p>    
 
+## 🧠 O que aprendi
+
+> Proposta de 01/11/2026, escrita a partir do código e das dependências. Ajuste com a sua experiência.
+
+- Separar o front React da API Express e consumir a API por uma camada de serviço (`src/services`).
+- Validar entradas com Zod e proteger a API com Helmet e CORS.
+- Persistir o CRUD da academia em SQLite com `better-sqlite3`.
+- Escrever testes da API com o executor nativo do Node.
+
 ### 💻 Sobre o desafio
 
 Esse projeto compreende tanto disciplinas de front-end quanto de back-end.
