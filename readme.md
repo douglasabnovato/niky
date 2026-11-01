@@ -35,16 +35,16 @@ npm start                 # http://localhost:3333  ·  npm test (8 testes)
 # 2) Front-end (itens 6, 8, 9 e 10), em outro terminal
 cd ..
 npm install
-npm start                 # http://localhost:3000  ·  npm test -- --watchAll=false (6 testes)
+npm start                 # http://localhost:3000  ·  npm test (6 testes)
 ```
 
-O front busca `GET {REACT_APP_API_URL}/categorias`; sem a variável, usa `http://localhost:3333`.
+O front busca `GET {VITE_API_URL}/categorias`; sem a variável, usa `http://localhost:3333`.
 
 ### ☁️ Publicação gratuita
 
 **Demonstração:** https://niky.onrender.com (front). A API publicada não responde, então os dados só aparecem rodando localmente (seção "Como executar").
 
-- Os dois serviços sobem juntos pelo `render.yaml` (Blueprint do Render): a **API** como serviço web gratuito com *root directory* `api`, e o **front** como site estático com `REACT_APP_API_URL` apontando para a API.
+- Os dois serviços sobem juntos pelo `render.yaml` (Blueprint do Render): a **API** como serviço web gratuito com *root directory* `api`, e o **front** como site estático com `VITE_API_URL` apontando para a API.
 - A API dorme após 15 min sem acesso (a primeira chamada leva ~1 min) e o SQLite é recriado a cada reinício.
 - **Item 11:** siga [lambda/sqs-logger/README.md](./lambda/sqs-logger/README.md).
 - Passo a passo completo: [docs/DEPLOY.md](docs/DEPLOY.md).
