@@ -4,7 +4,7 @@ Plano de ação para publicar o front-end e a API do teste Niky em hospedagem gr
 
 ## 1. Desafio
 
-Publicar duas peças que conversam entre si (front CRA que consome `GET /categorias` e API Express + SQLite) sem custo, com a URL da API configurável e sem segredos no código.
+Publicar duas peças que conversam entre si (front Vite que consome `GET /categorias` e API Express + SQLite) sem custo, com a URL da API configurável e sem segredos no código.
 
 ## 2. Conteúdo
 
@@ -13,7 +13,7 @@ Publicar duas peças que conversam entre si (front CRA que consome `GET /categor
 | Peça | Onde | Por quê |
 |---|---|---|
 | **API** (`api/`) | Render, serviço web gratuito (`niky-api`) | Node + SQLite com `rootDir: api` |
-| **Front** (raiz) | Render, site estático gratuito (`niky`) | CDN, não hiberna, variável `REACT_APP_API_URL` no build |
+| **Front** (raiz) | Render, site estático gratuito (`niky`) | CDN, não hiberna, variável `VITE_API_URL` no build |
 
 Os dois ficam no mesmo `render.yaml` e sobem com um único Blueprint.
 
@@ -41,7 +41,7 @@ Os dois ficam no mesmo `render.yaml` e sobem com um único Blueprint.
 ### Etapa 1 · Validar localmente (Git Bash)
 
 1. `cd /c/ambiente-projeto/ser-mvp/niky/api && npm ci && npm test && npm start` (deixe rodando)
-2. Em outro terminal: `cd /c/ambiente-projeto/ser-mvp/niky && npm ci && npm test -- --watchAll=false && npm start`
+2. Em outro terminal: `cd /c/ambiente-projeto/ser-mvp/niky && npm ci && npm test && npm start`
 3. A lista de categorias aparece e as ações de marcar e excluir pedem confirmação.
 
 ### Etapa 2 · Subir para o GitHub
@@ -59,7 +59,7 @@ Os dois ficam no mesmo `render.yaml` e sobem com um único Blueprint.
 2. **New → Blueprint** e escolher `douglasabnovato/niky`.
 3. Conferir os dois serviços (`niky-api` web Free e `niky` Static Site) e clicar em **Apply**.
 4. Quando a API terminar, abrir `https://<endereço-da-api>/health`.
-5. Se o endereço da API não for `https://niky-api.onrender.com`, abrir o serviço `niky` → **Environment**, corrigir `REACT_APP_API_URL` e clicar em **Manual Deploy → Deploy latest commit** (a variável entra no build).
+5. Se o endereço da API não for `https://niky-api.onrender.com`, abrir o serviço `niky` → **Environment**, corrigir `VITE_API_URL` e clicar em **Manual Deploy → Deploy latest commit** (a variável entra no build).
 
 ### Etapa 4 · Conferir no ar
 
