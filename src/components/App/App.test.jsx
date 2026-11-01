@@ -12,7 +12,7 @@ const CATEGORIAS = [
 
 /* Simula a resposta do fetch. */
 function mockFetch(response) {
-  global.fetch = jest.fn(() => response);
+  global.fetch = vi.fn(() => response);
 }
 
 describe("App", () => {

@@ -1,8 +1,8 @@
 /*
  * categorias.js · cliente da API GET /categorias (item 8).
- * A URL vem de REACT_APP_API_URL; sem ela, usa a API local da pasta api/ (porta 3333).
+ * A URL vem de VITE_API_URL; sem ela, usa a API local da pasta api/ (porta 3333).
  */
-export const API_URL = (process.env.REACT_APP_API_URL || "http://localhost:3333").replace(/\/$/, "");
+export const API_URL = (import.meta.env.VITE_API_URL || "http://localhost:3333").replace(/\/$/, "");
 
 /* Busca as categorias; lança Error com mensagem amigável em falha de rede ou HTTP. */
 export async function fetchCategorias({ signal } = {}) {

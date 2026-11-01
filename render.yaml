@@ -1,7 +1,7 @@
 # Blueprint do Render com dois serviços gratuitos:
 # - niky-api: API Express + SQLite (pasta api/), dorme sem acesso e tem disco temporário;
-# - niky: front-end CRA como site estático, apontando para a API por REACT_APP_API_URL.
-# Se o Render der outro endereço para a API, ajuste REACT_APP_API_URL no painel e faça um novo deploy do front.
+# - niky: front-end Vite como site estático, apontando para a API por VITE_API_URL.
+# Se o Render der outro endereço para a API, ajuste VITE_API_URL no painel e faça um novo deploy do front.
 services:
   - type: web
     name: niky-api
@@ -25,6 +25,6 @@ services:
     envVars:
       - key: NODE_VERSION
         value: "22"
-      - key: REACT_APP_API_URL
+      - key: VITE_API_URL
         value: https://niky-api.onrender.com
 # fim de render.yaml
