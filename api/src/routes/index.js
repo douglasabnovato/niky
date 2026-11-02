@@ -42,7 +42,7 @@ function createRouter({ alunos, turmas, cadastros }) {
     r.get('/turmas/:id', (req, res) => res.json(turmas.get(idParam(req.params.id))))
     r.post('/turmas', (req, res) => res.status(201).json(turmas.create(parse(schemas.turma, req.body))))
     r.patch('/turmas/:id', (req, res) => {
-        const body = parse(schemas.turma.innerType().partial(), req.body)
+        const body = parse(schemas.turmaParcial, req.body)
         res.json(turmas.update(idParam(req.params.id), body))
     })
     r.delete('/turmas/:id', (req, res) => {
