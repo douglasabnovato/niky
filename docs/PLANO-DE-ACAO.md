@@ -25,3 +25,49 @@ Priorização por **MoSCoW** e **ganho ÷ esforço** (esforço: 1 = até 15 min,
 - `npm test -- --watchAll=false` na raiz (6/6) e `npm test` em `api/` (8/8).
 - `npm run build` com `CI=true`.
 - axe-core sem violações na tela com a mensagem de erro do item 10.c.
+
+## Ciclo de 03/11/2026
+
+Executado em 06/11/2026, nas branches `feature/2026-11-06` → `developer-sprint-2026-11-12` → `main`.
+
+### Produto
+
+**Problema e público.** Quem gere benefícios de uma empresa precisa ver as categorias (alimentação, combustível etc.), a recorrência e o custo total, e ajustar o resumo sem excluir o que é mensal.
+
+**Hipótese e meta (proposta).** Praticar React com API: filtrar categorias e abrir o cadastro sem ajuda.
+
+**O que a pesquisa trouxe.**
+
+| Ideia | Fonte | Uso aqui |
+|---|---|---|
+| A Lei 14.442/2022 limita o auxílio-alimentação a refeições e alimentos e proíbe saque e deságio | [Portal da Indústria, Conexão Trabalho](https://conexaotrabalho.portaldaindustria.com.br/publicacoes/detalhe/trabalhista/-geral/novidades-no-auxilio-alimentacao-lei-1444222/) | Categorias de alimentação ficam separadas das demais; fora do escopo validar regras legais |
+| O Decreto 12.712/2025 fixou parâmetros de taxas e repasses para VA e VR | [Findes, informe sobre o decreto](https://findes.com.br/wp-content/uploads/2025/11/Informe-Estrategico-–-Novas-Regras-do-PAT-O-que-muda-com-o-Decreto-no-12.712_2025.pdf) | Quem gere precisa do custo total por categoria: entrou a linha de total |
+
+**Backlog priorizado (impacto × esforço).**
+
+| Item | Impacto | Esforço | Destino |
+|---|---|---|---|
+| Linha de total das categorias visíveis | Médio | Baixo | Este ciclo |
+| Testes de carregamento, vazio e erro HTTP | Médio | Baixo | Este ciclo |
+| CI nos PRs para `developer-**` | Médio | Baixo | Este ciclo |
+| Fluxo de salvar percorrido em teste | Alto | Médio | [#20](https://github.com/douglasabnovato/niky/issues/20) |
+| Total por frequência | Médio | Baixo | [#24](https://github.com/douglasabnovato/niky/issues/24) |
+| Republicar, proteger a `main`, Lambda | Médio | Baixo (responsável) | [#21](https://github.com/douglasabnovato/niky/issues/21), [#22](https://github.com/douglasabnovato/niky/issues/22), [#23](https://github.com/douglasabnovato/niky/issues/23) |
+
+**Fora do escopo.** Permissões, integrações externas e validação jurídica das categorias.
+
+### Engenharia
+
+**Arquitetura.** Front React 18 + Vite + React Bootstrap na raiz, cliente em `src/services/categorias.js`. API Express em `api/`, com Zod, Helmet e SQLite (`better-sqlite3`). Lambda de exemplo em `lambda/`.
+
+**Riscos.** O Render serve um build antigo e a API não responde. A principal aceita push direto.
+
+**Qualidade.** Vitest no front (11), `node --test` na API (8), build no CI. Sem alertas no `npm audit --omit=dev`.
+
+**Definição de pronto.** CI verde, teste novo, `MVP.md` e README atualizados.
+
+### Plano de ação
+
+**Executado neste ciclo.** Linha de total; testes de carregamento, vazio, erro HTTP e resposta inválida; gatilho do CI para `developer-**`; régua N1 e critérios 6, 9 e 10 revistos; seção de estado no README.
+
+**Vira issue.** #20 a #24.
