@@ -4,6 +4,8 @@
 import React from "react";
 import { render, screen, fireEvent, within } from "@testing-library/react";
 import App, { DELETE_QUESTION, MONTHLY_ERROR } from "./index";
+import { totalizar } from "../../utils/format";
+import { fetchCategorias } from "../../services/categorias";
 
 const CATEGORIAS = [
   { id: 1, categoria: "Alimentação", recorrencia: "Diária", valor: 45.5, valorTotal: 63700, beneficiarios: 70 },
@@ -69,9 +71,52 @@ describe("App", () => {
     render(<App />);
     const categorias = await screen.findByRole("region", { name: "Categorias" });
     fireEvent.change(screen.getByRole("searchbox", { name: "Pesquisar categoria" }), { target: { value: "combustivel" } });
-    const rows = within(categorias).getAllByRole("row").slice(1);
+    const rows = within(categorias).getAllByRole("row").slice(1, -1);
     expect(rows).toHaveLength(1);
     expect(rows[0]).toHaveTextContent("Combustível");
+  });
+
+  test("mostra o total das categorias visíveis e recalcula com a busca", async () => {
+    mockFetch(Promise.resolve({ ok: true, json: () => Promise.resolve(CATEGORIAS) }));
+    render(<App />);
+    const categorias = await screen.findByRole("region", { name: "Categorias" });
+    const total = () => within(categorias).getByRole("rowheader", { name: /Total/ }).closest("tr");
+    expect(total()).toHaveTextContent("Total (2 categorias)");
+    expect(total()).toHaveTextContent("R$ 67.200,00");
+    expect(total()).toHaveTextContent("105");
+    fireEvent.change(screen.getByRole("searchbox", { name: "Pesquisar categoria" }), { target: { value: "alimenta" } });
+    expect(total()).toHaveTextContent("Total (1 categoria)");
+    expect(total()).toHaveTextContent("R$ 63.700,00");
+  });
+
+  test("busca sem resultado mostra a mensagem de vazio e esconde o total", async () => {
+    mockFetch(Promise.resolve({ ok: true, json: () => Promise.resolve([...CATEGORIAS].reverse()) }));
+    render(<App />);
+    const categorias = await screen.findByRole("region", { name: "Categorias" });
+    fireEvent.change(screen.getByRole("searchbox", { name: "Pesquisar categoria" }), { target: { value: "inexistente" } });
+    expect(within(categorias).getByRole("status")).toHaveTextContent("Nenhuma categoria encontrada.");
+    expect(within(categorias).queryByRole("rowheader", { name: /Total/ })).not.toBeInTheDocument();
+  });
+
+  test("mostra o carregamento enquanto a API não responde", () => {
+    mockFetch(new Promise(() => {}));
+    render(<App />);
+    expect(screen.getByText(/Carregando categorias/)).toBeInTheDocument();
+  });
+});
+
+describe("totalizar e cliente da API", () => {
+  test("soma valores e ignora campos inválidos", () => {
+    expect(totalizar(CATEGORIAS)).toEqual({ valorTotal: 67200, beneficiarios: 105 });
+    expect(totalizar([{ valorTotal: "x", beneficiarios: null }])).toEqual({ valorTotal: 0, beneficiarios: 0 });
+    expect(totalizar([])).toEqual({ valorTotal: 0, beneficiarios: 0 });
+  });
+
+  test("erro HTTP e resposta que não é lista viram mensagem clara", async () => {
+    mockFetch(Promise.resolve({ ok: false, status: 500 }));
+    await expect(fetchCategorias()).rejects.toThrow("A API respondeu com erro 500.");
+    mockFetch(Promise.resolve({ ok: true, json: () => Promise.resolve({}) }));
+    await expect(fetchCategorias()).rejects.toThrow("Resposta inesperada da API.");
   });
 });
 /* fim de App.test.js */

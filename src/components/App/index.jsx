@@ -11,7 +11,7 @@ import Search from "../../Icons/Search";
 import Trash from "../../Icons/Trash";
 import ConfirmDialog from "../ConfirmDialog";
 import { fetchCategorias } from "../../services/categorias";
-import { formatBRL } from "../../utils/format";
+import { formatBRL, totalizar } from "../../utils/format";
 
 export const FREQUENCIAS = ["Diária", "Semanal", "Quinzenal", "Mensal", "Anual"];
 export const DELETE_QUESTION = "Deseja excluir essa categoria?";
@@ -169,6 +169,15 @@ function App() {
                       </tr>
                     )}
                   </tbody>
+                  {visiveis.length > 0 && (
+                    <tfoot>
+                      <tr className="fw-semibold">
+                        <th scope="row" colSpan="3">Total ({visiveis.length} {visiveis.length === 1 ? "categoria" : "categorias"})</th>
+                        <td className="text-end">{formatBRL(totalizar(visiveis).valorTotal)}</td>
+                        <td className="text-end">{totalizar(visiveis).beneficiarios}</td>
+                      </tr>
+                    </tfoot>
+                  )}
                 </table>
               </div>
             </section>
