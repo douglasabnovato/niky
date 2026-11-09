@@ -1,29 +1,29 @@
 > **Projeto de estudo (N1).** Estado conferido em 06/11/2026. Critérios em [docs/MVP.md](docs/MVP.md).
 
-## Estado e próximos passos (ciclo de 03/11/2026)
+## Estado e próximos passos (ciclo de 07/11/2026)
 
-Site publicado: https://niky.onrender.com responde HTTP 200 em 06/11/2026, mas serve uma versão antiga do front, e a API publicada dá 404. Para ver os dados, rode localmente. Republicar é do responsável ([#21](https://github.com/douglasabnovato/niky/issues/21)).
+Site publicado: https://niky.onrender.com responde HTTP 200 em 09/11/2026, mas serve uma versão antiga do front. Para ver o estado atual, rode localmente. Republicar é do responsável ([#21](https://github.com/douglasabnovato/niky/issues/21)).
 
-**O que foi feito**
+**O que foi feito** (09/11/2026, na sprint `developer-sprint-2026-11-12`; a `main` recebe depois da revisão do responsável)
 
-- Front migrado do Create React App para Vite (PR #12, #13).
-- `.env.example` com as variáveis usadas no código (PR #11).
-- Alerta alto da API tratado com o zod 4; `npm audit --omit=dev` sem alertas na raiz e na API (PR #17, #18, #19).
-- Total das categorias visíveis na tabela, recalculado com a busca, e testes de carregamento, vazio e erro HTTP (PR #25).
-- CI passa a rodar também nos PRs para `developer-**` (PR #25).
+- Fluxo principal percorrido no navegador: busca, filtro, troca de frequência, exclusão (com a regra do Mensal) e salvar (registro no `docs/MVP.md`, critério 3).
+- Teste do mesmo fluxo com a lista em duas ordens (#20).
+- Tabelas roláveis recebem foco pelo teclado (o axe acusava erro grave).
+- O navegador avisa ao sair da página com alterações não salvas.
+- `docs/MVP.md`: 9 de 10 critérios aplicáveis; o parcial depende do responsável.
 
 **O que queremos fazer**
 
-- [#20](https://github.com/douglasabnovato/niky/issues/20) Testar na tela a troca de frequência e o Salvar alterações.
+- [#24](https://github.com/douglasabnovato/niky/issues/24) Mostrar o total por frequência no resumo.
+- Salvar o resumo na API (issue do ciclo de 07/11).
 - [#21](https://github.com/douglasabnovato/niky/issues/21) Republicar o front e a API no Render (responsável).
 - [#22](https://github.com/douglasabnovato/niky/issues/22) Proteger a `main` com PR e CI obrigatórios (responsável).
 - [#23](https://github.com/douglasabnovato/niky/issues/23) Executar a Lambda do item 11 e registrar os prints (responsável).
-- [#24](https://github.com/douglasabnovato/niky/issues/24) Mostrar o total por frequência no resumo.
 
 **Onde está a documentação**
 
 - [docs/MVP.md](docs/MVP.md): estado de cada critério, com evidência e data.
-- [docs/PLANO-DE-ACAO.md](docs/PLANO-DE-ACAO.md): plano do ciclo, pesquisa e backlog.
+- [docs/PLANO-DE-ACAO.md](docs/PLANO-DE-ACAO.md): seção "Ciclo de 07/11/2026", com pesquisa e backlog.
 
 <h4 align="center"> 
 	Niky 🚀
@@ -60,7 +60,7 @@ npm start                 # http://localhost:3333  ·  npm test (8 testes)
 # 2) Front-end (itens 6, 8, 9 e 10), em outro terminal
 cd ..
 npm install
-npm start                 # http://localhost:3000  ·  npm test (11 testes)
+npm start                 # http://localhost:3000  ·  npm test (15 testes)
 ```
 
 O front busca `GET {VITE_API_URL}/categorias`; sem a variável, usa `http://localhost:3333`.
