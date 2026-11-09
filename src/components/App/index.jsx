@@ -151,7 +151,7 @@ function App() {
                   ))}
                 </select>
               </div>
-              <div className="table-responsive">
+              <div className="table-responsive" tabIndex={0} role="group" aria-label="Tabela de categorias">
                 <table className="table table-hover align-middle">
                   <thead>
                     <tr>
@@ -201,7 +201,7 @@ function App() {
                   {message.text}
                 </Alert>
               )}
-              <div className="table-responsive">
+              <div className="table-responsive" tabIndex={0} role="group" aria-label="Tabela do resumo">
                 <table className="table align-middle">
                   <thead>
                     <tr>

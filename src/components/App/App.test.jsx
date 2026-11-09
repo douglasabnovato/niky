@@ -61,6 +61,14 @@ describe("App", () => {
     expect(sair()).toBe(false);
   });
 
+  test("as tabelas roláveis recebem foco pelo teclado (axe scrollable-region-focusable)", async () => {
+    mockFetch(Promise.resolve({ ok: true, json: () => Promise.resolve(CATEGORIAS) }));
+    render(<App />);
+    for (const nome of ["Tabela de categorias", "Tabela do resumo"]) {
+      expect(await screen.findByRole("group", { name: nome })).toHaveAttribute("tabindex", "0");
+    }
+  });
+
   test("monta as duas tabelas a partir de GET /categorias", async () => {
     mockFetch(Promise.resolve({ ok: true, json: () => Promise.resolve(CATEGORIAS) }));
     render(<App />);
