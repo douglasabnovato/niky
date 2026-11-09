@@ -61,6 +61,17 @@ function App() {
 
   const dirty = JSON.stringify(resumo) !== JSON.stringify(saved);
 
+  /* Com alterações não salvas, o navegador pergunta antes de fechar ou recarregar a página (só enquanto houver o que perder). */
+  useEffect(() => {
+    if (!dirty) return undefined;
+    const avisar = (event) => {
+      event.preventDefault();
+      event.returnValue = "";
+    };
+    window.addEventListener("beforeunload", avisar);
+    return () => window.removeEventListener("beforeunload", avisar);
+  }, [dirty]);
+
   /* Troca a frequência escolhida no combo da linha. */
   const changeFrequencia = (id, frequencia) => {
     setMessage(null);
