@@ -18,6 +18,57 @@ function mockFetch(response) {
 }
 
 describe("App", () => {
+  /* Fluxo principal (#20): filtra o grupo, troca a frequência e salva; roda também com a lista invertida. */
+  test.each([
+    ["na ordem da API", CATEGORIAS],
+    ["com a lista invertida", [...CATEGORIAS].reverse()],
+  ])("filtra por grupo, troca a frequência e salva (%s)", async (_, lista) => {
+    mockFetch(Promise.resolve({ ok: true, json: () => Promise.resolve(lista) }));
+    render(<App />);
+    const categorias = await screen.findByRole("region", { name: "Categorias" });
+    fireEvent.change(within(categorias).getByRole("combobox", { name: "Filtrar por grupo" }), { target: { value: "Combustível" } });
+    const linhas = within(categorias).getAllByRole("row").filter((r) => r.closest("tbody"));
+    expect(linhas).toHaveLength(1);
+    expect(linhas[0]).toHaveTextContent("Combustível");
+
+    const resumo = screen.getByRole("region", { name: "Resumo" });
+    const salvar = within(resumo).getByRole("button", { name: "Salvar alterações" });
+    expect(salvar).toBeDisabled();
+    fireEvent.change(within(resumo).getByRole("combobox", { name: "Frequência de Combustível" }), { target: { value: "Semanal" } });
+    expect(salvar).toBeEnabled();
+    fireEvent.click(salvar);
+
+    expect(within(resumo).getByRole("status")).toHaveTextContent("Alterações salvas.");
+    expect(within(resumo).getByRole("combobox", { name: "Frequência de Combustível" })).toHaveValue("Semanal");
+    expect(within(resumo).getByRole("combobox", { name: "Frequência de Alimentação" })).toHaveValue("Diária");
+    expect(salvar).toBeDisabled();
+    expect(within(resumo).getByRole("button", { name: "Descartar alterações" })).toBeDisabled();
+  });
+
+  test("avisa ao sair da página só enquanto há alterações não salvas", async () => {
+    mockFetch(Promise.resolve({ ok: true, json: () => Promise.resolve(CATEGORIAS) }));
+    render(<App />);
+    const sair = () => {
+      const evento = new Event("beforeunload", { cancelable: true });
+      window.dispatchEvent(evento);
+      return evento.defaultPrevented;
+    };
+    const combo = await screen.findByRole("combobox", { name: "Frequência de Alimentação" });
+    expect(sair()).toBe(false);
+    fireEvent.change(combo, { target: { value: "Semanal" } });
+    expect(sair()).toBe(true);
+    fireEvent.click(screen.getByRole("button", { name: "Salvar alterações" }));
+    expect(sair()).toBe(false);
+  });
+
+  test("as tabelas roláveis recebem foco pelo teclado (axe scrollable-region-focusable)", async () => {
+    mockFetch(Promise.resolve({ ok: true, json: () => Promise.resolve(CATEGORIAS) }));
+    render(<App />);
+    for (const nome of ["Tabela de categorias", "Tabela do resumo"]) {
+      expect(await screen.findByRole("group", { name: nome })).toHaveAttribute("tabindex", "0");
+    }
+  });
+
   test("monta as duas tabelas a partir de GET /categorias", async () => {
     mockFetch(Promise.resolve({ ok: true, json: () => Promise.resolve(CATEGORIAS) }));
     render(<App />);

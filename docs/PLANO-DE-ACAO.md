@@ -71,3 +71,46 @@ Executado em 06/11/2026, nas branches `feature/2026-11-06` → `developer-sprint
 **Executado neste ciclo.** Linha de total; testes de carregamento, vazio, erro HTTP e resposta inválida; gatilho do CI para `developer-**`; régua N1 e critérios 6, 9 e 10 revistos; seção de estado no README.
 
 **Vira issue.** #20 a #24.
+
+## Ciclo de 07/11/2026
+
+> Executado em 09/11/2026. Nível N1. Sprint `developer-sprint-2026-11-12`, feature `feature/2026-11-07`.
+
+### Produto
+
+**Problema e público.** Quem gere benefícios consulta as categorias e ajusta a frequência por área. Sem mudança.
+
+**Meta do ciclo.** Fechar o critério 3: percorrer na tela filtrar, trocar a frequência, excluir e salvar, e cobrir com teste.
+
+**O que a pesquisa trouxe.**
+- A Testing Library recomenda consultar a tela como a pessoa usa, com `getByRole` primeiro. Fonte: [Testing Library, consultas](https://testing-library.com/docs/api-queries). O teste novo usa papéis e nomes acessíveis e roda com a lista em duas ordens.
+- Avisar antes de sair com alterações não salvas, ligando o `beforeunload` só enquanto há algo a perder e removendo depois. Fontes: [cópia da documentação da MDN sobre `beforeunload`](https://docs.w3cub.com/dom/window/beforeunload_event) e [Cloudscape, padrão de alterações não salvas](https://cloudscape.design/patterns/general/unsaved-changes/).
+
+**Backlog do ciclo (impacto × esforço).**
+
+| # | Item | Impacto | Esforço | Situação |
+|---|---|---|---|---|
+| 1 | Percorrer o fluxo na tela e registrar | Alto | Baixo | Feito |
+| 2 | Teste do fluxo nas duas ordens (#20) | Médio | Baixo | Feito |
+| 3 | Tabelas roláveis com foco (axe grave, achado no percurso) | Médio | Baixo | Feito |
+| 4 | Aviso ao sair com alterações não salvas (pesquisa) | Médio | Baixo | Feito |
+| 5 | CI em push para `developer-**` | Baixo | Baixo | Feito |
+| 6 | Total por frequência no resumo (#24) | Médio | Médio | Próximo ciclo |
+
+**Fora do escopo.** Persistir o resumo na API; republicar (#21).
+
+### Engenharia
+
+**Arquitetura.** Front React 18 + React Bootstrap com Vite; API Express + SQLite (`better-sqlite3`) com `GET /categorias`. O resumo é estado local: "Salvar" grava só na memória da página.
+
+**Riscos.** O "Salvar" não persiste: depois de salvar, recarregar a página perde as alterações sem aviso (o aviso ao sair só cobre o que ainda não foi salvo); vira issue. Site publicado antigo (#21). Sem proteção na `main` (#22).
+
+**Qualidade.** Front 15 testes (`npx vitest run`) e build; API 8 (`npm test` em `api`). axe sem violações depois da correção.
+
+**Definição de pronto.** CI verde no PR para a sprint; `docs/MVP.md` e README atualizados; PR com `revisao-responsavel`.
+
+### Plano de ação
+
+**Este ciclo executa.** Itens 1 a 5.
+
+**Vira issue.** Salvar o resumo na API; #24 segue; #21, #22 e #23 com o responsável; mesclar o ciclo (responsável).
