@@ -66,7 +66,7 @@ function App() {
     if (!dirty) return undefined;
     const avisar = (event) => {
       event.preventDefault();
-      event.returnValue = "";
+      event.returnValue = true;
     };
     window.addEventListener("beforeunload", avisar);
     return () => window.removeEventListener("beforeunload", avisar);

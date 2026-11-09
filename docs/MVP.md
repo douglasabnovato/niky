@@ -5,17 +5,17 @@
 **Resumo:** 9 de 10 aplicáveis atendidos
 **Finalizado:** sim
 
-Régua N1: os critérios 5 e 7 são "Não se aplica (N1)" e saem do denominador. Antes deste ciclo: 8 de 10. O único parcial (10) depende do responsável e tem issue com `depende-do-responsavel` (#22). O ciclo ainda não está na `main`: espera a revisão do responsável. O site publicado serve um build antigo (#21).
+Régua N1: os critérios 5 e 7 são "Não se aplica (N1)" e saem do denominador. Antes deste ciclo: 8 de 10. Pela regra do ciclo, "Finalizado" aceita parcial que depende do responsável: o único parcial (10) depende dele e tem issue com `depende-do-responsavel` (#22). O ciclo ainda não está na `main`: espera a revisão do responsável. O site publicado serve um build antigo (#21).
 
 | # | Critério | Como verificar | Situação (09/11/2026) |
 |---|---|---|---|
 | 1 | Problema e público claros | Dá para explicar em uma frase | Atende: quem gere benefícios vê categorias e ajusta a frequência por área. |
 | 2 | Hipótese a validar | Existe uma aposta escrita, com meta | Atende: seção "Hipótese"; ainda sem validação com pessoas. |
-| 3 | Fluxo principal completo | Uma pessoa conclui sem ajuda | Atende: em 09/11, API local (`node src/server.js`, SQLite) e front com `npx vite`, percorri no navegador embutido do app: a busca "educacao" acha "Educação" (1 categoria, total R$ 42.000,00); o filtro por grupo, com as setas do teclado, mostra só "Combustível"; Esc fecha a confirmação; a frequência de Combustível muda pelo teclado e liga "Salvar"; excluir "Saúde" (Mensal) mostra o erro com `role="alert"`; excluir "Transporte" mostra "excluída. Salve para confirmar."; "Salvar alterações" mostra "Alterações salvas." e os botões voltam a desligados. Teste do mesmo fluxo, nas duas ordens da lista: `App.test.jsx` (#20). |
+| 3 | Fluxo principal completo | Uma pessoa conclui sem ajuda | Atende: em 09/11, API local (`node src/server.js`, SQLite) e front com `npx vite`, percorri no navegador embutido do app: a busca "educacao" acha "Educação" (1 categoria, total R$ 42.000,00); o filtro por grupo, com as setas do teclado, mostra só "Combustível"; Esc fecha a confirmação; a frequência de Combustível muda pelo teclado e liga "Salvar"; excluir "Saúde" (Mensal) mostra o erro com `role="alert"`; excluir "Transporte" mostra "excluída. Salve para confirmar."; "Salvar alterações" mostra "Alterações salvas." e os botões voltam a desligados. Testes em `App.test.jsx`: filtro, troca de frequência e Salvar nas duas ordens da lista (#20, novo); exclusão com confirmação e bloqueio do Mensal (testes já existentes). |
 | 4 | Escopo enxuto | O que não entra está registrado | Atende: seção "Fora do MVP". |
 | 5 | Medição de uso | A métrica principal é coletada | Não se aplica (N1): projeto de estudo sem coleta de uso. |
 | 6 | Falhas tratadas | Erro, vazio e carregamento têm resposta clara | Atende: carregamento, vazio na busca, falha de rede com "Tentar novamente", HTTP 500 e resposta inválida têm teste; agora o navegador avisa ao sair com alterações não salvas (teste). `npx vitest run` em 09/11: 15 de 15. |
-| 7 | Desempenho aceitável | LCP de até 2,5 s no celular | Não se aplica (N1): o site publicado está desatualizado (#21). |
+| 7 | Desempenho aceitável | LCP de até 2,5 s no celular | Não se aplica (N1), pela régua de estudo. O site publicado está desatualizado (#21). |
 | 8 | Acessibilidade básica | axe e teclado | Atende: o axe-core 4.10 acusou em 09/11 `scrollable-region-focusable` (grave) na tabela de categorias; corrigido (tabelas roláveis com foco), e o axe ficou sem violações. Foco visível nos combos (anel do Bootstrap); sem rolagem lateral em 375 px. |
 | 9 | Segurança e conformidade | Riscos decididos | Atende: `npm audit --omit=dev` sem alertas na raiz e em `api` em 06/11/2026 (zod 4, PR #17); sem dependência nova neste ciclo. |
 | 10 | Entrega confiável | CI verde antes de entrar na principal | Parcial (depende do responsável, #22): CI verde nos PRs, agora também em push para `developer-**`; a principal não tem proteção. |

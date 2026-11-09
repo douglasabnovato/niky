@@ -1,8 +1,8 @@
-> **Projeto de estudo (N1).** Estado conferido em 06/11/2026. Critérios em [docs/MVP.md](docs/MVP.md).
+> **Projeto de estudo (N1).** Estado conferido em 09/11/2026. Critérios em [docs/MVP.md](docs/MVP.md).
 
 ## Estado e próximos passos (ciclo de 07/11/2026)
 
-Site publicado: https://niky.onrender.com responde HTTP 200 em 09/11/2026, mas serve uma versão antiga do front. Para ver o estado atual, rode localmente. Republicar é do responsável ([#21](https://github.com/douglasabnovato/niky/issues/21)).
+Site publicado: https://niky.onrender.com responde HTTP 200 em 09/11/2026, mas serve uma versão antiga do front, e a API publicada (`niky-api.onrender.com/categorias`) dá 404. Para ver o estado atual, rode localmente. Republicar é do responsável ([#21](https://github.com/douglasabnovato/niky/issues/21)).
 
 **O que foi feito** (09/11/2026, na sprint `developer-sprint-2026-11-12`; a `main` recebe depois da revisão do responsável)
 

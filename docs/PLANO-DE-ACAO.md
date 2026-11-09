@@ -103,7 +103,7 @@ Executado em 06/11/2026, nas branches `feature/2026-11-06` → `developer-sprint
 
 **Arquitetura.** Front React 18 + React Bootstrap com Vite; API Express + SQLite (`better-sqlite3`) com `GET /categorias`. O resumo é estado local: "Salvar" grava só na memória da página.
 
-**Riscos.** O "Salvar" não persiste: recarregar a página perde as alterações (o aviso ao sair reduz o risco). Site publicado antigo (#21). Sem proteção na `main` (#22).
+**Riscos.** O "Salvar" não persiste: depois de salvar, recarregar a página perde as alterações sem aviso (o aviso ao sair só cobre o que ainda não foi salvo); vira issue. Site publicado antigo (#21). Sem proteção na `main` (#22).
 
 **Qualidade.** Front 15 testes (`npx vitest run`) e build; API 8 (`npm test` em `api`). axe sem violações depois da correção.
 
