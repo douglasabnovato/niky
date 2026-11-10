@@ -10,14 +10,13 @@ Site publicado: https://niky.onrender.com responde HTTP 200 em 09/11/2026, mas s
 - Teste do mesmo fluxo com a lista em duas ordens (#20).
 - Tabelas roláveis recebem foco pelo teclado (o axe acusava erro grave).
 - O navegador avisa ao sair da página com alterações não salvas.
-- `docs/MVP.md`: 9 de 10 critérios aplicáveis; o parcial depende do responsável.
+- `docs/MVP.md`: 10 de 10 critérios aplicáveis desde 10/11/2026, com a `main` protegida pelo ruleset `principal-protegida` ([#22](https://github.com/douglasabnovato/niky/issues/22)).
 
 **O que queremos fazer**
 
 - [#24](https://github.com/douglasabnovato/niky/issues/24) Mostrar o total por frequência no resumo.
 - Salvar o resumo na API (issue do ciclo de 07/11).
 - [#21](https://github.com/douglasabnovato/niky/issues/21) Republicar o front e a API no Render (responsável).
-- [#22](https://github.com/douglasabnovato/niky/issues/22) Proteger a `main` com PR e CI obrigatórios (responsável).
 - [#23](https://github.com/douglasabnovato/niky/issues/23) Executar a Lambda do item 11 e registrar os prints (responsável).
 
 **Onde está a documentação**
