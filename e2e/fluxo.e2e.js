@@ -12,6 +12,15 @@ async function semViolacoes(page, seletor) {
   expect(violations.map((v) => `${v.id}: ${v.nodes.map((n) => n.target + " " + n.failureSummary).join(" | ")}`)).toEqual([]);
 }
 
+/* Aperta Tab até o alvo receber o foco, com limite de tentativas; falha se não chegar */
+async function tabAte(page, alvo, limite = 40) {
+  for (let i = 0; i < limite; i += 1) {
+    if (await alvo.evaluate((el) => el === document.activeElement)) return;
+    await page.keyboard.press("Tab");
+  }
+  await expect(alvo).toBeFocused();
+}
+
 /* Linhas do corpo da tabela de categorias */
 const linhasCategorias = (page) => page.getByRole("region", { name: "Categorias" }).locator("tbody tr");
 
@@ -80,7 +89,8 @@ test("só pelo teclado: foco visível, Esc fecha a confirmação e o foco não s
   await expect(page.getByRole("group", { name: "Tabela de categorias" })).toBeFocused();
 
   const excluir = page.getByRole("button", { name: "Excluir Alimentação" });
-  await excluir.focus();
+  await tabAte(page, excluir);
+  await expect(excluir).toBeFocused();
   await page.keyboard.press("Enter");
   const dialogo = page.getByRole("dialog");
   await expect(dialogo).toBeVisible();
@@ -91,7 +101,9 @@ test("só pelo teclado: foco visível, Esc fecha a confirmação e o foco não s
 
   await page.keyboard.press("Enter");
   await expect(dialogo).toBeVisible();
-  await dialogo.getByRole("button", { name: "Excluir", exact: true }).focus();
+  const confirmar = dialogo.getByRole("button", { name: "Excluir", exact: true });
+  await tabAte(page, confirmar, 5);
+  await expect(confirmar).toBeFocused();
   await page.keyboard.press("Enter");
   await expect(dialogo).toBeHidden();
   const mensagem = page.getByRole("region", { name: "Resumo" }).getByRole("status");

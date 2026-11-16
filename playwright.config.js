@@ -11,10 +11,8 @@ export default defineConfig({
   retries: process.env.CI ? 1 : 0,
   reporter: [["list"]],
   use: { baseURL: `http://localhost:${WEB_PORT}`, trace: "retain-on-failure", reducedMotion: "reduce" },
-  projects: [
-    { name: "claro", use: { ...devices["Desktop Chrome"], colorScheme: "light" } },
-    { name: "escuro", use: { ...devices["Desktop Chrome"], colorScheme: "dark" } },
-  ],
+  /* Um projeto só: o app não tem tema escuro próprio (sem prefers-color-scheme no CSS nem data-bs-theme) */
+  projects: [{ name: "desktop-chrome", use: { ...devices["Desktop Chrome"], colorScheme: "light" } }],
   webServer: [
     {
       command: "node src/server.js",

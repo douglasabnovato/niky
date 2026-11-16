@@ -26,7 +26,7 @@ Priorização por **MoSCoW** e **ganho ÷ esforço** (esforço: 1 = até 15 min,
 
 - `npm test` na raiz (Vitest) e `npm test` em `api/` (`node --test`), sem testes pulados.
 - `npm run build` sem erro.
-- `npm run test:e2e`: fluxo no navegador com axe sem violações no claro e no escuro.
+- `npm run test:e2e`: fluxo no navegador com axe sem violações no tema claro (o app não tem tema escuro próprio).
 - Job `raiz`, `api` e `e2e` do CI verdes no PR.
 
 ## Ciclo de 03/11/2026
@@ -126,7 +126,7 @@ Executado em 06/11/2026, nas branches `feature/2026-11-06` → `developer-sprint
 
 **Problema e público.** Quem gere benefícios consulta as categorias, vê o custo total e ajusta a frequência por área sem excluir o que é mensal. Sem mudança.
 
-**Hipótese e meta.** Acreditamos que a tela com busca, filtro, troca de frequência e a regra do Mensal deixa uma pessoa concluir o fluxo do desafio sem ajuda. Saberemos quando um teste no navegador percorrer buscar, filtrar, trocar a frequência, excluir com confirmação e salvar, passando no CI com 0 violações do axe (claro e escuro) e só pelo teclado. Meta: o fluxo inteiro verde no CI em todo PR.
+**Hipótese e meta.** Acreditamos que a tela com busca, filtro, troca de frequência e a regra do Mensal deixa uma pessoa concluir o fluxo do desafio sem ajuda. Saberemos quando um teste no navegador percorrer buscar, filtrar, trocar a frequência, excluir com confirmação e salvar, passando no CI com 0 violações do axe (tema claro; o app não tem tema escuro próprio) e só pelo teclado. Meta: o fluxo inteiro verde no CI em todo PR.
 
 **Por que este ciclo.** A conferência de 15/11 achou "Atende" sem a evidência que a régua pede: o critério 3 tinha percurso manual e testes no jsdom, sem Playwright no CI; o 8 tinha axe rodado à mão, fora de teste; o 2 não tinha meta nem "saberemos quando". Contagem honesta antes deste ciclo: 7 de 10.
 
@@ -144,7 +144,7 @@ Executado em 06/11/2026, nas branches `feature/2026-11-06` → `developer-sprint
 |---|---|---|---|---|
 | 1 | `npm audit --omit=dev` na raiz e em `api` | Alto | Baixo | Este ciclo |
 | 2 | `MVP.md` honesto: 2, 3 e 8 voltam a "Parcial" até a evidência existir | Alto | Baixo | Este ciclo |
-| 3 | Teste Playwright do fluxo com axe (claro e escuro) e job `e2e` no CI | Alto | Médio | Este ciclo |
+| 3 | Teste Playwright do fluxo com axe e job `e2e` no CI (tema claro; o app não tem tema escuro próprio; o projeto `escuro` repetia o claro e saiu em 16/11/2026) | Alto | Médio | Este ciclo |
 | 4 | Foco depois de excluir uma linha (pesquisa: APG) | Médio | Baixo | Este ciclo |
 | 5 | `DEPLOY.md` com caminhos do repositório e passo a passo do Render | Médio | Baixo | Este ciclo |
 | 6 | Total por frequência no resumo (#24) | Médio | Médio | Próximo ciclo |
