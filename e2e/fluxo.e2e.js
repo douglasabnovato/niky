@@ -96,6 +96,9 @@ test("só pelo teclado: foco visível, Esc fecha a confirmação e o foco não s
   await expect(dialogo).toBeHidden();
   const mensagem = page.getByRole("region", { name: "Resumo" }).getByRole("status");
   await expect(mensagem).toHaveText("Categoria Alimentação excluída. Salve para confirmar.");
+  const alvo = page.locator("#mensagem-resumo");
+  await expect(alvo).toBeFocused();
+  expect(await alvo.evaluate((el) => getComputedStyle(el).outlineStyle)).toBe("solid");
 });
 
 test("sem a API, mostra o erro e volta com Tentar novamente", async ({ page }) => {

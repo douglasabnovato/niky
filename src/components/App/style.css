@@ -179,4 +179,11 @@ body {
     align-items: stretch;
   }
 }
+
+/* Mensagem do resumo recebe foco depois de excluir uma linha */
+.mensagem:focus {
+  outline: 3px solid var(--blue-medium);
+  outline-offset: 2px;
+  border-radius: var(--radius);
+}
 /* fim de style.css */
