@@ -132,7 +132,7 @@ function App() {
         {status === "error" && (
           <Alert variant="danger" className="state">
             <p className="mb-2">{error}</p>
-            <button type="button" className="btn btn-outline-danger btn-sm" onClick={() => setAttempt((n) => n + 1)}>
+            <button type="button" className="btn btn-danger btn-sm" onClick={() => setAttempt((n) => n + 1)}>
               Tentar novamente
             </button>
           </Alert>
