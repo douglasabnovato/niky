@@ -1,4 +1,4 @@
-> **Projeto de estudo (N1).** Estado conferido em 16/11/2026. Critérios em [docs/MVP.md](docs/MVP.md): 9 de 10 aplicáveis, com evidência de CI; o 9 fica Parcial até o responsável ligar os alertas do Dependabot (#33).
+> **Projeto de estudo (N1).** Estado conferido em 16/11/2026. Critérios em [docs/MVP.md](docs/MVP.md): 10 de 10 aplicáveis, com evidência de CI; os alertas do Dependabot estão ligados, com 0 abertos em 16/11/2026.
 
 ## Estado e próximos passos (ciclo de 15/11/2026)
 
@@ -16,7 +16,7 @@
 - [#28](https://github.com/douglasabnovato/niky/issues/28) Salvar o resumo na API.
 - [#35](https://github.com/douglasabnovato/niky/issues/35) Migrar a API para o Express 5.
 - [#36](https://github.com/douglasabnovato/niky/issues/36) Atualizar a Testing Library e o jsdom.
-- Com o responsável: [#21](https://github.com/douglasabnovato/niky/issues/21) publicar no Render, [#23](https://github.com/douglasabnovato/niky/issues/23) executar a Lambda, [#33](https://github.com/douglasabnovato/niky/issues/33) ligar o Dependabot, [#34](https://github.com/douglasabnovato/niky/issues/34) exigir o job `e2e` no ruleset, [#29](https://github.com/douglasabnovato/niky/issues/29) levar a sprint para a `main`.
+- Com o responsável: [#21](https://github.com/douglasabnovato/niky/issues/21) publicar no Render, [#23](https://github.com/douglasabnovato/niky/issues/23) executar a Lambda, [#33](https://github.com/douglasabnovato/niky/issues/33) fechar a issue dos alertas do Dependabot (já ligados, com 0 abertos), [#34](https://github.com/douglasabnovato/niky/issues/34) exigir o job `e2e` no ruleset, [#29](https://github.com/douglasabnovato/niky/issues/29) levar a sprint para a `main`.
 
 **Onde está a documentação**
 
