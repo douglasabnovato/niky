@@ -41,7 +41,7 @@ jobs:
       - run: npm ci
       - run: npm test
   e2e:
-    # Fluxo principal no navegador: API com SQLite em memória + front do Vite, axe no claro e no escuro
+    # Fluxo principal no navegador: API com SQLite em memória + front do Vite, axe no tema claro (o app não tem tema escuro próprio)
     runs-on: ubuntu-latest
     timeout-minutes: 25
     steps:
@@ -58,3 +58,10 @@ jobs:
       - run: npm ci
       - run: npx playwright install --with-deps chromium
       - run: npm run test:e2e
+      - name: Guardar rastros do Playwright se falhar
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-test-results
+          path: test-results/
+          retention-days: 7
