@@ -8,7 +8,7 @@
 
 - [PR #32](https://github.com/douglasabnovato/niky/pull/32) (15/11/2026): teste Playwright do fluxo principal no navegador, com a API real e axe no claro e no escuro, e job `e2e` no CI; contraste do botão "Tentar novamente" corrigido (o axe achou 3,39:1); foco na mensagem depois de excluir uma linha; Bootstrap 5.3.9; `MVP.md` conferido contra a régua (antes, 7 de 10 com evidência real); `DEPLOY.md` revisto.
 - [PR #27](https://github.com/douglasabnovato/niky/pull/27) (09/11/2026): teste do fluxo nas duas ordens da lista ([#20](https://github.com/douglasabnovato/niky/issues/20)), tabelas roláveis com foco, aviso ao sair com alterações não salvas.
-- [PR #31](https://github.com/douglasabnovato/niky/pull/31) (10/11/2026): `main` protegida pelo ruleset `principal-protegida` ([#22](https://github.com/douglasabnovato/niky/issues/22)).
+- [PR #31](https://github.com/douglasabnovato/niky/pull/31) (10/11/2026): registro da `main` protegida pelo responsável, com o ruleset `principal-protegida` ([#22](https://github.com/douglasabnovato/niky/issues/22)).
 
 **O que queremos fazer**
 
