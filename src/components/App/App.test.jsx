@@ -2,7 +2,7 @@
  * App.test.js · itens 8 e 10: tabelas montadas pela API, estados de erro e regra de exclusão.
  */
 import React from "react";
-import { render, screen, fireEvent, within } from "@testing-library/react";
+import { render, screen, fireEvent, within, waitFor } from "@testing-library/react";
 import App, { DELETE_QUESTION, MONTHLY_ERROR } from "./index";
 import { totalizar } from "../../utils/format";
 import { fetchCategorias } from "../../services/categorias";
@@ -96,6 +96,15 @@ describe("App", () => {
     fireEvent.click(within(screen.getByRole("dialog")).getByRole("button", { name: "Excluir" }));
     expect(screen.queryByRole("button", { name: "Excluir Alimentação" })).not.toBeInTheDocument();
     expect(screen.getByRole("button", { name: "Salvar alterações" })).toBeEnabled();
+  });
+
+  test("depois de excluir, o foco vai para a mensagem, porque o botão de origem sumiu", async () => {
+    mockFetch(Promise.resolve({ ok: true, json: () => Promise.resolve(CATEGORIAS) }));
+    render(<App />);
+    fireEvent.click(await screen.findByRole("button", { name: "Excluir Alimentação" }));
+    fireEvent.click(within(screen.getByRole("dialog")).getByRole("button", { name: "Excluir" }));
+    await waitFor(() => expect(document.activeElement).toHaveAttribute("id", "mensagem-resumo"));
+    expect(document.activeElement).toHaveTextContent("Categoria Alimentação excluída.");
   });
 
   test("bloqueia a exclusão quando a frequência escolhida no combo é Mensal", async () => {

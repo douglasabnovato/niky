@@ -1,14 +1,15 @@
 /*
- * ConfirmDialog · confirmação acessível (foco preso, Esc fecha) no lugar do window.confirm.
+ * ConfirmDialog · confirmação acessível (foco preso, Esc fecha) no lugar do window.confirm;
+ * onExited avisa quando o diálogo terminou de fechar, para quem abriu decidir onde fica o foco.
  */
 import React from "react";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 
 /* Mostra a pergunta e devolve a escolha por onConfirm/onCancel. */
-export default function ConfirmDialog({ show, title, message, confirmLabel = "Excluir", onConfirm, onCancel }) {
+export default function ConfirmDialog({ show, title, message, confirmLabel = "Excluir", onConfirm, onCancel, onExited }) {
   return (
-    <Modal show={show} onHide={onCancel} centered aria-labelledby="confirm-title">
+    <Modal show={show} onHide={onCancel} onExited={onExited} centered aria-labelledby="confirm-title">
       <Modal.Header closeButton closeLabel="Fechar">
         <Modal.Title id="confirm-title" as="h2" className="h5">{title}</Modal.Title>
       </Modal.Header>

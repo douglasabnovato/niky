@@ -1,79 +1,49 @@
 # MVP — niky
 
-> Revisto em 09/11/2026 (ciclo de 07/11/2026). **Nível: N1 (estudo).** Meta: N1. Testado no Windows com Node 24 e no CI com Node 22. Não houve teste com pessoas nem em aparelho real.
+> Revisto em 15/11/2026 (ciclo de 15/11/2026). **Nível: N1 (estudo).** Meta: N1. Testado no Windows com Node 24 e no CI com Node 22. Não houve teste com pessoas nem em aparelho real.
 
 **Resumo:** 10 de 10 aplicáveis atendidos
 **Finalizado:** sim
 
-Régua N1: os critérios 5 e 7 são "Não se aplica (N1)" e saem do denominador. Antes deste ciclo: 8 de 10. O 10 passou a "Atende" em 10/11/2026, com a `main` protegida (#22). O ciclo ainda não está na `main`: espera a revisão do responsável. O site publicado serve um build antigo (#21).
+Régua N1: os critérios 5 e 7 são "Não se aplica (N1)" e saem do denominador. Antes deste ciclo, a conferência de 15/11 contou **7 de 10**: os critérios 2, 3 e 8 estavam marcados "Atende" sem a evidência que a régua pede (hipótese sem meta; fluxo sem teste no navegador; axe rodado à mão). O ciclo está na sprint `developer-sprint-2026-11-12` e chega à `main` pelo PR #30, que espera a revisão do responsável. O site publicado serve um build antigo (#21).
 
-| # | Critério | Como verificar | Situação (09/11/2026; critério 10 revisto em 10/11/2026) |
+| # | Critério | Como verificar | Situação e evidência (15/11/2026) |
 |---|---|---|---|
-| 1 | Problema e público claros | Dá para explicar em uma frase | Atende: quem gere benefícios vê categorias e ajusta a frequência por área. |
-| 2 | Hipótese a validar | Existe uma aposta escrita, com meta | Atende: seção "Hipótese"; ainda sem validação com pessoas. |
-| 3 | Fluxo principal completo | Uma pessoa conclui sem ajuda | Atende: em 09/11, API local (`node src/server.js`, SQLite) e front com `npx vite`, percorri no navegador embutido do app: a busca "educacao" acha "Educação" (1 categoria, total R$ 42.000,00); o filtro por grupo, com as setas do teclado, mostra só "Combustível"; Esc fecha a confirmação; a frequência de Combustível muda pelo teclado e liga "Salvar"; excluir "Saúde" (Mensal) mostra o erro com `role="alert"`; excluir "Transporte" mostra "excluída. Salve para confirmar."; "Salvar alterações" mostra "Alterações salvas." e os botões voltam a desligados. Testes em `App.test.jsx`: filtro, troca de frequência e Salvar nas duas ordens da lista (#20, novo); exclusão com confirmação e bloqueio do Mensal (testes já existentes). |
-| 4 | Escopo enxuto | O que não entra está registrado | Atende: seção "Fora do MVP". |
+| 1 | Problema e público claros | Dá para explicar em uma frase | Atende: quem gere benefícios vê as categorias e o custo total e ajusta a frequência por área, sem excluir o que é mensal (seção "Problema e público"). |
+| 2 | Hipótese a validar | Aposta escrita, com meta | Atende: seção "Hipótese", com meta e "saberemos quando"; medida pelo teste do critério 3. Sem validação com pessoas (N1). |
+| 3 | Fluxo principal completo | Teste de ponta a ponta no navegador passando no CI | Atende: `npm run test:e2e` (Playwright 1.65, `e2e/fluxo.e2e.js`) sobe a API real e o front e percorre buscar, filtrar, trocar a frequência, excluir com confirmação, ver o bloqueio do Mensal e salvar. Job `e2e` do CI, run 43795151726 (commit `a65b67c`, 15/11/2026): 6 de 6 (3 testes × claro e escuro). Local, 15/11: 6 de 6. |
+| 4 | Escopo enxuto | Seção "Fora do MVP" | Atende: seção "Fora do MVP". |
 | 5 | Medição de uso | A métrica principal é coletada | Não se aplica (N1): projeto de estudo sem coleta de uso. |
-| 6 | Falhas tratadas | Erro, vazio e carregamento têm resposta clara | Atende: carregamento, vazio na busca, falha de rede com "Tentar novamente", HTTP 500 e resposta inválida têm teste; agora o navegador avisa ao sair com alterações não salvas (teste). `npx vitest run` em 09/11: 15 de 15. |
-| 7 | Desempenho aceitável | LCP de até 2,5 s no celular | Não se aplica (N1), pela régua de estudo. O site publicado está desatualizado (#21). |
-| 8 | Acessibilidade básica | axe e teclado | Atende: o axe-core 4.10 acusou em 09/11 `scrollable-region-focusable` (grave) na tabela de categorias; corrigido (tabelas roláveis com foco), e o axe ficou sem violações. Foco visível nos combos (anel do Bootstrap); sem rolagem lateral em 375 px. |
-| 9 | Segurança e conformidade | Riscos decididos | Atende: `npm audit --omit=dev` sem alertas na raiz e em `api` em 06/11/2026 (zod 4, PR #17); sem dependência nova neste ciclo. |
-| 10 | Entrega confiável | CI verde antes de entrar na principal | Atende: `gh api repos/douglasabnovato/niky/rulesets`, em 10/11/2026: ruleset `principal-protegida` ativo (exige PR, bloqueia force push e exclusão); o workflow `CI` roda nos PRs e em push para `main` e `developer-**` (#22). |
-| 11 | Testes dos fluxos críticos | Testes automatizados no CI | Atende: front 15 testes (`npx vitest run`, 09/11), API 8 (`npm test` em `api`, 09/11), build no CI. |
-| 12 | Documentação honesta | O README ensina a rodar | Atende: README com o ciclo de 07/11 e o aviso de que o site publicado é antigo. |
+| 6 | Falhas tratadas | Testes de falha de rede, vazio e espera | Atende: no Vitest, carregamento, falha de rede com "Tentar novamente", HTTP 500, resposta inválida, busca vazia e aviso ao sair com alterações não salvas; no Playwright, a API cortada mostra o erro e "Tentar novamente" recupera a lista, e a busca sem resultado mostra o vazio. `npm test`, 15/11: 16 de 16; run 43795151726 verde. |
+| 7 | Desempenho aceitável | LCP de até 2,5 s no celular | Não se aplica (N1). O site publicado está desatualizado (#21). |
+| 8 | Acessibilidade básica | axe (claro e escuro, desktop, dados reais) e teclado | Atende: o axe (`@axe-core/playwright` 4.14, tags WCAG 2.1 A e AA) roda dentro do teste do critério 3 em 5 estados da tela (lista, diálogo, erro do Mensal, salvo, falha de rede), nos projetos `claro` e `escuro`, em `Desktop Chrome`, com os 7 itens da API: 0 violações (run 43795151726). O axe achou contraste de 3,39:1 no botão "Tentar novamente", corrigido neste ciclo. Teste só de teclado: Tab com anel de foco visível, Esc fecha a confirmação e devolve o foco, e o foco vai para a mensagem depois de excluir. |
+| 9 | Segurança e conformidade | `npm audit --omit=dev`, Dependabot, segredos, dados pessoais | Atende: `npm audit --omit=dev` na raiz e em `api`, 15/11/2026: 0 vulnerabilidades. Dependabot desligado (`gh api .../dependabot/alerts` responde 403), por isso o `npm audit` é a fonte (#33). Sem segredo no código (`.env.example` só com nomes). Dados de teste são do mock, sem dados pessoais. |
+| 10 | Entrega confiável | CI nos PRs e principal protegida | Atende: `gh api repos/douglasabnovato/niky/rulesets/<id>`, 15/11/2026: ruleset `principal-protegida` ativo, com `deletion`, `non_fast_forward`, `pull_request` e `required_status_checks` (`raiz` e `api`). O job novo `e2e` ainda não é obrigatório (#34). O CI roda nos PRs e em push para `main` e `developer-**`. |
+| 11 | Testes dos fluxos críticos | Log do CI sem `# skipped` | Atende: run 43795151726, 15/11/2026: `raiz` 16 de 16 (Vitest), `api` `# pass 8` e `# skipped 0`, `e2e` 6 passed, sem testes pulados. |
+| 12 | Documentação honesta | README com comandos conferidos contra o `package.json` | Atende: README e `docs/DEPLOY.md` revistos em 15/11/2026 contra os scripts (`start`, `build`, `test`, `test:e2e` na raiz; `start`, `test` em `api`); o link publicado aparece com o aviso de que serve um build antigo (HTTP 200 no front e 404 na API em 15/11). |
 
-## Hipótese (proposta)
+## Problema e público
 
-Praticar React com API: filtrar categorias e ajustar o resumo sem ajuda.
+Quem gere benefícios de uma empresa precisa ver as categorias (alimentação, combustível etc.), a recorrência e o custo total, e ajustar o resumo por área sem excluir o que é mensal. É o teste técnico da Niky (itens 6 a 10), feito como estudo.
+
+## Hipótese
+
+Acreditamos que a tela com busca, filtro, troca de frequência e a regra do Mensal deixa uma pessoa concluir o fluxo do desafio sem ajuda. **Saberemos quando** um teste no navegador percorrer buscar, filtrar, trocar a frequência, excluir com confirmação e salvar, passando no CI com 0 violações do axe no claro e no escuro e com um percurso só pelo teclado. **Meta:** esse teste verde em todo PR para a sprint e para a `main`. Estado em 15/11/2026: atingida no run 43795151726.
 
 ## Fora do MVP
 
-Permissões e integrações externas.
+- Gravar o resumo na API (#28): o "Salvar" grava só na memória da página.
+- Permissões, login e integrações externas.
+- Validação jurídica das categorias de benefício.
+- Total por frequência (#24), que fica para o próximo ciclo.
 
-## Neste ciclo (07/11/2026)
+## Neste ciclo (15/11/2026)
 
-Fluxo principal percorrido na tela e testado nas duas ordens (#20), aviso ao sair com alterações não salvas, tabelas roláveis com foco, CI em push para `developer-**`. Detalhes em [PLANO-DE-ACAO.md](PLANO-DE-ACAO.md), seção "Ciclo de 07/11/2026".
+Teste Playwright do fluxo com axe no claro e no escuro e job `e2e` no CI; contraste do botão "Tentar novamente" corrigido; foco na mensagem depois de excluir; Bootstrap 5.3.9; `DEPLOY.md` revisto. Detalhes em [PLANO-DE-ACAO.md](PLANO-DE-ACAO.md), seção "Ciclo de 15/11/2026".
 
 ## Histórico
 
-### Estado em 06/11/2026 (ciclo de 03/11/2026)
-
-> Criado em 02/11/2026. Meta: N1 (estudo). Testado no Windows, com Node 24, na cópia de `main`. Não houve teste com pessoas nem em aparelho real.
-
-**Nível:** N1 (estudo). **Resumo em 06/11/2026:** 8 de 10 critérios aplicáveis atendem (1, 2, 4, 6, 8, 9, 11, 12); 2 parciais (3, 10); 5 e 7 não se aplicam (N1). **Finalizado: não.** Falta o critério 3 (#20), que o código resolve; o 10 depende do responsável (#22).
-
-#### 1. Critérios: 8 de 10 aplicáveis atendidos
-
-| # | Critério | Como verificar | Situação |
-|---|---|---|---|
-| 1 | Problema e público claros | Dá para explicar em uma frase | Atende: Quem gere benefícios vê categorias e cadastra grupos. |
-| 2 | Hipótese a validar | Existe uma aposta escrita, com meta | Atende: Proposta na seção 2; ainda sem validação com pessoas. |
-| 3 | Fluxo principal completo | Uma pessoa conclui sem ajuda | Parcial: No navegador, com API e SQLite locais: categorias carregaram; a seleção e o cadastro não foram percorridos na tela (#20). |
-| 4 | Escopo enxuto | O que não entra está registrado | Atende: Seção 3. |
-| 5 | Medição de uso | A métrica principal é coletada | Não se aplica (N1): projeto de estudo sem coleta de uso. |
-| 6 | Falhas tratadas | Erro, vazio e carregamento têm resposta clara | Atende: testes de carregamento, lista vazia na busca, falha de rede com "Tentar novamente", erro HTTP 500 e resposta inválida (`App.test.jsx`, 06/11/2026). |
-| 7 | Desempenho aceitável | LCP de até 2,5 s no celular | Não se aplica (N1): o site publicado está desatualizado (#21). |
-| 8 | Acessibilidade básica | axe e teclado | Atende: Depois da correção, axe sem violações e sem rolagem em 375 px (antes, 199 px); foco visível. |
-| 9 | Segurança e conformidade | Riscos decididos | Atende: `npm audit --omit=dev` sem alertas na raiz e em `api` em 06/11/2026 (zod 4, PR #17). |
-| 10 | Entrega confiável | CI verde antes de entrar na principal | Parcial: CI verde nos PRs, mas a principal não tem proteção (#22). |
-| 11 | Testes dos fluxos críticos | Testes automatizados no CI | Atende: Testes automatizados rodam no CI. |
-| 12 | Documentação honesta | O README ensina a rodar | Atende: Comandos conferidos com o `package.json`; aviso de estudo no README. |
-
-#### 2. Hipótese (proposta)
-
-Praticar React com API: filtrar categorias e abrir o cadastro sem ajuda.
-
-#### 3. Fora do MVP
-
-Permissões e integrações externas.
-
-#### 4. Neste ciclo
-
-Corrige 199 px de rolagem horizontal em 375 px e atualiza dependências da API.
-
-#### 5. Revisão de 06/11/2026 (ciclo de 03/11/2026)
-
-- Régua N1: critérios 5 e 7 passam a "Não se aplica" e saem do denominador.
-- Critério 6 vai para "Atende": o código já tinha carregamento, vazio e erro, e agora há teste de cada um.
-- Critério 9 vai para "Atende"; critério 10 vai para "Parcial" (principal sem proteção).
-- Tabela de categorias com linha de total. Testes do front: 11 (antes 6). API: 8.
+- **10/11/2026:** o critério 10 passou a "Atende" com o ruleset `principal-protegida` (#22).
+- **09/11/2026 (ciclo de 07/11):** a tabela marcava 9 de 10, e depois 10 de 10. O critério 3 se apoiava num percurso manual no navegador e em testes no jsdom, e o 8 num axe rodado à mão. Pela régua, os dois eram "Parcial"; o 2 não tinha meta. Corrigido em 15/11.
+- **06/11/2026 (ciclo de 03/11):** 8 de 10 (3 e 10 parciais). Régua N1 aplicada; linha de total; testes de carregamento, vazio e erro.
+- **02/11/2026:** criado o `MVP.md`.

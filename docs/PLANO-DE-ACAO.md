@@ -22,9 +22,12 @@ Priorização por **MoSCoW** e **ganho ÷ esforço** (esforço: 1 = até 15 min,
 
 ## Definição de pronto
 
-- `npm test -- --watchAll=false` na raiz (6/6) e `npm test` em `api/` (8/8).
-- `npm run build` com `CI=true`.
-- axe-core sem violações na tela com a mensagem de erro do item 10.c.
+> Atualizada em 15/11/2026 (a versão de 27/09 citava o Create React App).
+
+- `npm test` na raiz (Vitest) e `npm test` em `api/` (`node --test`), sem testes pulados.
+- `npm run build` sem erro.
+- `npm run test:e2e`: fluxo no navegador com axe sem violações no claro e no escuro.
+- Job `raiz`, `api` e `e2e` do CI verdes no PR.
 
 ## Ciclo de 03/11/2026
 
@@ -114,3 +117,53 @@ Executado em 06/11/2026, nas branches `feature/2026-11-06` → `developer-sprint
 **Este ciclo executa.** Itens 1 a 5.
 
 **Vira issue.** Salvar o resumo na API; #24 segue; #21, #22 e #23 com o responsável; mesclar o ciclo (responsável).
+
+## Ciclo de 15/11/2026
+
+> Executado em 15/11/2026. Nível N1. Sprint `developer-sprint-2026-11-12` (o PR #30 para a `main` segue aberto), feature `feature/2026-11-15`.
+
+### Produto
+
+**Problema e público.** Quem gere benefícios consulta as categorias, vê o custo total e ajusta a frequência por área sem excluir o que é mensal. Sem mudança.
+
+**Hipótese e meta.** Acreditamos que a tela com busca, filtro, troca de frequência e a regra do Mensal deixa uma pessoa concluir o fluxo do desafio sem ajuda. Saberemos quando um teste no navegador percorrer buscar, filtrar, trocar a frequência, excluir com confirmação e salvar, passando no CI com 0 violações do axe (claro e escuro) e só pelo teclado. Meta: o fluxo inteiro verde no CI em todo PR.
+
+**Por que este ciclo.** A conferência de 15/11 achou "Atende" sem a evidência que a régua pede: o critério 3 tinha percurso manual e testes no jsdom, sem Playwright no CI; o 8 tinha axe rodado à mão, fora de teste; o 2 não tinha meta nem "saberemos quando". Contagem honesta antes deste ciclo: 7 de 10.
+
+**O que a pesquisa trouxe.**
+
+| Ideia | Fonte | Uso aqui |
+|---|---|---|
+| Rodar o axe dentro do teste do Playwright com `@axe-core/playwright` e as tags `wcag2a`, `wcag2aa`, `wcag21a`, `wcag21aa`; o teste automático pega só parte dos problemas | [Playwright, Accessibility testing](https://playwright.dev/docs/accessibility-testing) | Teste `e2e/fluxo.e2e.js` com axe em cada estado da tela, mais um teste só de teclado |
+| No diálogo modal, Esc fecha e o foco volta a quem abriu; se esse elemento não existe mais, o foco vai para um destino lógico | [WAI-ARIA APG, Dialog (Modal) Pattern](https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/) | Depois de excluir uma linha, o botão de origem some; o foco passa para a mensagem de confirmação |
+| Site estático do Blueprint usa `runtime: static` e `staticPublishPath`, sem plano de computação | [Render, Blueprint YAML Reference](https://render.com/docs/blueprint-spec) | O `render.yaml` já segue a referência; o passo a passo do `DEPLOY.md` foi revisto |
+
+**Backlog do ciclo (impacto × esforço).**
+
+| # | Item | Impacto | Esforço | Situação |
+|---|---|---|---|---|
+| 1 | `npm audit --omit=dev` na raiz e em `api` | Alto | Baixo | Este ciclo |
+| 2 | `MVP.md` honesto: 2, 3 e 8 voltam a "Parcial" até a evidência existir | Alto | Baixo | Este ciclo |
+| 3 | Teste Playwright do fluxo com axe (claro e escuro) e job `e2e` no CI | Alto | Médio | Este ciclo |
+| 4 | Foco depois de excluir uma linha (pesquisa: APG) | Médio | Baixo | Este ciclo |
+| 5 | `DEPLOY.md` com caminhos do repositório e passo a passo do Render | Médio | Baixo | Este ciclo |
+| 6 | Total por frequência no resumo (#24) | Médio | Médio | Próximo ciclo |
+| 7 | Salvar o resumo na API (#28) | Médio | Alto | Próximo ciclo |
+
+**Fora do escopo.** Persistir o resumo, republicar (é do responsável, #21), validação jurídica das categorias.
+
+### Engenharia
+
+**Arquitetura.** Front React 18 + React Bootstrap com Vite na raiz; API Express 4 + SQLite (`better-sqlite3`) em `api/`, com `GET /categorias` lido de `categorias.json`. O Playwright sobe a API e o front pelo `webServer`, cada um numa porta própria.
+
+**Riscos.** O site publicado serve um build antigo e a API publicada dá 404 (#21). O job `e2e` novo não entra nas checagens obrigatórias do ruleset até o responsável incluí-lo. O Dependabot está desligado (API 403): o `npm audit` é a única fonte do critério 9.
+
+**Qualidade.** Vitest no front, `node --test` na API, Playwright + axe no navegador, build no CI.
+
+**Definição de pronto.** CI verde (`raiz`, `api`, `e2e`) no PR para a sprint; `MVP.md` com evidência de comando, data e resultado; README e `DEPLOY.md` atualizados.
+
+### Plano de ação
+
+**Este ciclo executa.** Itens 1 a 5.
+
+**Vira issue.** #24 e #28 seguem; job `e2e` obrigatório no ruleset (responsável); Dependabot ligado (responsável); #21 e #23 com o responsável.

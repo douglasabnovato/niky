@@ -40,3 +40,21 @@ jobs:
           cache-dependency-path: api/package-lock.json
       - run: npm ci
       - run: npm test
+  e2e:
+    # Fluxo principal no navegador: API com SQLite em memória + front do Vite, axe no claro e no escuro
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: |
+            package-lock.json
+            api/package-lock.json
+      - run: npm ci
+        working-directory: api
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - run: npm run test:e2e

@@ -3,7 +3,7 @@
  * As duas tabelas são montadas a partir de GET /categorias; o resumo permite trocar a frequência
  * e excluir a linha, bloqueando a exclusão quando a frequência escolhida é "Mensal" (item 10.c).
  */
-import React, { useCallback, useEffect, useMemo, useState } from "react";
+import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import Alert from "react-bootstrap/Alert";
 import Spinner from "react-bootstrap/Spinner";
 import "./style.css";
@@ -34,6 +34,8 @@ function App() {
   const [pending, setPending] = useState(null);
   const [message, setMessage] = useState(null);
   const [attempt, setAttempt] = useState(0);
+  const mensagemRef = useRef(null);
+  const focarMensagem = useRef(false);
 
   useEffect(() => {
     const controller = new AbortController();
@@ -89,8 +91,16 @@ function App() {
       return;
     }
     setResumo((linhas) => linhas.filter((l) => l.id !== linha.id));
+    focarMensagem.current = true;
     setMessage({ variant: "success", text: `Categoria ${linha.categoria} excluída. Salve para confirmar.` });
   }, [pending, resumo]);
+
+  /* Depois de excluir, o botão que abriu a confirmação some: o foco vai para a mensagem (padrão de diálogo da WAI-ARIA APG). */
+  const focarDepoisDeExcluir = () => {
+    if (!focarMensagem.current) return;
+    focarMensagem.current = false;
+    mensagemRef.current?.focus();
+  };
 
   /* Salva as alterações do resumo (estado local; a API do item 7 é somente leitura). */
   const save = () => {
@@ -132,7 +142,7 @@ function App() {
         {status === "error" && (
           <Alert variant="danger" className="state">
             <p className="mb-2">{error}</p>
-            <button type="button" className="btn btn-outline-danger btn-sm" onClick={() => setAttempt((n) => n + 1)}>
+            <button type="button" className="btn btn-danger btn-sm" onClick={() => setAttempt((n) => n + 1)}>
               Tentar novamente
             </button>
           </Alert>
@@ -197,9 +207,11 @@ function App() {
               <h2 id="resumo-title" className="h4">Resumo</h2>
               <p className="subtitle">Gestores de área</p>
               {message && (
-                <Alert variant={message.variant} role={message.variant === "danger" ? "alert" : "status"}>
-                  {message.text}
-                </Alert>
+                <div id="mensagem-resumo" className="mensagem" ref={mensagemRef} tabIndex={-1}>
+                  <Alert variant={message.variant} role={message.variant === "danger" ? "alert" : "status"}>
+                    {message.text}
+                  </Alert>
+                </div>
               )}
               <div className="table-responsive" tabIndex={0} role="group" aria-label="Tabela do resumo">
                 <table className="table align-middle">
@@ -260,6 +272,7 @@ function App() {
         message={DELETE_QUESTION}
         onConfirm={confirmDelete}
         onCancel={() => setPending(null)}
+        onExited={focarDepoisDeExcluir}
       />
     </div>
   );
