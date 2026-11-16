@@ -22,9 +22,12 @@ Priorização por **MoSCoW** e **ganho ÷ esforço** (esforço: 1 = até 15 min,
 
 ## Definição de pronto
 
-- `npm test -- --watchAll=false` na raiz (6/6) e `npm test` em `api/` (8/8).
-- `npm run build` com `CI=true`.
-- axe-core sem violações na tela com a mensagem de erro do item 10.c.
+> Atualizada em 15/11/2026 (a versão de 27/09 citava o Create React App).
+
+- `npm test` na raiz (Vitest) e `npm test` em `api/` (`node --test`), sem testes pulados.
+- `npm run build` sem erro.
+- `npm run test:e2e`: fluxo no navegador com axe sem violações no claro e no escuro.
+- Job `raiz`, `api` e `e2e` do CI verdes no PR.
 
 ## Ciclo de 03/11/2026
 

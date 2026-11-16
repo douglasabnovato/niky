@@ -1,74 +1,84 @@
 # Deploy · Niky
 
-Plano de ação para publicar o front-end e a API do teste Niky em hospedagem gratuita.
+Passo a passo para publicar o front e a API do teste Niky no Render, no plano gratuito. Revisto em 16/11/2026. Criar a conta, o Blueprint e mexer no painel é do **responsável** (#21); o agente só prepara o código e este roteiro.
 
-## 1. Desafio
+## 1. O que sobe
 
-Publicar duas peças que conversam entre si (front Vite que consome `GET /categorias` e API Express + SQLite) sem custo, com a URL da API configurável e sem segredos no código.
+| Peça | Serviço no `render.yaml` | Tipo | Comando |
+|---|---|---|---|
+| API (`api/`) | `niky-api` | Web Service, `plan: free`, `rootDir: api` | `npm ci` e `npm start`; saúde em `/health` |
+| Front (raiz) | `niky` | Static Site (`runtime: static`) | `npm ci && npm run build`; publica `./build` |
 
-## 2. Conteúdo
+O front lê a URL da API de `VITE_API_URL` **no build**. Mudou a variável, precisa de um deploy novo do front.
 
-### Decisão de hospedagem
+Referência: [Render, Blueprint YAML Reference](https://render.com/docs/blueprint-spec) (site estático com `runtime: static` e `staticPublishPath`, sem plano de computação).
 
-| Peça | Onde | Por quê |
+## 2. Estado em 16/11/2026
+
+| Endereço | HTTP | O que serve |
 |---|---|---|
-| **API** (`api/`) | Render, serviço web gratuito (`niky-api`) | Node + SQLite com `rootDir: api` |
-| **Front** (raiz) | Render, site estático gratuito (`niky`) | CDN, não hiberna, variável `VITE_API_URL` no build |
+| https://niky.onrender.com | 200 | Build antigo: `lang="en"`, título "Nikey", `last-modified` de 01/05/2025 |
+| https://niky-api.onrender.com/health | 404 | Outro servidor (`x-render-origin-server: gunicorn`, Python). O nome `niky-api.onrender.com` não é desta API |
 
-Os dois ficam no mesmo `render.yaml` e sobem com um único Blueprint.
+Conclusão: o Blueprint ainda não foi aplicado com o `render.yaml` atual. Quando for, o Render pode dar à API outro endereço (por exemplo, `niky-api-xxxx.onrender.com`), porque o subdomínio `niky-api` já responde com outro serviço. O passo 3.5 corrige isso.
 
-### Pontos de atenção
+## 3. Passo a passo (responsável)
 
-- A API dorme após 15 min sem acesso: a primeira carga do front pode levar cerca de 1 min, e a tela mostra o estado de carregamento e, se passar do tempo, o erro com a opção de tentar de novo.
-- O disco da API é temporário: o schema é reaplicado a cada início (idempotente) e as categorias vêm do mock `categorias.json`.
-- CORS: a API aceita qualquer origem por padrão (`CORS_ORIGIN` opcional); o conteúdo é público e somente de leitura no front.
+### 3.1 Conferir localmente (opcional)
 
-### O que foi ajustado para o deploy
+```bash
+cd api && npm ci && npm start          # http://localhost:3333/health
+# outro terminal, na raiz:
+npm ci && npm start                    # http://localhost:3000
+```
 
-| Mudança | Arquivo | Por quê |
-|---|---|---|
-| Blueprint com API e front | `render.yaml` | Os dois serviços e a ligação entre eles versionados |
-| `package-lock.json` do front regenerado | `package-lock.json` | Estava fora de sincronia com o `package.json` e o `npm ci` do deploy falhava |
-| Seção de publicação com links | `readme.md` | Endereços e limitações para quem visita |
+### 3.2 Esperar a `main`
 
-### Verificação feita antes da entrega
+O `render.yaml` publica a branch `main`. Mesclar antes o PR #30 (sprint → `main`).
 
-- API: `npm ci` limpo, 8 testes passando, `npm audit --omit=dev` sem vulnerabilidades, `/health` e `/categorias` respondendo 200.
-- Front: `npm ci` limpo, 6 testes passando, build com `CI=true` compilado sem avisos.
+### 3.3 Criar o Blueprint
 
-## 3. Solução (passo a passo)
+1. Entrar em https://dashboard.render.com com a conta do GitHub.
+2. **New +** → **Blueprint**.
+3. Escolher o repositório `douglasabnovato/niky` (se não aparecer: **Configure account** → dar acesso ao repositório).
+4. **Blueprint Name:** `niky`. **Branch:** `main`.
+5. Conferir os dois serviços: `niky-api` (Web Service, Free) e `niky` (Static Site). Clicar em **Apply**.
 
-### Etapa 1 · Validar localmente (Git Bash)
+Se o painel já tiver um serviço antigo `niky` (o site de 2025), o Render pede para ligar o Blueprint a ele ou criar outro. Ligar ao existente mantém o endereço `niky.onrender.com`.
 
-1. `cd /c/ambiente-projeto/ser-mvp/niky/api && npm ci && npm test && npm start` (deixe rodando)
-2. Em outro terminal: `cd /c/ambiente-projeto/ser-mvp/niky && npm ci && npm test && npm start`
-3. A lista de categorias aparece e as ações de marcar e excluir pedem confirmação.
+### 3.4 Conferir a API
 
-### Etapa 2 · Subir para o GitHub
+1. Abrir o serviço `niky-api` → copiar o endereço do topo (ex.: `https://niky-api-xxxx.onrender.com`).
+2. Abrir `<endereço>/health`: deve mostrar `{"status":"ok"}`.
+3. Abrir `<endereço>/categorias`: deve mostrar 7 categorias em JSON.
 
-1. `cd /c/ambiente-projeto/ser-mvp/niky`
-2. `git rm src/assets/check-lg.svg src/assets/search.svg src/assets/trash-fill.svg src/components/App/assets/photo-1.jpg` (arquivos sem referência)
-3. `git status` (não podem aparecer `node_modules/`, `build/`, `api/data/` nem `.sqlite`)
-4. `git add -A`
-5. `git commit -m "feat: API Express+SQLite 3FN, lambda SQS, exercícios, testes e deploy no Render (API + front)"`
-6. `git push`
+### 3.5 Ligar o front à API
 
-### Etapa 3 · Criar os serviços no Render
+1. Se o endereço da API **não** for `https://niky-api.onrender.com`: serviço `niky` → **Environment** → `VITE_API_URL` → **Edit** → colar o endereço da API, sem barra no fim → **Save changes**.
+2. Serviço `niky` → **Manual Deploy** → **Deploy latest commit** (a variável só entra no build).
+3. Opcional: o agente atualiza o `render.yaml` com o endereço real num PR, para o Blueprint não voltar ao valor antigo.
 
-1. Entrar em **render.com** com o GitHub e autorizar o repositório `niky`.
-2. **New → Blueprint** e escolher `douglasabnovato/niky`.
-3. Conferir os dois serviços (`niky-api` web Free e `niky` Static Site) e clicar em **Apply**.
-4. Quando a API terminar, abrir `https://<endereço-da-api>/health`.
-5. Se o endereço da API não for `https://niky-api.onrender.com`, abrir o serviço `niky` → **Environment**, corrigir `VITE_API_URL` e clicar em **Manual Deploy → Deploy latest commit** (a variável entra no build).
+### 3.6 Conferir no ar
 
-### Etapa 4 · Conferir no ar
+```bash
+curl -s https://niky.onrender.com | grep -o 'lang="pt-BR"'            # o build novo
+curl -s -o /dev/null -w "%{http_code}\n" <endereço-da-api>/categorias   # 200
+```
 
-1. Abrir o front: as categorias carregam (a primeira vez pode demorar enquanto a API acorda).
-2. Buscar, marcar e excluir uma categoria (com confirmação).
-3. `https://<endereço-da-api>/categorias` devolve o JSON do mock.
+Na tela: as categorias carregam (a primeira chamada pode levar cerca de 1 minuto, enquanto a API acorda), a busca filtra e excluir pede confirmação.
 
-### Etapa 5 · Fechar
+### 3.7 Fechar
 
-1. Se os endereços reais forem diferentes, corrigir o `readme.md` e o `render.yaml`, commit e push.
-2. No GitHub, **About → Website**: colar a URL do front.
-3. Item 11 (SQS + Lambda) é opcional e roda na AWS: seguir `lambda/sqs-logger/README.md` e gerar as capturas 11.b e 11.d.
+1. Comentar na #21 o resultado dos dois `curl`, com a data.
+2. No GitHub: **About** (engrenagem) → **Website** → `https://niky.onrender.com`.
+
+## 4. Limites do plano gratuito
+
+- A API dorme depois de 15 minutos sem acesso; a tela mostra "Carregando" e, se falhar, o erro com "Tentar novamente".
+- O disco da API é temporário: o SQLite da academia (itens 3 e 4) volta vazio a cada reinício; as categorias vêm de `api/src/db/categorias.json`.
+- CORS: a API aceita qualquer origem por padrão (`CORS_ORIGIN` opcional). Para restringir: serviço `niky-api` → **Environment** → `CORS_ORIGIN` = `https://niky.onrender.com`.
+- Sem segredos: nenhuma variável deste projeto é sigilosa.
+
+## 5. Item 11 (AWS)
+
+A fila SQS e a Lambda rodam na conta AWS do responsável: seguir [lambda/sqs-logger/README.md](../lambda/sqs-logger/README.md) (#23).

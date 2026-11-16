@@ -1,28 +1,28 @@
-> **Projeto de estudo (N1).** Estado conferido em 09/11/2026. Critérios em [docs/MVP.md](docs/MVP.md).
+> **Projeto de estudo (N1).** Estado conferido em 15/11/2026. Critérios em [docs/MVP.md](docs/MVP.md): 10 de 10 aplicáveis, com evidência de CI.
 
-## Estado e próximos passos (ciclo de 07/11/2026)
+## Estado e próximos passos (ciclo de 15/11/2026)
 
-Site publicado: https://niky.onrender.com responde HTTP 200 em 09/11/2026, mas serve uma versão antiga do front, e a API publicada (`niky-api.onrender.com/categorias`) dá 404. Para ver o estado atual, rode localmente. Republicar é do responsável ([#21](https://github.com/douglasabnovato/niky/issues/21)).
+**Site publicado:** https://niky.onrender.com responde HTTP 200 em 16/11/2026, mas serve um build antigo (título "Nikey", de 2025), e a API ainda não foi publicada. Para ver o estado atual, rode localmente (seção "Como executar"). Publicar é do responsável ([#21](https://github.com/douglasabnovato/niky/issues/21)), com o passo a passo em [docs/DEPLOY.md](docs/DEPLOY.md).
 
-**O que foi feito** (09/11/2026, na sprint `developer-sprint-2026-11-12`; a `main` recebe depois da revisão do responsável)
+**O que foi feito** (na sprint `developer-sprint-2026-11-12`; a `main` recebe pelo [PR #30](https://github.com/douglasabnovato/niky/pull/30), depois da revisão do responsável)
 
-- Fluxo principal percorrido no navegador: busca, filtro, troca de frequência, exclusão (com a regra do Mensal) e salvar (registro no `docs/MVP.md`, critério 3).
-- Teste do mesmo fluxo com a lista em duas ordens (#20).
-- Tabelas roláveis recebem foco pelo teclado (o axe acusava erro grave).
-- O navegador avisa ao sair da página com alterações não salvas.
-- `docs/MVP.md`: 10 de 10 critérios aplicáveis desde 10/11/2026, com a `main` protegida pelo ruleset `principal-protegida` ([#22](https://github.com/douglasabnovato/niky/issues/22)).
+- [PR #32](https://github.com/douglasabnovato/niky/pull/32) (15/11/2026): teste Playwright do fluxo principal no navegador, com a API real e axe no claro e no escuro, e job `e2e` no CI; contraste do botão "Tentar novamente" corrigido (o axe achou 3,39:1); foco na mensagem depois de excluir uma linha; Bootstrap 5.3.9; `MVP.md` conferido contra a régua (antes, 7 de 10 com evidência real); `DEPLOY.md` revisto.
+- [PR #27](https://github.com/douglasabnovato/niky/pull/27) (09/11/2026): teste do fluxo nas duas ordens da lista ([#20](https://github.com/douglasabnovato/niky/issues/20)), tabelas roláveis com foco, aviso ao sair com alterações não salvas.
+- [PR #31](https://github.com/douglasabnovato/niky/pull/31) (10/11/2026): `main` protegida pelo ruleset `principal-protegida` ([#22](https://github.com/douglasabnovato/niky/issues/22)).
 
 **O que queremos fazer**
 
 - [#24](https://github.com/douglasabnovato/niky/issues/24) Mostrar o total por frequência no resumo.
-- Salvar o resumo na API (issue do ciclo de 07/11).
-- [#21](https://github.com/douglasabnovato/niky/issues/21) Republicar o front e a API no Render (responsável).
-- [#23](https://github.com/douglasabnovato/niky/issues/23) Executar a Lambda do item 11 e registrar os prints (responsável).
+- [#28](https://github.com/douglasabnovato/niky/issues/28) Salvar o resumo na API.
+- [#35](https://github.com/douglasabnovato/niky/issues/35) Migrar a API para o Express 5.
+- [#36](https://github.com/douglasabnovato/niky/issues/36) Atualizar a Testing Library e o jsdom.
+- Com o responsável: [#21](https://github.com/douglasabnovato/niky/issues/21) publicar no Render, [#23](https://github.com/douglasabnovato/niky/issues/23) executar a Lambda, [#33](https://github.com/douglasabnovato/niky/issues/33) ligar o Dependabot, [#34](https://github.com/douglasabnovato/niky/issues/34) exigir o job `e2e` no ruleset, [#29](https://github.com/douglasabnovato/niky/issues/29) levar a sprint para a `main`.
 
 **Onde está a documentação**
 
-- [docs/MVP.md](docs/MVP.md): estado de cada critério, com evidência e data.
-- [docs/PLANO-DE-ACAO.md](docs/PLANO-DE-ACAO.md): seção "Ciclo de 07/11/2026", com pesquisa e backlog.
+- [docs/MVP.md](docs/MVP.md): estado de cada critério, com comando, data e resultado.
+- [docs/PLANO-DE-ACAO.md](docs/PLANO-DE-ACAO.md): seção "Ciclo de 15/11/2026", com pesquisa e backlog.
+- [docs/DEPLOY.md](docs/DEPLOY.md): publicação no Render, clique a clique.
 
 <h4 align="center"> 
 	Niky 🚀
@@ -59,14 +59,18 @@ npm start                 # http://localhost:3333  ·  npm test (8 testes)
 # 2) Front-end (itens 6, 8, 9 e 10), em outro terminal
 cd ..
 npm install
-npm start                 # http://localhost:3000  ·  npm test (15 testes)
+npm start                 # http://localhost:3000  ·  npm test (16 testes)
+
+# 3) Fluxo no navegador com axe (sobe a API e o front sozinho, nas portas 4317 e 4318)
+npx playwright install chromium
+npm run test:e2e          # 6 testes: 3 cenários no tema claro e no escuro
 ```
 
 O front busca `GET {VITE_API_URL}/categorias`; sem a variável, usa `http://localhost:3333`.
 
 ### ☁️ Publicação gratuita
 
-**Demonstração:** https://niky.onrender.com (front, versão antiga em 06/11/2026). A API publicada não responde, então os dados só aparecem rodando localmente (seção "Como executar"). Ver #21.
+**Demonstração:** https://niky.onrender.com serve um build antigo em 16/11/2026, e a API ainda não foi publicada; os dados só aparecem rodando localmente (seção "Como executar"). Ver #21.
 
 - Os dois serviços sobem juntos pelo `render.yaml` (Blueprint do Render): a **API** como serviço web gratuito com *root directory* `api`, e o **front** como site estático com `VITE_API_URL` apontando para a API.
 - A API dorme após 15 min sem acesso (a primeira chamada leva ~1 min) e o SQLite é recriado a cada reinício.
@@ -296,7 +300,7 @@ processamento assíncrono.
 - [x] refatorar e componentizar (ConfirmDialog, cliente da API, formatação)
 - [x] consumir `GET /categorias` com estados de carregando e erro (item 8)
 - [x] Bootstrap 5 via npm, sem jQuery/CDN
-- [x] acessibilidade verificada com axe-core
+- [x] acessibilidade verificada com axe-core dentro do teste Playwright (claro e escuro)
 
 ### 📅 Tela Entregues
 
