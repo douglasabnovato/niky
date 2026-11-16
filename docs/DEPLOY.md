@@ -1,6 +1,6 @@
 # Deploy · Niky
 
-Passo a passo para publicar o front e a API do teste Niky no Render, no plano gratuito. Revisto em 16/11/2026. Criar a conta, o Blueprint e mexer no painel é do **responsável** (#21); o agente só prepara o código e este roteiro.
+Passo a passo para publicar o front e a API do teste Niky no Render, no plano gratuito. Revisto em 16/11/2026, 00h01 (horário de Brasília). Criar a conta, o Blueprint e mexer no painel é do **responsável** (#21); o agente só prepara o código e este roteiro.
 
 ## 1. O que sobe
 
@@ -13,7 +13,7 @@ O front lê a URL da API de `VITE_API_URL` **no build**. Mudou a variável, prec
 
 Referência: [Render, Blueprint YAML Reference](https://render.com/docs/blueprint-spec) (site estático com `runtime: static` e `staticPublishPath`, sem plano de computação).
 
-## 2. Estado em 16/11/2026
+## 2. Estado em 16/11/2026, 00h11 (horário de Brasília, `curl`)
 
 | Endereço | HTTP | O que serve |
 |---|---|---|

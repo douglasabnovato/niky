@@ -1,12 +1,12 @@
-> **Projeto de estudo (N1).** Estado conferido em 15/11/2026. Critérios em [docs/MVP.md](docs/MVP.md): 10 de 10 aplicáveis, com evidência de CI.
+> **Projeto de estudo (N1).** Estado conferido em 16/11/2026. Critérios em [docs/MVP.md](docs/MVP.md): 10 de 10 aplicáveis, com evidência de CI.
 
 ## Estado e próximos passos (ciclo de 15/11/2026)
 
-**Site publicado:** https://niky.onrender.com responde HTTP 200 em 16/11/2026, mas serve um build antigo (título "Nikey", de 2025), e a API ainda não foi publicada. Para ver o estado atual, rode localmente (seção "Como executar"). Publicar é do responsável ([#21](https://github.com/douglasabnovato/niky/issues/21)), com o passo a passo em [docs/DEPLOY.md](docs/DEPLOY.md).
+**Site publicado:** https://niky.onrender.com responde HTTP 200 em 16/11/2026, 00h11 (horário de Brasília, `curl`), mas serve um build antigo (título "Nikey", de 2025), e a API ainda não foi publicada. Para ver o estado atual, rode localmente (seção "Como executar"). Publicar é do responsável ([#21](https://github.com/douglasabnovato/niky/issues/21)), com o passo a passo em [docs/DEPLOY.md](docs/DEPLOY.md).
 
 **O que foi feito** (na sprint `developer-sprint-2026-11-12`; a `main` recebe pelo [PR #30](https://github.com/douglasabnovato/niky/pull/30), depois da revisão do responsável)
 
-- [PR #32](https://github.com/douglasabnovato/niky/pull/32) (15/11/2026): teste Playwright do fluxo principal no navegador, com a API real e axe no claro e no escuro, e job `e2e` no CI; contraste do botão "Tentar novamente" corrigido (o axe achou 3,39:1); foco na mensagem depois de excluir uma linha; Bootstrap 5.3.9; `MVP.md` conferido contra a régua (antes, 7 de 10 com evidência real); `DEPLOY.md` revisto.
+- [PR #32](https://github.com/douglasabnovato/niky/pull/32) (15/11/2026): teste Playwright do fluxo principal no navegador, com a API real e axe (tema claro; o app não tem tema escuro próprio), e job `e2e` no CI; contraste do botão "Tentar novamente" corrigido (o axe achou 3,39:1); foco na mensagem depois de excluir uma linha; Bootstrap 5.3.9; `MVP.md` conferido contra a régua (antes, 7 de 10 com evidência real); `DEPLOY.md` revisto.
 - [PR #27](https://github.com/douglasabnovato/niky/pull/27) (09/11/2026): teste do fluxo nas duas ordens da lista ([#20](https://github.com/douglasabnovato/niky/issues/20)), tabelas roláveis com foco, aviso ao sair com alterações não salvas.
 - [PR #31](https://github.com/douglasabnovato/niky/pull/31) (10/11/2026): registro da `main` protegida pelo responsável, com o ruleset `principal-protegida` ([#22](https://github.com/douglasabnovato/niky/issues/22)).
 
@@ -63,7 +63,7 @@ npm start                 # http://localhost:3000  ·  npm test (16 testes)
 
 # 3) Fluxo no navegador com axe (sobe a API e o front sozinho, nas portas 4317 e 4318)
 npx playwright install chromium
-npm run test:e2e          # 6 testes: 3 cenários no tema claro e no escuro
+npm run test:e2e          # 3 testes no tema claro (o app não tem tema escuro próprio)
 ```
 
 O front busca `GET {VITE_API_URL}/categorias`; sem a variável, usa `http://localhost:3333`.
@@ -300,7 +300,7 @@ processamento assíncrono.
 - [x] refatorar e componentizar (ConfirmDialog, cliente da API, formatação)
 - [x] consumir `GET /categorias` com estados de carregando e erro (item 8)
 - [x] Bootstrap 5 via npm, sem jQuery/CDN
-- [x] acessibilidade verificada com axe-core dentro do teste Playwright (claro e escuro)
+- [x] acessibilidade verificada com axe-core dentro do teste Playwright (tema claro; o app não tem tema escuro próprio)
 
 ### 📅 Tela Entregues
 
