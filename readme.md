@@ -1,4 +1,4 @@
-> **Projeto de estudo (N1).** Estado conferido em 16/11/2026. Critérios em [docs/MVP.md](docs/MVP.md): 10 de 10 aplicáveis, com evidência de CI.
+> **Projeto de estudo (N1).** Estado conferido em 16/11/2026. Critérios em [docs/MVP.md](docs/MVP.md): 9 de 10 aplicáveis, com evidência de CI; o 9 fica Parcial até o responsável ligar os alertas do Dependabot (#33).
 
 ## Estado e próximos passos (ciclo de 15/11/2026)
 
