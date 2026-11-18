@@ -5,7 +5,9 @@
 **Resumo:** 10 de 10 aplicáveis atendidos
 **Finalizado:** sim. Todos os critérios aplicáveis atendem; o 9 passou a "Atende" em 16/11/2026, quando o responsável ligou os alertas do Dependabot.
 
-Régua N1: os critérios 5 e 7 são "Não se aplica (N1)" e saem do denominador. Antes deste ciclo, a conferência de 15/11 contou **7 de 10**: os critérios 2, 3 e 8 estavam marcados "Atende" sem a evidência que a régua pede (hipótese sem meta; fluxo sem teste no navegador; axe rodado à mão). O ciclo está na sprint `developer-sprint-2026-11-12` e chega à `main` pelo PR #30, que espera a revisão do responsável. O site publicado serve um build antigo (#21).
+Régua N1: os critérios 5 e 7 são "Não se aplica (N1)" e saem do denominador. Antes deste ciclo, a conferência de 15/11 contou **7 de 10**: os critérios 2, 3 e 8 estavam marcados "Atende" sem a evidência que a régua pede (hipótese sem meta; fluxo sem teste no navegador; axe rodado à mão). O ciclo chegou à `main` pelo PR #30, mesclado em 16/11/2026 (`gh pr view 30`, conferido em 18/11/2026). O site publicado serve um build antigo (#21; `curl` em 18/11/2026: HTTP 200, `lang="en"`, título "Nikey").
+
+Em 18/11/2026 (triagem das issues), a feature `feature/2026-11-18` levou a API ao Express 5 (#35) e a Testing Library ao 16, com jsdom 31 (#36), sem mudar critério: local, `npm test` 16 de 16 na raiz, `npm test` em `api` 9 de 9 com `# skipped 0`, `npm run test:e2e` 3 de 3 e `npm audit --omit=dev` com 0 vulnerabilidades na raiz e em `api`.
 
 | # | Critério | Como verificar | Situação e evidência (15 e 16/11/2026) |
 |---|---|---|---|
