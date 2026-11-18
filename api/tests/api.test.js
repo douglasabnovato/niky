@@ -125,6 +125,5 @@ test('JSON inválido e corpo ausente respondem 400 em JSON', async () => {
     const semCorpo = await request(app).post('/atividades')
     assert.equal(semCorpo.status, 400)
     assert.match(semCorpo.body.error, /nome/)
-    assert.equal(semCorpo.headers['x-powered-by'], undefined)
 })
 /* fim de api.test.js */

@@ -14,7 +14,7 @@
 
 - [#24](https://github.com/douglasabnovato/niky/issues/24) Mostrar o total por frequência no resumo.
 - [#28](https://github.com/douglasabnovato/niky/issues/28) Salvar o resumo na API.
-- [#35](https://github.com/douglasabnovato/niky/issues/35) Migrar a API para o Express 5 e [#36](https://github.com/douglasabnovato/niky/issues/36) atualizar a Testing Library e o jsdom: feitas na sprint `developer-sprint-2026-11-19` em 18/11/2026; fecham no merge na `main`.
+- [#35](https://github.com/douglasabnovato/niky/issues/35) Migrar a API para o Express 5 e [#36](https://github.com/douglasabnovato/niky/issues/36) atualizar a Testing Library e o jsdom: feitas em 18/11/2026 no PR #43 (`feature/2026-11-18` → `developer-sprint-2026-11-19`); fecham quando a sprint chegar à `main`.
 - Com o responsável: [#21](https://github.com/douglasabnovato/niky/issues/21) publicar no Render, [#23](https://github.com/douglasabnovato/niky/issues/23) executar a Lambda, [#34](https://github.com/douglasabnovato/niky/issues/34) exigir o job `e2e` no ruleset. Já cumpridas, para fechar: [#22](https://github.com/douglasabnovato/niky/issues/22) (ruleset), [#29](https://github.com/douglasabnovato/niky/issues/29) (sprint na `main`) e [#33](https://github.com/douglasabnovato/niky/issues/33) (alertas do Dependabot ligados, 0 abertos).
 
 **Onde está a documentação**
