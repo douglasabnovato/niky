@@ -116,4 +116,15 @@ test('rota e id inexistentes respondem 404 em JSON', async () => {
     assert.equal((await request(app).get('/nada')).status, 404)
     assert.equal((await request(app).get('/turmas/abc')).status, 404)
 })
+
+/* Express 5 (#35): sem corpo, req.body fica undefined; JSON quebrado e corpo vazio seguem em 400. */
+test('JSON inválido e corpo ausente respondem 400 em JSON', async () => {
+    const quebrado = await request(app).post('/alunos').set('Content-Type', 'application/json').send('{"nome":')
+    assert.equal(quebrado.status, 400)
+    assert.equal(quebrado.body.error, 'JSON inválido.')
+    const semCorpo = await request(app).post('/atividades')
+    assert.equal(semCorpo.status, 400)
+    assert.match(semCorpo.body.error, /nome/)
+    assert.equal(semCorpo.headers['x-powered-by'], undefined)
+})
 /* fim de api.test.js */
