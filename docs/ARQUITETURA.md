@@ -18,7 +18,7 @@ flowchart LR
 | Contêiner | Pasta | Tecnologia | Hospedagem gratuita |
 |---|---|---|---|
 | Front-end | `/` (raiz) | React 18, Vite 8, Bootstrap 5, react-bootstrap | GitHub Pages ou Vercel |
-| API | `api/` | Node 20, Express 4, better-sqlite3, zod | Render (free) ou alwaysdata |
+| API | `api/` | Node 20, Express 5, better-sqlite3, zod | Render (free) ou alwaysdata |
 | Função | `lambda/sqs-logger/` | Node 20 (ESM) | AWS Lambda + SQS (nível gratuito) |
 
 ### Nível 3 — Componentes da API
