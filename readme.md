@@ -4,7 +4,7 @@
 
 **Site publicado:** https://niky.onrender.com responde HTTP 200 em 16/11/2026, 00h11 (horário de Brasília, `curl`), mas serve um build antigo (título "Nikey", de 2025), e a API ainda não foi publicada. Para ver o estado atual, rode localmente (seção "Como executar"). Publicar é do responsável ([#21](https://github.com/douglasabnovato/niky/issues/21)), com o passo a passo em [docs/DEPLOY.md](docs/DEPLOY.md).
 
-**O que foi feito** (na sprint `developer-sprint-2026-11-12`; a `main` recebe pelo [PR #30](https://github.com/douglasabnovato/niky/pull/30), depois da revisão do responsável)
+**O que foi feito** (na sprint `developer-sprint-2026-11-12`; chegou à `main` pelo [PR #30](https://github.com/douglasabnovato/niky/pull/30), mesclado em 16/11/2026)
 
 - [PR #32](https://github.com/douglasabnovato/niky/pull/32) (15/11/2026): teste Playwright do fluxo principal no navegador, com a API real e axe (tema claro; o app não tem tema escuro próprio), e job `e2e` no CI; contraste do botão "Tentar novamente" corrigido (o axe achou 3,39:1); foco na mensagem depois de excluir uma linha; Bootstrap 5.3.9; `MVP.md` conferido contra a régua (antes, 7 de 10 com evidência real); `DEPLOY.md` revisto.
 - [PR #27](https://github.com/douglasabnovato/niky/pull/27) (09/11/2026): teste do fluxo nas duas ordens da lista ([#20](https://github.com/douglasabnovato/niky/issues/20)), tabelas roláveis com foco, aviso ao sair com alterações não salvas.
@@ -14,9 +14,8 @@
 
 - [#24](https://github.com/douglasabnovato/niky/issues/24) Mostrar o total por frequência no resumo.
 - [#28](https://github.com/douglasabnovato/niky/issues/28) Salvar o resumo na API.
-- [#35](https://github.com/douglasabnovato/niky/issues/35) Migrar a API para o Express 5.
-- [#36](https://github.com/douglasabnovato/niky/issues/36) Atualizar a Testing Library e o jsdom.
-- Com o responsável: [#21](https://github.com/douglasabnovato/niky/issues/21) publicar no Render, [#23](https://github.com/douglasabnovato/niky/issues/23) executar a Lambda, [#33](https://github.com/douglasabnovato/niky/issues/33) fechar a issue dos alertas do Dependabot (já ligados, com 0 abertos), [#34](https://github.com/douglasabnovato/niky/issues/34) exigir o job `e2e` no ruleset, [#29](https://github.com/douglasabnovato/niky/issues/29) levar a sprint para a `main`.
+- [#35](https://github.com/douglasabnovato/niky/issues/35) Migrar a API para o Express 5 e [#36](https://github.com/douglasabnovato/niky/issues/36) atualizar a Testing Library e o jsdom: feitas em 18/11/2026 no PR #43 (`feature/2026-11-18` → `developer-sprint-2026-11-19`); fecham quando a sprint chegar à `main`.
+- Com o responsável: [#21](https://github.com/douglasabnovato/niky/issues/21) publicar no Render, [#23](https://github.com/douglasabnovato/niky/issues/23) executar a Lambda, [#34](https://github.com/douglasabnovato/niky/issues/34) exigir o job `e2e` no ruleset. Já cumpridas, para fechar: [#22](https://github.com/douglasabnovato/niky/issues/22) (ruleset), [#29](https://github.com/douglasabnovato/niky/issues/29) (sprint na `main`) e [#33](https://github.com/douglasabnovato/niky/issues/33) (alertas do Dependabot ligados, 0 abertos).
 
 **Onde está a documentação**
 
